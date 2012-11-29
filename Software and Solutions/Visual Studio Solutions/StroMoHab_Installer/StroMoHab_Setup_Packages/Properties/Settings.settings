@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="StroMoHab_Setup_Packages.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="TrackingToolsVersion" Type="System.String" Scope="User">
+      <Value Profile="(Default)">2.2</Value>
+    </Setting>
+    <Setting Name="TrackingToolsInstallName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">TrackingTools.2.2.0.Final.exe</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,9 @@
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StromoLight_RemoteCalibration\StromoLight_RemoteCalibration\bin\Release\StromoLight_RemoteCalibration.XML
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StromoLight_RemoteCalibration\StromoLight_RemoteCalibration\bin\Release\StromoLight_RemoteCalibration.dll
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StromoLight_RemoteCalibration\StromoLight_RemoteCalibration\bin\Release\StromoLight_RemoteCalibration.pdb
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StromoLight_RemoteCalibration\StromoLight_RemoteCalibration\bin\Release\StroMoHab_Objects.dll
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StromoLight_RemoteCalibration\StromoLight_RemoteCalibration\bin\Release\StroMoHab_Objects.pdb
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StromoLight_RemoteCalibration\StromoLight_RemoteCalibration\bin\Release\StroMoHab_Objects.xml
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StromoLight_RemoteCalibration\StromoLight_RemoteCalibration\obj\Release\ResolveAssemblyReference.cache
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StromoLight_RemoteCalibration\StromoLight_RemoteCalibration\obj\Release\StromoLight_RemoteCalibration.dll
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StromoLight_RemoteCalibration\StromoLight_RemoteCalibration\obj\Release\StromoLight_RemoteCalibration.pdb

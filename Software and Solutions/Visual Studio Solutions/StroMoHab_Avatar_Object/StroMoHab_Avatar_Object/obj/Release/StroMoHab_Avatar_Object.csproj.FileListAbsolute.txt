@@ -1,0 +1,12 @@
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Avatar_Object\StroMoHab_Avatar_Object\bin\Release\StroMoHab_Avatar_Object.XML
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Avatar_Object\StroMoHab_Avatar_Object\bin\Release\StroMoHab_Avatar_Object.dll
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Avatar_Object\StroMoHab_Avatar_Object\bin\Release\StroMoHab_Avatar_Object.pdb
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Avatar_Object\StroMoHab_Avatar_Object\bin\Release\MathNet.Iridium.dll
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Avatar_Object\StroMoHab_Avatar_Object\bin\Release\StroMoHab_Objects.dll
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Avatar_Object\StroMoHab_Avatar_Object\bin\Release\StroMoHab_Objects.pdb
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Avatar_Object\StroMoHab_Avatar_Object\bin\Release\StroMoHab_Objects.xml
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Avatar_Object\StroMoHab_Avatar_Object\bin\Release\MathNet.Iridium.pdb
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Avatar_Object\StroMoHab_Avatar_Object\bin\Release\MathNet.Iridium.xml
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Avatar_Object\StroMoHab_Avatar_Object\obj\Release\ResolveAssemblyReference.cache
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Avatar_Object\StroMoHab_Avatar_Object\obj\Release\StroMoHab_Avatar_Object.dll
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Avatar_Object\StroMoHab_Avatar_Object\obj\Release\StroMoHab_Avatar_Object.pdb

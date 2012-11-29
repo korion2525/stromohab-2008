@@ -1,0 +1,2 @@
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StromoLight_TaskDesigner\StromoLight_TaskDesigner\bin\Debug\StromoLight_TaskDesigner.exe.config
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StromoLight_TaskDesigner\StromoLight_TaskDesigner\obj\Debug\ResolveAssemblyReference.cache

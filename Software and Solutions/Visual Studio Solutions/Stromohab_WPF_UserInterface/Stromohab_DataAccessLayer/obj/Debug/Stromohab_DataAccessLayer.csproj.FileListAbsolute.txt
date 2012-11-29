@@ -1,0 +1,12 @@
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\Stromohab_WPF_UserInterface\Stromohab_DataAccessLayer\bin\Debug\CodeContracts\Stromohab_DataAccessLayer.Contracts.dll
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\Stromohab_WPF_UserInterface\Stromohab_DataAccessLayer\bin\Debug\CodeContracts\Stromohab_DataAccessLayer.Contracts.pdb
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\Stromohab_WPF_UserInterface\Stromohab_DataAccessLayer\bin\Debug\Stromohab_DataAccessLayer.dll.config
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\Stromohab_WPF_UserInterface\Stromohab_DataAccessLayer\bin\Debug\Stromohab_DataAccessLayer.dll
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\Stromohab_WPF_UserInterface\Stromohab_DataAccessLayer\bin\Debug\Stromohab_DataAccessLayer.pdb
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\Stromohab_WPF_UserInterface\Stromohab_DataAccessLayer\obj\Debug\ResolveAssemblyReference.cache
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\Stromohab_WPF_UserInterface\Stromohab_DataAccessLayer\obj\Debug\Decl\Stromohab_DataAccessLayer.dll
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\Stromohab_WPF_UserInterface\Stromohab_DataAccessLayer\obj\Debug\Decl\Stromohab_DataAccessLayer.pdb
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\Stromohab_WPF_UserInterface\Stromohab_DataAccessLayer\obj\Debug\Stromohab_DataAccessLayer.rewritten
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\Stromohab_WPF_UserInterface\Stromohab_DataAccessLayer\obj\Debug\Stromohab_DataAccessLayer.dll
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\Stromohab_WPF_UserInterface\Stromohab_DataAccessLayer\obj\Debug\Stromohab_DataAccessLayer.pdb
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\Stromohab_WPF_UserInterface\Stromohab_DataAccessLayer\obj\Debug\CodeContractAnalysisRun.log

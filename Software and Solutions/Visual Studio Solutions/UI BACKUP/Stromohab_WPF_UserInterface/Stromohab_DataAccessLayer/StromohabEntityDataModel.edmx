@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="stromohabDevModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.1" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="stromohabDevModelStoreContainer">
+          <EntitySet Name="clinicians" EntityType="stromohabDevModel.Store.clinicians" store:Type="Tables" Schema="stromohabdev" />
+          <EntitySet Name="diagnostics" EntityType="stromohabDevModel.Store.diagnostics" store:Type="Tables" Schema="stromohabdev" />
+          <EntitySet Name="patients" EntityType="stromohabDevModel.Store.patients" store:Type="Tables" Schema="stromohabdev" />
+          <EntitySet Name="sessions" EntityType="stromohabDevModel.Store.sessions" store:Type="Tables" Schema="stromohabdev" />
+          <EntitySet Name="sessions_has_tasks" EntityType="stromohabDevModel.Store.sessions_has_tasks" store:Type="Tables" Schema="stromohabdev" />
+          <EntitySet Name="tasks" EntityType="stromohabDevModel.Store.tasks" store:Type="Tables" Schema="stromohabdev" />
+          <AssociationSet Name="fk_Patients_Clinicians1" Association="stromohabDevModel.Store.fk_Patients_Clinicians1">
+            <End Role="clinicians" EntitySet="clinicians" />
+            <End Role="patients" EntitySet="patients" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Sessions_has_Tasks_Diagnostics1" Association="stromohabDevModel.Store.fk_Sessions_has_Tasks_Diagnostics1">
+            <End Role="diagnostics" EntitySet="diagnostics" />
+            <End Role="sessions_has_tasks" EntitySet="sessions_has_tasks" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Sessions_has_Tasks_Tasks1" Association="stromohabDevModel.Store.fk_Sessions_has_Tasks_Tasks1">
+            <End Role="tasks" EntitySet="tasks" />
+            <End Role="sessions_has_tasks" EntitySet="sessions_has_tasks" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Sessions_Patients1" Association="stromohabDevModel.Store.fk_Sessions_Patients1">
+            <End Role="patients" EntitySet="patients" />
+            <End Role="sessions" EntitySet="sessions" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="clinicians">
+          <Key>
+            <PropertyRef Name="cUserName" />
+          </Key>
+          <Property Name="cFirstName" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="cIsAdmin" Type="bool" Nullable="false" />
+          <Property Name="cLastName" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="cPassword" Type="varchar" Nullable="false" MaxLength="32" />
+          <Property Name="cUserName" Type="varchar" Nullable="false" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="diagnostics">
+          <Key>
+            <PropertyRef Name="idDiagnostics" />
+          </Key>
+          <Property Name="dDistanceTravelled" Type="int" Nullable="false" />
+          <Property Name="dStrideSymmetry" Type="int" />
+          <Property Name="idDiagnostics" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="patients">
+          <Key>
+            <PropertyRef Name="Clinicians_cUserName" />
+            <PropertyRef Name="idPatient" />
+          </Key>
+          <Property Name="Clinicians_cUserName" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="idPatient" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="pContactNumber" Type="varchar" MaxLength="15" />
+          <Property Name="pDateOfBirth" Type="date" Nullable="false" />
+          <Property Name="pFirstName" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="pGender" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="pLastName" Type="varchar" Nullable="false" MaxLength="45" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6035: The relationship 'fk_Sessions_has_Tasks_Sessions1' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+      -->
+        <EntityType Name="sessions">
+          <Key>
+            <PropertyRef Name="idSession" />
+            <PropertyRef Name="Patients_Clinicians_cUserName" />
+            <PropertyRef Name="Patients_idPatient" />
+          </Key>
+          <Property Name="idSession" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Patients_Clinicians_cUserName" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="Patients_idPatient" Type="int" Nullable="false" />
+          <Property Name="sDate" Type="date" Nullable="false" />
+          <Property Name="sTime" Type="time" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sessions_has_tasks">
+          <Key>
+            <PropertyRef Name="Diagnostics_idDiagnostics" />
+            <PropertyRef Name="Sessions_idSession" />
+            <PropertyRef Name="Tasks_idTask" />
+          </Key>
+          <Property Name="Diagnostics_idDiagnostics" Type="int" Nullable="false" />
+          <Property Name="Sessions_idSession" Type="int" Nullable="false" />
+          <Property Name="Tasks_idTask" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tasks">
+          <Key>
+            <PropertyRef Name="idTask" />
+          </Key>
+          <Property Name="idTask" Type="int" Nullable="false" />
+          <Property Name="tData" Type="blob" />
+          <Property Name="tName" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <Association Name="fk_Patients_Clinicians1">
+          <End Role="clinicians" Type="stromohabDevModel.Store.clinicians" Multiplicity="1" />
+          <End Role="patients" Type="stromohabDevModel.Store.patients" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="clinicians">
+              <PropertyRef Name="cUserName" />
+            </Principal>
+            <Dependent Role="patients">
+              <PropertyRef Name="Clinicians_cUserName" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Sessions_has_Tasks_Diagnostics1">
+          <End Role="diagnostics" Type="stromohabDevModel.Store.diagnostics" Multiplicity="1" />
+          <End Role="sessions_has_tasks" Type="stromohabDevModel.Store.sessions_has_tasks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="diagnostics">
+              <PropertyRef Name="idDiagnostics" />
+            </Principal>
+            <Dependent Role="sessions_has_tasks">
+              <PropertyRef Name="Diagnostics_idDiagnostics" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Sessions_has_Tasks_Tasks1">
+          <End Role="tasks" Type="stromohabDevModel.Store.tasks" Multiplicity="1" />
+          <End Role="sessions_has_tasks" Type="stromohabDevModel.Store.sessions_has_tasks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tasks">
+              <PropertyRef Name="idTask" />
+            </Principal>
+            <Dependent Role="sessions_has_tasks">
+              <PropertyRef Name="Tasks_idTask" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Sessions_Patients1">
+          <End Role="patients" Type="stromohabDevModel.Store.patients" Multiplicity="1" />
+          <End Role="sessions" Type="stromohabDevModel.Store.sessions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="patients">
+              <PropertyRef Name="idPatient" />
+              <PropertyRef Name="Clinicians_cUserName" />
+            </Principal>
+            <Dependent Role="sessions">
+              <PropertyRef Name="Patients_idPatient" />
+              <PropertyRef Name="Patients_Clinicians_cUserName" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="stromohabDevModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="stromohabDevEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="clinicians" EntityType="stromohabDevModel.clinician" />
+          <EntitySet Name="diagnostics" EntityType="stromohabDevModel.diagnostic" />
+          <EntitySet Name="patients" EntityType="stromohabDevModel.patient" />
+          <EntitySet Name="sessions" EntityType="stromohabDevModel.session" />
+          <EntitySet Name="sessions_has_tasks" EntityType="stromohabDevModel.sessions_has_tasks" />
+          <EntitySet Name="tasks" EntityType="stromohabDevModel.task" />
+          <AssociationSet Name="fk_Patients_Clinicians1" Association="stromohabDevModel.fk_Patients_Clinicians1">
+            <End Role="clinicians" EntitySet="clinicians" />
+            <End Role="patients" EntitySet="patients" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Sessions_has_Tasks_Diagnostics1" Association="stromohabDevModel.fk_Sessions_has_Tasks_Diagnostics1">
+            <End Role="diagnostics" EntitySet="diagnostics" />
+            <End Role="sessions_has_tasks" EntitySet="sessions_has_tasks" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Sessions_Patients1" Association="stromohabDevModel.fk_Sessions_Patients1">
+            <End Role="patients" EntitySet="patients" />
+            <End Role="sessions" EntitySet="sessions" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Sessions_has_Tasks_Tasks1" Association="stromohabDevModel.fk_Sessions_has_Tasks_Tasks1">
+            <End Role="tasks" EntitySet="tasks" />
+            <End Role="sessions_has_tasks" EntitySet="sessions_has_tasks" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="clinician">
+          <Key>
+            <PropertyRef Name="cUserName" />
+          </Key>
+          <Property Name="cFirstName" Type="String" Nullable="false" />
+          <Property Name="cIsAdmin" Type="Boolean" Nullable="false" />
+          <Property Name="cLastName" Type="String" Nullable="false" />
+          <Property Name="cPassword" Type="String" Nullable="false" />
+          <Property Name="cUserName" Type="String" Nullable="false" />
+          <NavigationProperty Name="patients" Relationship="stromohabDevModel.fk_Patients_Clinicians1" FromRole="clinicians" ToRole="patients" />
+        </EntityType>
+        <EntityType Name="diagnostic">
+          <Key>
+            <PropertyRef Name="idDiagnostics" />
+          </Key>
+          <Property Name="dDistanceTravelled" Type="Int32" Nullable="false" />
+          <Property Name="dStrideSymmetry" Type="Int32" />
+          <Property Name="idDiagnostics" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="sessions_has_tasks" Relationship="stromohabDevModel.fk_Sessions_has_Tasks_Diagnostics1" FromRole="diagnostics" ToRole="sessions_has_tasks" />
+        </EntityType>
+        <EntityType Name="patient">
+          <Key>
+            <PropertyRef Name="Clinicians_cUserName" />
+            <PropertyRef Name="idPatient" />
+          </Key>
+          <Property Name="Clinicians_cUserName" Type="String" Nullable="false" />
+          <Property Name="idPatient" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="pContactNumber" Type="String" />
+          <Property Name="pDateOfBirth" Type="DateTime" Nullable="false" />
+          <Property Name="pFirstName" Type="String" Nullable="false" />
+          <Property Name="pGender" Type="String" Nullable="false" />
+          <Property Name="pLastName" Type="String" Nullable="false" />
+          <NavigationProperty Name="clinician" Relationship="stromohabDevModel.fk_Patients_Clinicians1" FromRole="patients" ToRole="clinicians" />
+          <NavigationProperty Name="sessions" Relationship="stromohabDevModel.fk_Sessions_Patients1" FromRole="patients" ToRole="sessions" />
+        </EntityType>
+        <EntityType Name="session">
+          <Key>
+            <PropertyRef Name="idSession" />
+            <PropertyRef Name="Patients_Clinicians_cUserName" />
+            <PropertyRef Name="Patients_idPatient" />
+          </Key>
+          <Property Name="idSession" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Patients_Clinicians_cUserName" Type="String" Nullable="false" />
+          <Property Name="Patients_idPatient" Type="Int32" Nullable="false" />
+          <Property Name="sDate" Type="DateTime" Nullable="false" />
+          <Property Name="sTime" Type="Time" Nullable="false" />
+          <NavigationProperty Name="patient" Relationship="stromohabDevModel.fk_Sessions_Patients1" FromRole="sessions" ToRole="patients" />
+        </EntityType>
+        <EntityType Name="sessions_has_tasks">
+          <Key>
+            <PropertyRef Name="Diagnostics_idDiagnostics" />
+            <PropertyRef Name="Sessions_idSession" />
+            <PropertyRef Name="Tasks_idTask" />
+          </Key>
+          <Property Name="Diagnostics_idDiagnostics" Type="Int32" Nullable="false" />
+          <Property Name="Sessions_idSession" Type="Int32" Nullable="false" />
+          <Property Name="Tasks_idTask" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="diagnostic" Relationship="stromohabDevModel.fk_Sessions_has_Tasks_Diagnostics1" FromRole="sessions_has_tasks" ToRole="diagnostics" />
+          <NavigationProperty Name="task" Relationship="stromohabDevModel.fk_Sessions_has_Tasks_Tasks1" FromRole="sessions_has_tasks" ToRole="tasks" />
+        </EntityType>
+        <EntityType Name="task">
+          <Key>
+            <PropertyRef Name="idTask" />
+          </Key>
+          <Property Name="idTask" Type="Int32" Nullable="false" />
+          <Property Name="tName" Type="String" />
+          <NavigationProperty Name="sessions_has_tasks" Relationship="stromohabDevModel.fk_Sessions_has_Tasks_Tasks1" FromRole="tasks" ToRole="sessions_has_tasks" />
+          <Property Type="Binary" Name="tData" />
+        </EntityType>
+        <Association Name="fk_Patients_Clinicians1">
+          <End Role="clinicians" Type="stromohabDevModel.clinician" Multiplicity="1" />
+          <End Role="patients" Type="stromohabDevModel.patient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="clinicians">
+              <PropertyRef Name="cUserName" />
+            </Principal>
+            <Dependent Role="patients">
+              <PropertyRef Name="Clinicians_cUserName" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Sessions_has_Tasks_Diagnostics1">
+          <End Role="diagnostics" Type="stromohabDevModel.diagnostic" Multiplicity="1" />
+          <End Role="sessions_has_tasks" Type="stromohabDevModel.sessions_has_tasks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="diagnostics">
+              <PropertyRef Name="idDiagnostics" />
+            </Principal>
+            <Dependent Role="sessions_has_tasks">
+              <PropertyRef Name="Diagnostics_idDiagnostics" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Sessions_Patients1">
+          <End Role="patients" Type="stromohabDevModel.patient" Multiplicity="1" />
+          <End Role="sessions" Type="stromohabDevModel.session" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="patients">
+              <PropertyRef Name="idPatient" />
+              <PropertyRef Name="Clinicians_cUserName" />
+            </Principal>
+            <Dependent Role="sessions">
+              <PropertyRef Name="Patients_idPatient" />
+              <PropertyRef Name="Patients_Clinicians_cUserName" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Sessions_has_Tasks_Tasks1">
+          <End Role="tasks" Type="stromohabDevModel.task" Multiplicity="1" />
+          <End Role="sessions_has_tasks" Type="stromohabDevModel.sessions_has_tasks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tasks">
+              <PropertyRef Name="idTask" />
+            </Principal>
+            <Dependent Role="sessions_has_tasks">
+              <PropertyRef Name="Tasks_idTask" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="stromohabDevModelStoreContainer" CdmEntityContainer="stromohabDevEntities">
+          <EntitySetMapping Name="clinicians"><EntityTypeMapping TypeName="stromohabDevModel.clinician"><MappingFragment StoreEntitySet="clinicians">
+            <ScalarProperty Name="cFirstName" ColumnName="cFirstName" />
+            <ScalarProperty Name="cIsAdmin" ColumnName="cIsAdmin" />
+            <ScalarProperty Name="cLastName" ColumnName="cLastName" />
+            <ScalarProperty Name="cPassword" ColumnName="cPassword" />
+            <ScalarProperty Name="cUserName" ColumnName="cUserName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="diagnostics"><EntityTypeMapping TypeName="stromohabDevModel.diagnostic"><MappingFragment StoreEntitySet="diagnostics">
+            <ScalarProperty Name="dDistanceTravelled" ColumnName="dDistanceTravelled" />
+            <ScalarProperty Name="dStrideSymmetry" ColumnName="dStrideSymmetry" />
+            <ScalarProperty Name="idDiagnostics" ColumnName="idDiagnostics" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="patients"><EntityTypeMapping TypeName="stromohabDevModel.patient"><MappingFragment StoreEntitySet="patients">
+            <ScalarProperty Name="Clinicians_cUserName" ColumnName="Clinicians_cUserName" />
+            <ScalarProperty Name="idPatient" ColumnName="idPatient" />
+            <ScalarProperty Name="pContactNumber" ColumnName="pContactNumber" />
+            <ScalarProperty Name="pDateOfBirth" ColumnName="pDateOfBirth" />
+            <ScalarProperty Name="pFirstName" ColumnName="pFirstName" />
+            <ScalarProperty Name="pGender" ColumnName="pGender" />
+            <ScalarProperty Name="pLastName" ColumnName="pLastName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="sessions"><EntityTypeMapping TypeName="stromohabDevModel.session"><MappingFragment StoreEntitySet="sessions">
+            <ScalarProperty Name="idSession" ColumnName="idSession" />
+            <ScalarProperty Name="Patients_Clinicians_cUserName" ColumnName="Patients_Clinicians_cUserName" />
+            <ScalarProperty Name="Patients_idPatient" ColumnName="Patients_idPatient" />
+            <ScalarProperty Name="sDate" ColumnName="sDate" />
+            <ScalarProperty Name="sTime" ColumnName="sTime" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="sessions_has_tasks"><EntityTypeMapping TypeName="stromohabDevModel.sessions_has_tasks"><MappingFragment StoreEntitySet="sessions_has_tasks">
+            <ScalarProperty Name="Diagnostics_idDiagnostics" ColumnName="Diagnostics_idDiagnostics" />
+            <ScalarProperty Name="Sessions_idSession" ColumnName="Sessions_idSession" />
+            <ScalarProperty Name="Tasks_idTask" ColumnName="Tasks_idTask" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="tasks"><EntityTypeMapping TypeName="stromohabDevModel.task"><MappingFragment StoreEntitySet="tasks">
+            <ScalarProperty Name="tData" ColumnName="tData" />
+                <ScalarProperty Name="idTask" ColumnName="idTask" />
+            <ScalarProperty Name="tName" ColumnName="tName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="DDLGenerationTemplate" Value="$(VSEFTools)\DBGen\SSDLToMySQL.tt" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="StromohabEntityDataModel">
+        <EntityTypeShape EntityType="stromohabDevModel.clinician" Width="1.5" PointX="2.75" PointY="4.25" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="stromohabDevModel.diagnostic" Width="1.5" PointX="0.75" PointY="1" Height="1.787985026041667" IsExpanded="true" />
+        <EntityTypeShape EntityType="stromohabDevModel.patient" Width="1.5" PointX="5" PointY="4" Height="2.7494921874999996" IsExpanded="true" />
+        <EntityTypeShape EntityType="stromohabDevModel.session" Width="1.5" PointX="7.25" PointY="4.25" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="stromohabDevModel.sessions_has_tasks" Width="1.5" PointX="3" PointY="0.875" Height="1.9802864583333315" IsExpanded="true" />
+        <EntityTypeShape EntityType="stromohabDevModel.task" Width="1.5" PointX="0.75" PointY="4" Height="1.7879850260416665" IsExpanded="true" />
+        <AssociationConnector Association="stromohabDevModel.fk_Patients_Clinicians1" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.25" PointY="5.3362939453125" />
+          <ConnectorPoint PointX="5" PointY="5.3362939453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="stromohabDevModel.fk_Sessions_has_Tasks_Diagnostics1" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="1.8939925130208335" />
+          <ConnectorPoint PointX="3" PointY="1.8939925130208335" />
+        </AssociationConnector>
+        <AssociationConnector Association="stromohabDevModel.fk_Sessions_Patients1" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.5" PointY="5.3362939453125" />
+          <ConnectorPoint PointX="7.25" PointY="5.3362939453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="stromohabDevModel.fk_Sessions_has_Tasks_Tasks1" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="4.09375" />
+          <ConnectorPoint PointX="4.40625" PointY="4.09375" />
+          <ConnectorPoint PointX="4.40625" PointY="2.8552864583333317" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="stromohabDevModelStoreContainer" CdmEntityContainer="stromohabDevEntitiesNew">
+    <EntitySetMapping Name="clinicians">
+      <EntityTypeMapping TypeName="stromohabDevModel.clinician">
+        <MappingFragment StoreEntitySet="clinicians">
+          <ScalarProperty Name="cFirstName" ColumnName="cFirstName" />
+          <ScalarProperty Name="cIsAdmin" ColumnName="cIsAdmin" />
+          <ScalarProperty Name="cLastName" ColumnName="cLastName" />
+          <ScalarProperty Name="cPassword" ColumnName="cPassword" />
+          <ScalarProperty Name="cUserName" ColumnName="cUserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="diagnostics">
+      <EntityTypeMapping TypeName="stromohabDevModel.diagnostic">
+        <MappingFragment StoreEntitySet="diagnostics">
+          <ScalarProperty Name="dDistanceTravelled" ColumnName="dDistanceTravelled" />
+          <ScalarProperty Name="dStrideSymmetry" ColumnName="dStrideSymmetry" />
+          <ScalarProperty Name="idDiagnostics" ColumnName="idDiagnostics" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="patients">
+      <EntityTypeMapping TypeName="stromohabDevModel.patient">
+        <MappingFragment StoreEntitySet="patients">
+          <ScalarProperty Name="Clinicians_cUserName" ColumnName="Clinicians_cUserName" />
+          <ScalarProperty Name="idPatient" ColumnName="idPatient" />
+          <ScalarProperty Name="pContactNumber" ColumnName="pContactNumber" />
+          <ScalarProperty Name="pDateOfBirth" ColumnName="pDateOfBirth" />
+          <ScalarProperty Name="pFirstName" ColumnName="pFirstName" />
+          <ScalarProperty Name="pGender" ColumnName="pGender" />
+          <ScalarProperty Name="pLastName" ColumnName="pLastName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sessions">
+      <EntityTypeMapping TypeName="stromohabDevModel.session">
+        <MappingFragment StoreEntitySet="sessions">
+          <ScalarProperty Name="idSession" ColumnName="idSession" />
+          <ScalarProperty Name="Patients_Clinicians_cUserName" ColumnName="Patients_Clinicians_cUserName" />
+          <ScalarProperty Name="Patients_idPatient" ColumnName="Patients_idPatient" />
+          <ScalarProperty Name="sDate" ColumnName="sDate" />
+          <ScalarProperty Name="sTime" ColumnName="sTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sessions_has_tasks">
+      <EntityTypeMapping TypeName="stromohabDevModel.sessions_has_tasks">
+        <MappingFragment StoreEntitySet="sessions_has_tasks">
+          <ScalarProperty Name="Diagnostics_idDiagnostics" ColumnName="Diagnostics_idDiagnostics" />
+          <ScalarProperty Name="Sessions_idSession" ColumnName="Sessions_idSession" />
+          <ScalarProperty Name="Tasks_idTask" ColumnName="Tasks_idTask" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tasks">
+      <EntityTypeMapping TypeName="stromohabDevModel.task">
+        <MappingFragment StoreEntitySet="tasks">
+          <ScalarProperty Name="idTask" ColumnName="idTask" />
+          <ScalarProperty Name="tFilepath" ColumnName="tFilepath" />
+          <ScalarProperty Name="tName" ColumnName="tName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

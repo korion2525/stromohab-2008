@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F7EBC5AD-1DBF-4510-B563-1F0A7B52A9A5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StromoLight_TaskDesigner</RootNamespace>
+    <AssemblyName>StromoLight_TaskDesigner</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetZone>LocalIntranet</TargetZone>
+    <GenerateManifests>false</GenerateManifests>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <ApplicationIcon>Stromohab.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Debug\StromoLight_TaskDesigner.XML</DocumentationFile>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Release\StromoLight_TaskDesigner.XML</DocumentationFile>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Externals.cs" />
+    <Compile Include="Forms\Form_TaskDesigner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_TaskDesigner.Designer.cs">
+      <DependentUpon>Form_TaskDesigner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectIO.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Form_TaskDesigner.resx">
+      <DependentUpon>Form_TaskDesigner.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="client.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="TaskFileIO.cs" />
+    <Compile Include="WindowAlignment.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Stromohab.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Mats_CustomControls\CustomControls\CustomControls.csproj">
+      <Project>{6F9B98D5-9CF5-4595-ADD5-9B67AD78344D}</Project>
+      <Name>CustomControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\StroMoHab_Objects\StroMoHab_Objects\StroMoHab_Objects.csproj">
+      <Project>{04E86A84-E886-40CB-9143-FAE0DE0A35D0}</Project>
+      <Name>StroMoHab_Objects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\StroMoHab_Remote_DataManager\StroMoHab_Remote_DataManager.csproj">
+      <Project>{6A804C54-4711-41B6-BEFE-328CCD5DB50B}</Project>
+      <Name>StroMoHab_Remote_DataManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\StromoLight_RemoteDrawingList\StromoLight_RemoteDrawingList\StromoLight_RemoteDrawingList.csproj">
+      <Project>{BA668CD5-E6BB-40E6-B776-4EABA05E14F5}</Project>
+      <Name>StromoLight_RemoteDrawingList</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Win32Utilites\Win32Utilites\Win32Utilites.csproj">
+      <Project>{DCCC8418-A0A2-4D23-9407-22988CB11340}</Project>
+      <Name>Win32Utilites</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>REM IF $(ConfigurationName) == Release goto :release
+goto :end
+:release
+robocopy "E:\Mat\Documents\Repository Working Copy\Stromohab\stromohab_08\Visual Studio Solutions\StromoLight_TaskDesigner\StromoLight_TaskDesigner\bin\Release"  "%25STROMOLIGHTDEPLOY%25\StromoLight_TaskDesigner" /S /E /XD *.svn
+call "E:\Mat\Documents\Repository Working Copy\Stromohab\stromohab_08\StromoLight_Deployment\robocopyExitCoding.bat"
+
+:end</PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StromoLight_RemoteCalibration</name>
+    </assembly>
+    <members>
+        <member name="M:StromoLight_RemoteCalibration.Calibration.Store(StroMoHab_Objects.Objects.Marker,StroMoHab_Objects.Objects.Marker)">
+            <summary>
+            Stores the calibration (inital) positions of the left and right feet.
+            </summary>
+        </member>
+        <member name="M:StromoLight_RemoteCalibration.Calibration.Store(StroMoHab_Objects.Objects.Trackable,StroMoHab_Objects.Objects.Trackable)">
+            <summary>
+            Stores the calibration (inital) positions of the left and right feet.
+            </summary>
+        </member>
+        <member name="M:StromoLight_RemoteCalibration.Calibration.InitializeLifetimeService">
+            <summary>
+            Required to ensure object connection doesn't timeout during remote access.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="E:StromoLight_RemoteCalibration.Calibration.CalibrationUpdated">
+            <summary>
+            CalibrationCompleted Event
+            </summary>
+        </member>
+        <member name="T:StromoLight_RemoteCalibration.Calibration.CalibrationDataUpdatedEventHandler">
+            <summary>
+            Delegate for CalibrationCompleted Event
+            </summary>
+            <param name="m_calibration"></param>
+        </member>
+    </members>
+</doc>

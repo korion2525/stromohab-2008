@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StromoLight_RemoteDrawingList</name>
+    </assembly>
+    <members>
+        <member name="T:StromoLight_RemoteDrawingList.DrawingList">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:StromoLight_RemoteDrawingList.DrawingList.MoveAvatarInTaskDesigner(System.Single)">
+            <summary>
+            Updates the avatar position in the Task Designer.
+            </summary>
+            <param name="zPosition"></param>
+        </member>
+        <member name="M:StromoLight_RemoteDrawingList.DrawingList.ObjectIndexInBoundsAndNotCorridor(System.Int32)">
+            <summary>
+            Checks the supplied index corresponds to an editable object (usually obstacle) in the drawing list
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StromoLight_RemoteDrawingList.DrawingList.Add(StroMoHab_Objects.Graphics.OpenGlObject)">
+            <summary>
+            Adds an OpenGl object to the drawing list.
+            </summary>
+            <param name="objectToAdd"></param>
+        </member>
+        <member name="M:StromoLight_RemoteDrawingList.DrawingList.RemoveAt(System.Int32)">
+            <summary>
+            Removes the object at a specified index.
+            </summary>
+            <param name="index"></param>
+        </member>
+        <member name="M:StromoLight_RemoteDrawingList.DrawingList.ReplaceAt(System.Int32,StroMoHab_Objects.Graphics.OpenGlObject)">
+            <summary>
+            Replaces an object at a specified index with a new one.
+            </summary>
+            <param name="index"></param>
+            <param name="newObject"></param>
+        </member>
+        <member name="M:StromoLight_RemoteDrawingList.DrawingList.SetNewObjectWidth(System.Int32,System.Single)">
+            <summary>
+            Sets a new width for the object at list position: index
+            </summary>
+            <param name="index"></param>
+            <param name="newValue"></param>
+        </member>
+        <member name="M:StromoLight_RemoteDrawingList.DrawingList.SetNewObjectHeight(System.Int32,System.Single)">
+            <summary>
+            Sets a new Height for the object at list position: index
+            </summary>
+            <param name="index"></param>
+            <param name="newValue"></param>
+        </member>
+        <member name="M:StromoLight_RemoteDrawingList.DrawingList.SetNewObjectDepth(System.Int32,System.Single)">
+            <summary>
+            Sets a new Depth for the object at list position: index
+            </summary>
+            <param name="index"></param>
+            <param name="newValue"></param>
+        </member>
+        <member name="M:StromoLight_RemoteDrawingList.DrawingList.SetNewObjectY(System.Int32,System.Single)">
+            <summary>
+            Sets a new Y coordinate value for the object at list position: index
+            </summary>
+            <param name="index"></param>
+            <param name="newValue"></param>
+        </member>
+        <member name="M:StromoLight_RemoteDrawingList.DrawingList.SetNewObjectX(System.Int32,System.Single)">
+            <summary>
+            Sets a new X coordinate value for the object at list position: index
+            </summary>
+            <param name="index"></param>
+            <param name="newValue"></param>
+        </member>
+        <member name="M:StromoLight_RemoteDrawingList.DrawingList.GetObjectFromList(System.Int32)">
+            <summary>
+            Returns the OpenGLObject in the drawing list position specified by index
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StromoLight_RemoteDrawingList.DrawingList.Clear">
+            <summary>
+            Clears the list.
+            </summary>
+        </member>
+        <member name="M:StromoLight_RemoteDrawingList.DrawingList.SetSelected(System.Int32,System.Boolean)">
+            <summary>
+            Sets the "Selected" property of an item in the draw list.
+            </summary>
+            <param name="index"></param>
+            <param name="selected"></param>
+        </member>
+        <member name="M:StromoLight_RemoteDrawingList.DrawingList.SetTextureNumber(System.Int32,System.Int32)">
+            <summary>
+            Sets the texture number of an item in the draw list
+            </summary>
+            <param name="index"></param>
+            <param name="textureNumber"></param>
+        </member>
+        <member name="M:StromoLight_RemoteDrawingList.DrawingList.MoveAvatarInVisualiser(System.Single)">
+            <summary>
+            Moves the avatar to a new Z Position in the Visualiser.
+            </summary>
+            <param name="zPosition"></param>
+        </member>
+        <member name="M:StromoLight_RemoteDrawingList.DrawingList.Initialise">
+            <summary>
+            Opens the connection - call to minimise delay when client UI is initally used.
+            </summary>
+            <returns>
+            Bool indicating if connection to Visualiser succeded.
+            </returns>
+            <exception cref="T:System.Net.Sockets.SocketException">
+            This is thrown if a connection cannot be made to the Visualiser. If the Visualiser is located on the same machine,
+            catch this exception and lauch the Visualiser using a new System.Diagnostics.Process.
+            </exception>
+        </member>
+        <member name="P:StromoLight_RemoteDrawingList.DrawingList.FullScreen">
+            <summary>
+            Set to true when in full screen mode
+            </summary>
+        </member>
+        <member name="P:StromoLight_RemoteDrawingList.DrawingList.VisualiserLoading">
+            <summary>
+            Set to true while the visualiser is still loading
+            </summary>
+        </member>
+        <member name="P:StromoLight_RemoteDrawingList.DrawingList.GeneratingScreenShot">
+            <summary>
+            Set to true when the Visualiser is in the process of generating a new screen shot
+            </summary>
+        </member>
+        <member name="P:StromoLight_RemoteDrawingList.DrawingList.TaskScreenShot">
+            <summary>
+            The byte array containing the screenshot
+            </summary>
+        </member>
+        <member name="E:StromoLight_RemoteDrawingList.DrawingList.AvatarMovedInTaskDesigner">
+            <summary>
+            Triggered when avatar position is changed in the task designer.
+            </summary>
+        </member>
+        <member name="E:StromoLight_RemoteDrawingList.DrawingList.AvatarMovedInVisualiser">
+            <summary>
+            Triggered when avatar position is changed in the visualiser.
+            </summary>
+        </member>
+        <member name="P:StromoLight_RemoteDrawingList.DrawingList.ObjectsToDraw">
+            <summary>
+            The list of objects to draw.
+            </summary>
+        </member>
+        <member name="T:StromoLight_RemoteDrawingList.DrawingList.AvatarMovedInTaskDesignerEventHandler">
+            <summary>
+            Avatar moved in task designer delegate
+            </summary>
+            <param name="zPosition"></param>
+        </member>
+        <member name="T:StromoLight_RemoteDrawingList.DrawingList.AvatarMovedInVisualiserEventHandler">
+            <summary>
+            Avatar moved in visualiser delegate.
+            </summary>
+            <param name="zPosition"></param>
+        </member>
+    </members>
+</doc>

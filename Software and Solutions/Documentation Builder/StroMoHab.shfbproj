@@ -1,0 +1,116 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <!-- The configuration and platform will be used to determine which
+         assemblies to include from solution and project documentation
+         sources -->
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{a8051c7f-c228-4c88-9316-6a45fdd233c7}</ProjectGuid>
+    <SHFBSchemaVersion>1.9.0.0</SHFBSchemaVersion>
+    <!-- AssemblyName, Name, and RootNamespace are not used by SHFB but Visual
+         Studio adds them anyway -->
+    <AssemblyName>Documentation</AssemblyName>
+    <RootNamespace>Documentation</RootNamespace>
+    <Name>Documentation</Name>
+    <!-- SHFB properties -->
+    <OutputPath>.\Help\</OutputPath>
+    <HtmlHelpName>Documentation</HtmlHelpName>
+    <Language>en-US</Language>
+    <DocumentationSources>
+      <DocumentationSource sourceFile="..\Visual Studio Solutions\Stromohab_Deployment\Stromohab_Deployment.sln" />
+    </DocumentationSources>
+    <HelpFileFormat>Website</HelpFileFormat>
+    <HelpTitle>StroMoHab Development Documentation</HelpTitle>
+    <SyntaxFilters>CSharp</SyntaxFilters>
+    <ContentPlacement>AboveNamespaces</ContentPlacement>
+    <CopyrightHref>http://www.stromohab.com</CopyrightHref>
+    <CopyrightText>2010 StroMoHab</CopyrightText>
+    <FeedbackEMailAddress>
+    </FeedbackEMailAddress>
+    <PresentationStyle>vs2005</PresentationStyle>
+    <NamespaceSummaries>
+      <NamespaceSummaryItem name="StroMoHab_TT_Server.Properties" isDocumented="True" />
+      <NamespaceSummaryItem name="StromoLight_TaskDesigner.Properties" isDocumented="True" />
+      <NamespaceSummaryItem name="TightropeDiagnostics.Properties" isDocumented="True" />
+      <NamespaceSummaryItem name="StroMoHab_Objects.Communication" isDocumented="True">Provides the classes needed to connect and communicate with the server</NamespaceSummaryItem>
+    </NamespaceSummaries>
+    <RootNamespaceContainer>False</RootNamespaceContainer>
+    <SelfBranded>True</SelfBranded>
+    <VisibleItems>Attributes, InheritedMembers, InheritedFrameworkMembers, Internals, Privates, Protected, SealedProtected, PrivateFields</VisibleItems>
+    <PlugInConfigurations>
+      <PlugInConfig id="Hierarchical Table of Contents" enabled="True">
+        <configuration>
+          <toc minParts="2" insertBelow="False" />
+        </configuration>
+      </PlugInConfig>
+      <PlugInConfig id="Additional Content Only" enabled="False">
+        <configuration />
+      </PlugInConfig>
+    </PlugInConfigurations>
+    <KeepLogFile>False</KeepLogFile>
+    <ComponentConfigurations>
+      <ComponentConfig id="Post-transform Component" enabled="True">
+        <component id="Post-transform Component" type="SandcastleBuilder.Components.PostTransformComponent" assembly="{@SHFBFolder}SandcastleBuilder.Components.dll">
+          <!-- Code colorizer files (required).
+                 Attributes:
+                    Stylesheet file (required)
+                    Script file (required)
+                    "Copy" image file (required) -->
+          <colorizer stylesheet="{@SHFBFolder}Colorizer\highlight.css" scriptFile="{@SHFBFolder}Colorizer\highlight.js" copyImage="{@SHFBFolder}Colorizer\CopyCode.gif" />
+          <!-- Base output paths for the files (required).  These should match
+                 the parent folder of the output path of the HTML files (see
+                 each of the SaveComponent instances below). -->
+          <outputPaths>
+{@HelpFormatOutputPaths}
+            </outputPaths>
+          <!-- Logo image file (optional).  Filename is required. The height,
+                 width, altText, placement, and alignment attributes are
+                 optional. -->
+          <logoFile filename="{@ProjectFolder}StromohabLogosmall.png" height="0" width="0" altText="StroMoHab" placement="right" alignment="left" />
+        </component>
+      </ComponentConfig>
+    </ComponentConfigurations>
+    <BinaryTOC>True</BinaryTOC>
+  </PropertyGroup>
+  <!-- There are no properties for these groups.  AnyCPU needs to appear in
+       order for Visual Studio to perform the build.  The others are optional
+       common platform types that may appear. -->
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Win32' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Win32' ">
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Content\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\5264dc9f-958b-461d-8d27-82a1921708e5.aml" />
+    <None Include="Content\Glossary.aml" />
+    <None Include="Content\2d35186e-2f64-480a-b800-a4ad3820a974.aml" />
+    <None Include="Content\7cffbdfc-af7a-4441-b50f-2c8aeca492af.aml" />
+    <None Include="Content\b3f0e5fa-acb3-4164-991a-c30e7cc8e6cf.aml" />
+    <None Include="Content\79737911-3b75-48d1-8f23-e702efa75993.aml" />
+    <None Include="Content\6f2b964a-1537-4138-bd0d-a4d187cafaa1.aml" />
+    <None Include="Content\5c13c0fc-5d2a-4efe-85ed-932efed6e5fe.aml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ContentLayout Include="Content Layout.content" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="StromohabLogosmall.png" />
+  </ItemGroup>
+  <!-- Import the SHFB build targets -->
+  <Import Project="$(SHFBROOT)\SandcastleHelpFileBuilder.targets" />
+</Project>

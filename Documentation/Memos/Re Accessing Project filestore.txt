@@ -1,0 +1,46 @@
+From: Terry Edhouse [tje1@ohm.york.ac.uk]
+Sent: 10 November 2008 15:18
+To: pj10@ohm.york.ac.uk
+Cc: ap23@ohm.york.ac.uk; mag501@york.ac.uk; mz503@york.ac.uk
+Subject: Re: Project filestore
+
+pj10@ohm.york.ac.uk wrote:
+> 
+> Thanks for your advice regards setting up a project filestore.
+> 
+> 500MB should be fine. Project name is: stromohab
+
+I have setup a project area for stromohab.
+
+Connect to :
+
+\\ElecFS\StaffFS
+
+and look in 'ShareAreas' for a folder named STROMOHAB
+
+
+If you have problems connecting then check that you are connecting using your Computing Service username and password.  XP users might need to do the following :
+
+
+ From the 'Control Panel' select 'User Accounts' and select your account to manage.
+
+Then select 'Manage My Network Passwords' and add an entry exactly as follows :
+
+Server : ElecFS
+
+Username : ElecFS\<username>
+
+
+Replace <username> with your Computing Service username, and enter your password.
+
+You might get prompted about setting a domain password which you can say 'No' to.
+
+
+By default everything in \\ElecFS\StaffFS is only accessible to users connected to the Departmental 
+network.  Access can be arranged for users connecting via the VPN or NAS but Adar will need to 
+approve it.
+
+Regards,
+
+--Terry
+

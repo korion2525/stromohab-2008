@@ -1,0 +1,9 @@
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Objects\StroMoHab_Objects\bin\Release\StroMoHab_Objects.dll.config
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Objects\StroMoHab_Objects\bin\Release\StroMoHab_Objects.dll
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Objects\StroMoHab_Objects\bin\Release\StroMoHab_Objects.pdb
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Objects\StroMoHab_Objects\obj\Release\ResolveAssemblyReference.cache
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Objects\StroMoHab_Objects\obj\Release\StroMoHab_Objects.Communication.Forms.FindServer.resources
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Objects\StroMoHab_Objects\obj\Release\StroMoHab_Objects.csproj.GenerateResource.Cache
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Objects\StroMoHab_Objects\obj\Release\StroMoHab_Objects.dll
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Objects\StroMoHab_Objects\obj\Release\StroMoHab_Objects.pdb
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Objects\StroMoHab_Objects\bin\Release\StroMoHab_Objects.xml

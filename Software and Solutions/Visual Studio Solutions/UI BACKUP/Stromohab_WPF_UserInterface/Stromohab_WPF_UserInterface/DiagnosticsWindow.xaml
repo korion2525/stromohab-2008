@@ -1,0 +1,14 @@
+﻿<Window x:Class="Stromohab_WPF_UserInterface.DiagnosticsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"        
+        WindowStartupLocation="CenterScreen"
+        SizeToContent="WidthAndHeight"
+        Loaded="Window_Loaded" 
+        WindowStyle="SingleBorderWindow" WindowState="Normal" AllowsTransparency="False" UseLayoutRounding="True">
+    <Viewbox>
+<Border Style="{StaticResource StromohabBorderStyle}" Height="Auto" Width="Auto">
+        <Grid Name="gridLayout" HorizontalAlignment="Stretch" Height="Auto" Width="Auto">
+        </Grid>
+    </Border>
+    </Viewbox>
+</Window>

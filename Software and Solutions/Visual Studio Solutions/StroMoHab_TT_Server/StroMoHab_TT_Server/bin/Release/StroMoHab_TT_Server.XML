@@ -1,0 +1,1689 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StroMoHab_TT_Server</name>
+    </assembly>
+    <members>
+        <member name="T:StroMoHab_TT_Server.Properties.Settings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Properties.Settings.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:StroMoHab_TT_Server.DataStorage.ClinicianDataManager">
+            <summary>
+            Manages clinicians
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataStorage.ClinicianDataManager.GenderateDefaultClinician">
+            <summary>
+            Generates the default clinician
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataStorage.ClinicianDataManager.Clinician_Remote_DateManager_DeleteClinicianRequestedByClient(StroMoHab_Objects.Objects.Clinician)">
+            <summary>
+            Deletes a clinician
+            </summary>
+            <param name="clinician"></param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataStorage.ClinicianDataManager.Clinician_Remote_DateManager_UpdateClinicianListRequestedByClient">
+            <summary>
+            Gets an updated list of clinicians
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataStorage.ClinicianDataManager.Clinician_Remote_DateManager_UpdateClinicianRequestedByClient(StroMoHab_Objects.Objects.Clinician)">
+            <summary>
+            Updates a clincian
+            </summary>
+            <param name="clinician"></param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataStorage.ClinicianDataManager.Clinician_Remote_DateManager_NewClinicianSaveRequestedByClient(StroMoHab_Objects.Objects.Clinician)">
+            <summary>
+            Saves a new clinician (will fail if one with the same login already exists)
+            </summary>
+            <param name="clinician"></param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataStorage.ClinicianDataManager.Clinician_Remote_DateManager_LoginRequestByClient(System.String,System.String)">
+            <summary>
+            Processes a login request
+            </summary>
+            <param name="login"></param>
+            <param name="password"></param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataStorage.ClinicianDataManager.RespondToLoginRequest(StroMoHab_Objects.Objects.Clinician)">
+            <summary>
+            Responds to a login request
+            </summary>
+            <param name="clinician">A valid clicnian or Null if login failed</param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Treadmill.TreadmillController.ClearSerialPortName">
+            <summary>
+            Clears the serial port so SetSerialPortName() can be called
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Treadmill.TreadmillController.m_woodway_TreadmillPortUnpluggedEvent">
+            <summary>
+            When the treadmill's port gets unplugged set m_woodway to null so it can be set again
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Treadmill.TreadmillController.TransmitSpeed">
+            <summary>
+            Forces the TreadmillController to fire a Transmit Speed Event
+            </summary>
+        </member>
+        <member name="T:StroMoHab_TT_Server.Treadmill.Treadmill">
+            <summary>
+            Woodway treadmill controller class
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Treadmill.Treadmill.Start">
+            <summary>
+            Method starts the treadmill at a speed and direction determined by
+            the Speed and Reverse (velocity) properties.
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Treadmill.Treadmill.Halt">
+            <summary>
+            Method stops the treadmill and sets the speed property to zero
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Treadmill.Treadmill.Stop">
+            <summary>
+            Method stops the treadmill and sets the speed and elevation to zero
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Treadmill.Treadmill.CloseSession">
+            <summary>
+            Method causes timer thread to stop and closes serial port connection
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Treadmill.Treadmill.Disengage">
+            <summary>
+            Method disengages the belt into 'freewheel' mode
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Treadmill.Treadmill.sendCommand">
+            <summary>
+            Starts separate timed thread for sending commands to the treadmill
+            via serial port.
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Treadmill.Treadmill.SafeWrite(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Safely Writes to the serial port, if there is a problem it closes the session and notifys TreadmillContrller
+            </summary>
+            <param name="buffer"></param>
+            <param name="offset"></param>
+            <param name="count"></param>
+        </member>
+        <member name="E:StroMoHab_TT_Server.Treadmill.Treadmill.TreadmillPortUnpluggedEvent">
+            <summary>
+            When SafeWrite() detects a problem with the serial port
+            </summary>
+        </member>
+        <member name="P:StroMoHab_TT_Server.Treadmill.Treadmill.TimerThreadIsAlive">
+            <summary>
+            Returns the status of the timer thread
+            </summary>
+        </member>
+        <member name="P:StroMoHab_TT_Server.Treadmill.Treadmill.Speed">
+            <summary>
+            gets/sets speed of treadmill in MPH
+            Direction of the treadmill is determined by the state of the Reverse property
+            Velocity property is updated to equivalent meters per second
+            </summary>
+        </member>
+        <member name="P:StroMoHab_TT_Server.Treadmill.Treadmill.Velocity">
+            <summary>
+            gets/sets the speed of the treadmill in meters per second
+            If the set value is negative the Reverse property is set True
+            and the Speed property is update to the equivalent MPH
+            </summary>
+        </member>
+        <member name="P:StroMoHab_TT_Server.Treadmill.Treadmill.Elevation">
+            <summary>
+            gets/sets elevation of treadmill in degrees
+            </summary>
+        </member>
+        <member name="P:StroMoHab_TT_Server.Treadmill.Treadmill.Reverse">
+            <summary>
+            gets/sets whether the treadmill is set to run in reverse
+            </summary>
+        </member>
+        <member name="T:StroMoHab_TT_Server.DataProcessing.CoRLocator">
+            <summary>
+            Locates the CoR of two Trackables based on continually updating data.
+            Each time a new frame of data is avaliable, call FindCoR with the two Trackables
+            and an updated estimate for the CoR will be located.
+            
+            Note: One CoRLocator class must be instantiated for each pair of Trackbles / each joint
+            </summary>
+            <auther>Will Lunniss</auther>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataProcessing.CoRLocator.ClearData">
+            <summary>
+            Clears all of the data so that the calculations can start again
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataProcessing.CoRLocator.FindCoR(StroMoHab_Objects.Objects.Trackable,StroMoHab_Objects.Objects.Trackable)">
+            <summary>
+            Finds an updated CoR for the two Trackables given.
+            </summary>
+            <param name="T1">Trackable1</param>
+            <param name="T2">Trackable2</param>
+            <returns>The CoR Matrix, containg the x, y, and z coordinates</returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataProcessing.CoRLocator.BuildM_Inverse">
+            <summary>
+            Builds the Matrix M and then performs an effcient block based inversion on it
+            to generate Matrix M_Inverse
+            </summary>
+            <returns>M_Inverse</returns>
+        </member>
+        <member name="T:StroMoHab_TT_Server.Treadmill.TreadmillCalibrationForm">
+            <summary>
+            The form definition
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Treadmill.TreadmillCalibrationForm.#ctor">
+            <summary>
+            The form used to calibrate the speed of the treadmill
+            </summary>
+        </member>
+        <member name="F:StroMoHab_TT_Server.Treadmill.TreadmillCalibrationForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Treadmill.TreadmillCalibrationForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Treadmill.TreadmillCalibrationForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_TT_Server.Treadmill.TreadmillCalibrationForm.TreadmillToVisualiserConversionValue">
+            <summary>
+            The ratio between speed and real speed
+            </summary>
+        </member>
+        <member name="P:StroMoHab_TT_Server.Treadmill.TreadmillCalibrationForm.Speed">
+            <summary>
+            The speed of the treadmill
+            </summary>
+        </member>
+        <member name="T:StroMoHab_TT_Server.MotionCapture.VirtualMotionCaptureSubSession">
+            <summary>
+            Stores a motion capture sub session - the data collected between the treadmill starting and stopping
+            </summary>
+        </member>
+        <member name="F:StroMoHab_TT_Server.MotionCapture.VirtualMotionCaptureSubSession._virtualMotionCaptureFrameList">
+            <summary>
+            The list of frames
+            </summary>
+        </member>
+        <member name="F:StroMoHab_TT_Server.MotionCapture.VirtualMotionCaptureSubSession._currentFrame">
+            <summary>
+            The current playback frame number
+            </summary>
+        </member>
+        <member name="F:StroMoHab_TT_Server.MotionCapture.VirtualMotionCaptureSubSession._sessionStartTime">
+            <summary>
+            The date and time at the start of the session
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.VirtualMotionCaptureSubSession.AddFrame(StroMoHab_TT_Server.MotionCapture.VirtualMotionCaptureFrame)">
+            <summary>
+            Adds a frame of data
+            </summary>
+            <param name="frame"></param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.VirtualMotionCaptureSubSession.GetNextFrame">
+            <summary>
+            Returns the next frame of data
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.VirtualMotionCaptureSubSession.ResetSubSession">
+            <summary>
+            Starts playback from the begining
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.VirtualMotionCaptureSubSession.SessionSize">
+            <summary>
+            Gets the number of frames
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:StroMoHab_TT_Server.MotionCapture.VirtualMotionCaptureController">
+            <summary>
+            Controlls recording and playing back motion capture data
+            
+            Record mode works by listening for Treadmill/Marker/Trackable events and saving them
+            Playback work by injecting the data into callback methods inside MotionCapture which then send out the data
+            as if it had just been collected from the API
+            
+            
+            
+            IMPORTANT: When calling OpenMotionCaptureSubSession with a DateTime - you must check that it is valid and that
+            the data file is stored on disk in the correct location. To do this use the following code: 
+            <code>
+                if(System.IO.File.Exists(VirtualMotionCaptureController.BuildSubSessionFileName(dateTime)))
+                {
+                    VirtualMotionCaptureController.OpenMotionCaptureSubSession(dateTime);
+                }
+                else
+                {
+                    ...
+                    do something when file doesn't exist
+                    ...
+                }
+            </code>
+            
+            Call OpenMotionCaptureSubSession(VALID DateTime) and then MotionCaptureDataPlayback(true) to playback
+            as well as setting Communication.OptitrackCommandParser_Server.VirtualMotionCaputrePlayback = true
+            
+            or
+            
+            MotionCaptureDataRecord(true) to record as well as setting
+            Communication.OptitrackCommandParser_Server.VirtualMotionCaputrePlayback = false;
+            
+            
+            CommandParser must be informed of the current mode to ensure that the update timer gets MC data from the correct
+            motion capture controler (MotionCapture or VirtualMotionCaptureController)
+            
+            </summary>
+        </member>
+        <member name="F:StroMoHab_TT_Server.MotionCapture.VirtualMotionCaptureController._recordingSessionStarted">
+            <summary>
+            Represents where or not a recording session is currently running
+            </summary>
+        </member>
+        <member name="F:StroMoHab_TT_Server.MotionCapture.VirtualMotionCaptureController._currentMarkerList">
+            <summary>
+            Stores the current marker list
+            </summary>
+        </member>
+        <member name="F:StroMoHab_TT_Server.MotionCapture.VirtualMotionCaptureController._currentTrackableList">
+            <summary>
+            Stores the current trackable list
+            </summary>
+        </member>
+        <member name="F:StroMoHab_TT_Server.MotionCapture.VirtualMotionCaptureController._currentMarkerTimeStamp">
+            <summary>
+            Stores the time stamp for the current marker list
+            </summary>
+        </member>
+        <member name="F:StroMoHab_TT_Server.MotionCapture.VirtualMotionCaptureController._currentTrackableTimeStamp">
+            <summary>
+            Stores the time stamp for the current trackable list
+            </summary>
+        </member>
+        <member name="F:StroMoHab_TT_Server.MotionCapture.VirtualMotionCaptureController._currentSubSession">
+            <summary>
+            Stores the current sub session
+            </summary>
+        </member>
+        <member name="F:StroMoHab_TT_Server.MotionCapture.VirtualMotionCaptureController._currentFrame">
+            <summary>
+            Stores the current frame
+            </summary>
+        </member>
+        <member name="F:StroMoHab_TT_Server.MotionCapture.VirtualMotionCaptureController._subSessionStartTime">
+            <summary>
+            Stores the current sub session start time
+            </summary>
+        </member>
+        <member name="F:StroMoHab_TT_Server.MotionCapture.VirtualMotionCaptureController._subSessionEndTime">
+            <summary>
+            Stores the current sub session end time
+            </summary>
+        </member>
+        <member name="F:StroMoHab_TT_Server.MotionCapture.VirtualMotionCaptureController._lastSpeed">
+            <summary>
+            stores the speed before playback was paused
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.VirtualMotionCaptureController.MotionCaptureDataRecord(System.Boolean)">
+            <summary>
+            Turns on and off recording motion capture data
+            </summary>
+            <param name="record"></param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.VirtualMotionCaptureController.MotionCaptureDataPlayback(System.Boolean)">
+            <summary>
+            Turns on or off playing back motion capture data
+            You must call OpenMotionCaptureSubSession first
+            </summary>
+            <param name="playback"></param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.VirtualMotionCaptureController.OpenMotionCaptureSubSession(System.DateTime)">
+            <summary>
+            Opens a sub session using its DateTime value.
+            </summary>
+            <param name="subSession"></param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.VirtualMotionCaptureController.UpdateCoordinates">
+            <summary>
+            Sends the virtual motion capture data to the motion capture controller
+            and sends out any treadmill speed updates
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.VirtualMotionCaptureController.GetNextFrame">
+            <summary>
+            Gets the next frame from the database
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.VirtualMotionCaptureController.TreadmillSpeedChanged(System.Single@)">
+            <summary>
+            Checks the database to see if the treadmill speed changed this frame
+            </summary>
+            <param name="newSpeed"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.VirtualMotionCaptureController.RecordedSubSessionStart(System.Single)">
+            <summary>
+            Starts recording a new sub session
+            </summary>
+            <param name="_treadmillSpeed">The starting speed</param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.VirtualMotionCaptureController.SaveTreadmillSpeedChange(System.Single)">
+            <summary>
+            Saves a treadmill speed change
+            </summary>
+            <param name="newSpeed"></param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.VirtualMotionCaptureController.SaveFrame">
+            <summary>
+            Saves one frame of data
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.VirtualMotionCaptureController.RecordedSessionEnd">
+            <summary>
+            Ends recording the current session
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.VirtualMotionCaptureController.SaveSubSession(System.DateTime)">
+            <summary>
+            Saves the current sub session to the database
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.VirtualMotionCaptureController.OpenSubSession(System.DateTime)">
+            <summary>
+            Opens a sub session from the database
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.VirtualMotionCaptureController.BuildSubSessionFileName(System.DateTime)">
+            <summary>
+            Turns the session start time into the file name used to store the data
+            </summary>
+            <param name="sessionStartTime">Session start time</param>
+            <returns>File name</returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.VirtualMotionCaptureController.TreadmillController_TransmitSpeedEvent(System.Single)">
+            <summary>
+            Responds to the updated treadmill speed
+            </summary>
+            <param name="newSpeed"></param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.VirtualMotionCaptureController.MotionCaptureController_TrackableListAvaliable(System.Collections.Generic.List{StroMoHab_Objects.Objects.Trackable},System.Int64)">
+            <summary>
+            Saves the new trackable data
+            </summary>
+            <param name="trackableList"></param>
+            <param name="timeStamp"></param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.VirtualMotionCaptureController.MotionCaptureController_MarkerListAvaliable(System.Collections.Generic.List{StroMoHab_Objects.Objects.Marker},System.Int64)">
+            <summary>
+            Saves the new marker data
+            </summary>
+            <param name="markerList"></param>
+            <param name="timeStamp"></param>
+        </member>
+        <member name="T:StroMoHab_TT_Server.Forms.GUI">
+            <summary>
+            GUI
+            </summary>
+        </member>
+        <member name="F:StroMoHab_TT_Server.Forms.GUI.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Forms.GUI.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Forms.GUI.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Forms.GUI.#ctor">
+            <summary>
+            GUI
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Forms.GUI.DetectTreadmill">
+            <summary>
+            Gets a list of all the avaliable Serial Ports
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Forms.GUI.comboBoxCOMPort_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Changes the selected COM Port
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Forms.GUI.buttonRestartTM_Click(System.Object,System.EventArgs)">
+            <summary>
+            Redetects avaliable COM ports
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Forms.GUI.buttonRestartMC_Click(System.Object,System.EventArgs)">
+            <summary>
+            Restarts the Motion Capture API
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Forms.GUI.checkBox1_CheckStateChanged(System.Object,System.EventArgs)">
+            <summary>
+            Turns treadmill speed detection on and off
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Forms.GUI.buttonCalibrateTreadmill_Click(System.Object,System.EventArgs)">
+            <summary>
+            Calibrates the treadmill speed detection 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Forms.GUI.UpdateGUIStatus(System.Object,System.EventArgs)">
+            <summary>
+            Updates the GUI Status labels
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Forms.GUI.guiHider_Tick(System.Object,System.EventArgs)">
+            <summary>
+            Hides the gui and displays the notification icon BalloonTip
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:StroMoHab_TT_Server.Communication.OptitrackCommandParser_Server">
+            <summary>
+            OptitrackCommandParser_Server is responsable for sending commands to MotionCapture
+            It does so using the handleCommand method which is called by the TCPServer with new commands to issue
+            Aditionally it has a timer which calls MotionCapture.UpdateCoordinates every 10 ms again through handleCommand
+            The reson for this is handleCommand locks itself while executing preventing more than one command at once
+            to be passed to MotionCapture. This is required because Natural Points API is unmanaged
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Communication.OptitrackCommandParser_Server.updateTimer_Elapsed(System.Object,System.Timers.ElapsedEventArgs)">
+            <summary>
+            updateTimer event. Calls handleCommand with the correct inputs so that it updates the coordinates
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Communication.OptitrackCommandParser_Server.ShowMessageBox">
+            <summary>
+            Shows a message box when there is a problem
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Communication.OptitrackCommandParser_Server.MotionCaptureStart">
+            <summary>
+            Starts the Motion Capture Engine
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Communication.OptitrackCommandParser_Server.MotionCaptureStop">
+            <summary>
+            Stops the Motion Capture Engine
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Communication.OptitrackCommandParser_Server.FinalShutdown">
+            <summary>
+            Shuts down the api and drivers so that the program can exit
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Communication.OptitrackCommandParser_Server.StartUpdateTimer">
+            <summary>
+            Starts the timer to update camera data every 10 ms
+            On each update an event will be fired once the data has been processed
+            </summary>
+            <returns name="errorCode"></returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Communication.OptitrackCommandParser_Server.StopUpdateTimer">
+            <summary>
+            Stops the timer which updates the camera data
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Communication.OptitrackCommandParser_Server.handleCommand(System.Byte[])">
+            <summary>
+            Converts byte to command and then executes command
+            </summary>
+            <param name="receivedCommand"></param>
+        </member>
+        <member name="E:StroMoHab_TT_Server.Communication.OptitrackCommandParser_Server.camerasStartedEvent">
+            <summary>
+            Triggered when cameras are started
+            </summary>
+        </member>
+        <member name="P:StroMoHab_TT_Server.Communication.OptitrackCommandParser_Server.StartupLog">
+            <summary>
+            A log detailing any problems with startup
+            </summary>
+        </member>
+        <member name="P:StroMoHab_TT_Server.Communication.OptitrackCommandParser_Server.VirtualMotionCaputrePlayback">
+            <summary>
+            When set to TRUE - VirtualMotionCaptureController.UpdateCoordinates will be called (Playback mode)
+            When set to FALSE - MotionCapture.UpdateCoordinates will be called (Live or Record mode)
+            </summary>
+        </member>
+        <member name="T:StroMoHab_TT_Server.Communication.OptitrackCommandParser_Server.CamerasStartedHandler">
+            <summary>
+            Handles event triggered when cameras are started.
+            </summary>
+        </member>
+        <member name="T:StroMoHab_TT_Server.Communication.OptitrackCommandParser_Server.ToggleFeetCommandRecievedHandler">
+            <summary>
+            Handles event triggered when toggle feet commmand is received.
+            </summary>
+        </member>
+        <member name="T:StroMoHab_TT_Server.DataProcessing.JointProcessor">
+            <summary>
+            JointProcessor will turn a joint definition file and a list of currently tracked rigid bodys
+            into a list of joints. To start call LoadJointDefintion(), then call UpdateJoints with a new
+            list of Trackables when required, when done an event is fired (JointListAvaliable) containing
+            the new joint list
+            
+            Note: The JointList that JointProcessor Maintains will always contain all loaded joints, even if
+            they aren't tracked, to get those that are currently visiable, check the .Exists property
+            </summary>
+             <author>Will Lunniss</author>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataProcessing.JointProcessor.LoadJointDefinition">
+            <summary>
+            Loads in the joint definitions from an xml based file joints.xml (Returns 0=Success / -1= Failed to find file)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataProcessing.JointProcessor.LoadJointDefinition(System.String)">
+            <summary>
+            Loads in the joint definitions from an xml based file (Returns 0=Success / -1= Failed to find file)
+            </summary>
+            <param name="file">The file containing the joint definitions</param>
+            <returns></returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataProcessing.JointProcessor.UpdateJoints(System.Collections.Generic.List{StroMoHab_Objects.Objects.Trackable})">
+            <summary>
+            Based on the given the current rigid body list, it Updates the avaliable joints.
+            When done an event is fired (JointListAvaliable) containing the updated JointList
+            </summary>
+            <param name="trackableList">The trackable list</param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataProcessing.JointProcessor.ResetCoRCalculations">
+            <summary>
+            Sets a flag to clear the CoR data at the start of the next update
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataProcessing.JointProcessor.ClearCoRData">
+            <summary>
+            Clears the CoR data and resets the flag
+            </summary>
+        </member>
+        <member name="E:StroMoHab_TT_Server.DataProcessing.JointProcessor.JointListAvaliable">
+            <summary>
+            JointListAvaliableEvent containing the update JointList
+            </summary>
+        </member>
+        <member name="T:StroMoHab_TT_Server.DataProcessing.JointProcessor.JointListAvaliableEventHandler">
+            <summary>
+            Delegate for the JointListAvaliableEvent
+            </summary>
+            <param name="jointList">The updated JointList</param>
+        </member>
+        <member name="T:StroMoHab_TT_Server.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_TT_Server.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_TT_Server.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:StroMoHab_TT_Server.MotionCapture.MotionCaptureController">
+            <summary>
+            Provides Methods to control and interact with the Tracking Tools API
+            Call Initialize, LoadCalibration, LoadTrackable then Start
+            OR Call Initialize, LoadCalibration and LoadTrackable, then manage a Timer that calls UpdateCoordinates()
+            Once that is done, subscribe to the events needed
+            </summary>
+            <author>Will Lunniss</author>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.MotionCaptureController.VirtualMotionCaptureControllerCallbackOnMarkerListAvaliable(System.Collections.Generic.List{StroMoHab_Objects.Objects.Marker},System.Int64)">
+            <summary>
+            Method to allow the virtual motion capture controller to inject recorded motion capture data into the motion capture controller
+            </summary>
+            <param name="markerList">The marker list</param>
+            <param name="timeStamp">The time stamp</param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.MotionCaptureController.VirtualMotionCaptureControllerCallbackOnTrackableListAvaliable(System.Collections.Generic.List{StroMoHab_Objects.Objects.Trackable},System.Int64)">
+            <summary>
+            Method to allow the virtual motion capture controller to inject recorded motion capture data into the motion capture controller
+            </summary>
+            <param name="trackableList">The trackable list</param>
+            <param name="timeStamp">The time stamp</param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.MotionCaptureController.Initialize">
+            <summary>
+            Starts up the Tracking Tools API
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.MotionCaptureController.Shutdown">
+            <summary>
+            Shuts down the Tracking Tools API - but doesn't shutdown the driver thread
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.MotionCaptureController.FinalShutdown">
+            <summary>
+            Shuts down the API and driver threads - the application must now be re-started
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.MotionCaptureController.Start">
+            <summary>
+            Starts the timer to update camera data every 10 ms
+            On each update an event will be fired once the data has been processed
+            </summary>
+            <returns name="errorCode"></returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.MotionCaptureController.Stop">
+            <summary>
+            Stops the timer which updates the camera data
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.MotionCaptureController.GetErrorMessage(System.Int32)">
+            <summary>
+            Turns an error code of type int into a string containing the error message
+            </summary>
+            <param name="errorCode"></param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.MotionCaptureController.LoadCalibration(System.String)">
+            <summary>
+            Loads the calibration file defined in CalibrationPath
+            </summary>
+            <param name="CalibrationPath">The .cal file Path</param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.MotionCaptureController.LoadTrackables(System.String)">
+            <summary>
+            Loads the Trackables Definition file defined in TrackablePath
+            </summary>
+            <param name="TrackablePath">The .tra file path</param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.MotionCaptureController.LoadProject(System.String)">
+            <summary>
+            Loads the Tracking Tools Project (Calibration + Rigid Bodys etc)
+            Not very usefull as they can't be transfered between each new development build
+            </summary>
+            <param name="ProjectPath"></param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.MotionCaptureController.UpdateCameraList">
+            <summary>
+            Updates the camera list
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.MotionCaptureController.UpdateCoordinates(System.Boolean,System.Boolean)">
+            <summary>
+            Updates the list of markers with lastest marker coordinates
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.MotionCaptureController.GetCameraList">
+            <summary>
+            Returns a list of OptiTrackCamera containing the full details of the cameras
+            Use GetConnectedCameraDetails for a simple string containing the number of cameras and their serial numbers
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.MotionCaptureController.GetMarkerList">
+            <summary>
+            Returns a list of Markers that are both single markers and part of trackables
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.MotionCaptureController.GetTrackableList">
+            <summary>
+            Returns a list of Trackables
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.MotionCaptureController.GetConnectedCameraDetails">
+            <summary>
+            Provides a string containg the number of cameras and their serial numbers
+            Use GetCameraList for full details of the cameras
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.MotionCaptureController.GetConnectedCameraCount">
+            <summary>
+            Returns the number of connected cameras
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="E:StroMoHab_TT_Server.MotionCapture.MotionCaptureController.MarkerListAvaliable">
+            <summary>
+            MarkerListAvaliable Event
+            </summary>
+        </member>
+        <member name="E:StroMoHab_TT_Server.MotionCapture.MotionCaptureController.TrackableListAvaliable">
+            <summary>
+            TrackableListAvaliable Event
+            </summary>
+        </member>
+        <member name="P:StroMoHab_TT_Server.MotionCapture.MotionCaptureController.UpdateTimerRunning">
+            <summary>
+            UpdateTimerRunning - True if the Update Timer is running, this implies that the API is also running correctly
+            Note this property is read-only
+            </summary>
+        </member>
+        <member name="P:StroMoHab_TT_Server.MotionCapture.MotionCaptureController.APIRunning">
+            <summary>
+            APIRunning - True if the API is running, false if not 
+            Note this property is read-only
+            </summary>
+        </member>
+        <member name="P:StroMoHab_TT_Server.MotionCapture.MotionCaptureController.ProcessMarkers">
+            <summary>
+            ProcessMarkers - Set to true to process markers when an update event occurs
+            and false not to (defult is true)
+            </summary>
+        </member>
+        <member name="P:StroMoHab_TT_Server.MotionCapture.MotionCaptureController.ProcessTrackables">
+            <summary>
+            ProcessTrackables - Set to true to process trackables when an update event occurs
+            and false not to (defult is true)
+            </summary>
+        </member>
+        <member name="T:StroMoHab_TT_Server.MotionCapture.MotionCaptureController.MarkerListAvaliableEventHandler">
+            <summary>
+            Delegate for MarkerListAvaliable Event
+            </summary>
+            <param name="markerList">The Updated Marker List</param>
+            <param name="timeStamp">The Time that the marker data was collected</param>
+        </member>
+        <member name="T:StroMoHab_TT_Server.MotionCapture.MotionCaptureController.TrackableListAvaliableEventHandler">
+            <summary>
+            Delegate for TrackableListAvaliable Event
+            </summary>
+            <param name="trackableList">The Updated Trackable List</param>
+            <param name="timeStamp">The Time that the trackable data was collected</param>
+        </member>
+        <member name="T:StroMoHab_TT_Server.DataProcessing.FilteredMarkerProcessor">
+            <summary>
+            Takes a list of markers and a list of trackables and updates FilteredMarkerList.listOfMarkers with just
+            the markers that aren't part of the trackables
+            </summary>
+            <author>Will Lunniss</author>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataProcessing.FilteredMarkerProcessor.UpdatedFilteredMarkers(System.Collections.Generic.List{StroMoHab_Objects.Objects.Marker},System.Collections.Generic.List{StroMoHab_Objects.Objects.Trackable})">
+            <summary>
+            Filters out all of the markers that are part of a trackable and leaves just single markers
+            </summary>
+        </member>
+        <member name="E:StroMoHab_TT_Server.DataProcessing.FilteredMarkerProcessor.FilteredMarkerListAvaliable">
+            <summary>
+            FilteredMarkerListAvaliableEvent
+            </summary>
+        </member>
+        <member name="T:StroMoHab_TT_Server.DataProcessing.FilteredMarkerProcessor.FilteredMarkerListAvaliableEventHandler">
+            <summary>
+            Delegate for the FilteredMarkerListAvaliableEvent
+            </summary>
+        </member>
+        <member name="T:StroMoHab_TT_Server.MotionCapture.TrackingTools">
+            <summary>
+            TrackingTools contains the methods needed to use the unmanged code inside NPTrackingTools.dll
+            It should only be used through MotionCapture.cs or a similar class which provieds the needed protection
+            to only allow method calls once the API is running etc (otherwise the program will access invalid memory and crash)
+            </summary>
+            <auther>Will Lunniss</auther>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.TrackingTools.Initialize">
+            <summary>
+            Initialises the Tracking Tools API
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.TrackingTools.Shutdown">
+            <summary>
+            Shuts down the Tracking Tools API
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.TrackingTools.FinalShutdown">
+            <summary>
+            Shuts down the camera drivers and unloads them from memory. The application
+            must now be restarted
+            </summary>
+            <returns>The result</returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.TrackingTools.LoadCalibration(System.String)">
+            <summary>
+            Loads in a calibration file
+            </summary>
+            <param name="file">The calibration file</param>
+            <returns>The result</returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.TrackingTools.LoadTrackables(System.String)">
+            <summary>
+            Loads in a trackable definition file
+            </summary>
+            <param name="file">The trackable file</param>
+            <returns>The result</returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.TrackingTools.LoadProject(System.String)">
+            <summary>
+            Loads in a project file
+            </summary>
+            <param name="file">The project file</param>
+            <returns>The result</returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.TrackingTools.UpdateAll">
+            <summary>
+            Updates upto the current frame
+            </summary>
+            <returns>The result</returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.TrackingTools.UpdateSingle">
+            <summary>
+            Updates the next frame in the queue
+            </summary>
+            <returns>The result</returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.TrackingTools.FrameMarkerCount">
+            <summary>
+            Gets the number of markers in the current frame
+            </summary>
+            <returns>The result</returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.TrackingTools.FrameMarkerX(System.Int32)">
+            <summary>
+            Gets the X position for the marker
+            </summary>
+            <param name="index">The marker index</param>
+            <returns>The result</returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.TrackingTools.FrameMarkerY(System.Int32)">
+            <summary>
+            Gets the Y position for the marker
+            </summary>
+            <param name="index">The marker index</param>
+            <returns>The result</returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.TrackingTools.FrameMarkerZ(System.Int32)">
+            <summary>
+            Gets the Z position for the marker
+            </summary>
+            <param name="index">The marker index</param>
+            <returns>The result</returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.TrackingTools.IsTrackableTracked(System.Int32)">
+            <summary>
+            Checks to see if the trackable is currently being tracked
+            </summary>
+            <param name="index">The trackable index</param>
+            <returns>The result</returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.TrackingTools.GetTrackableLocation(System.Int32)">
+            <summary>
+            Returns the Trackable for the index specified
+            </summary>
+            <param name="TrackableIndex">The index of the trackable</param>
+            <returns>The result</returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.TrackingTools.ClearTrackableList">
+            <summary>
+            Clears the list of trackables
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.TrackingTools.TrackableCount">
+            <summary>
+            Gets the number of trackables
+            </summary>
+            <returns>The result</returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.TrackingTools.TrackableID(System.Int32)">
+            <summary>
+            Gets the ID number of the trackable
+            </summary>
+            <param name="index">The trackable index</param>
+            <returns>The result</returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.TrackingTools.SetTrackableID(System.Int32,System.Int32)">
+            <summary>
+            Sets the ID number of the trackable
+            </summary>
+            <param name="index">The trackable index</param>
+            <param name="ID">The result</param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.TrackingTools.TT_TrackableName(System.Int32)">
+            <summary>
+            Gets the name of the trackable
+            </summary>
+            <param name="Index">The trackable index</param>
+            <returns>The result</returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.TrackingTools.SetTrackableEnabled(System.Int32,System.Boolean)">
+            <summary>
+            Enables/Dissables the trackable
+            </summary>
+            <param name="index">The trackable index</param>
+            <param name="enabled">Enable/Dissable</param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.TrackingTools.TrackableEnabled(System.Int32)">
+            <summary>
+            Checks to see if the trackable is enabled
+            </summary>
+            <param name="index">The trackable index</param>
+            <returns>The result</returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.TrackingTools.TrackableMarkerCount(System.Int32)">
+            <summary>
+            Gets the number of markers that make up the trackable
+            </summary>
+            <param name="index">The trackable index</param>
+            <returns>The result</returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.TrackingTools.TrackableMarker(System.Int32,System.Int32,System.Single@,System.Single@,System.Single@)">
+            <summary>
+            Gets the location of the Marker specified by the index in the Trackable specified by the index
+            </summary>
+            <param name="TrackableIndex">The trackable index</param>
+            <param name="MarkerIndex">The marker index</param>
+            <param name="x">X position</param>
+            <param name="y">Y position</param>
+            <param name="z">Z Position</param>
+            <returns></returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.TrackingTools.TrackableMarker(System.Int32,System.Int32)">
+            <summary>
+            Gets the marker that makes up the trackable
+            </summary>
+            <param name="TrackableIndex">The trackable index</param>
+            <param name="MarkerIndex">The marker index</param>
+            <returns>The marker</returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.TrackingTools.CameraCount">
+            <summary>
+            Gets the number of connected cameras
+            </summary>
+            <returns>The result</returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.TrackingTools.CameraLocationX(System.Int32)">
+            <summary>
+            Gets the X location of the camera
+            </summary>
+            <param name="index">The camera index</param>
+            <returns>The result</returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.TrackingTools.CameraLocationY(System.Int32)">
+            <summary>
+            Gets the Y location of the camera
+            </summary>
+            <param name="index">The camera index</param>
+            <returns>The result</returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.TrackingTools.CameraLocationZ(System.Int32)">
+            <summary>
+            Gets the Z location of the camera
+            </summary>
+            <param name="index">The camera index</param>
+            <returns>The result</returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.TrackingTools.CameraOrientation(System.Int32,System.Int32)">
+            <summary>
+            Gets the orientation of the camera
+            </summary>
+            <param name="camera">The camera index</param>
+            <param name="index">The index of the orientation matrix</param>
+            <returns>The result</returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.TrackingTools.CameraName(System.Int32)">
+            <summary>
+            Gets the name of the camera
+            </summary>
+            <param name="index">The camera index</param>
+            <returns>The result</returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.TrackingTools.CameraMarkerCount(System.Int32)">
+            <summary>
+            Gets the number of markers that the camera can see
+            </summary>
+            <param name="index">The camera index</param>
+            <returns>The result</returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.TrackingTools.GetResultString(System.Int32)">
+            <summary>
+            Turns a result code into a string
+            </summary>
+            <param name="result">The result code</param>
+            <returns>The result string</returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.MotionCapture.TrackingTools.CheckDLLExists">
+            <summary>
+            Checks that NPTrackingTools.dll exists
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:StroMoHab_TT_Server.DataStorage.PatientDataManager">
+            <summary>
+            Manages Patients, Sessions and recording/playback
+            
+            This class manages the patient data that is stored on disk,
+            sets up and controls VirtualMotionCaptureController and puts
+            CommandParser into the correct mode to either playback or record
+            motion capture data
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataStorage.PatientDataManager.RegisterEvents">
+            <summary>
+            Registers all of the events stored in the remote objected that are fired by the client
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataStorage.PatientDataManager.Patient_Remote_DataManager_DeleteSessionRequestedByClient(System.Int32,System.Int32)">
+            <summary>
+            Deletes a Sessions MC Data
+            </summary>
+            <param name="patientIndex"></param>
+            <param name="sessionIndex"></param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataStorage.PatientDataManager.Patient_Remote_DataManager_DeletePatientRequestedByClient(System.Int32)">
+            <summary>
+            Deletes a patient
+            </summary>
+            <param name="patientIndex"></param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataStorage.PatientDataManager.Patient_Remote_DataManager_UpdatePatientRequestedByClient(StroMoHab_Objects.Objects.Patient,System.Int32)">
+            <summary>
+            Updates a previously saved patient and deletes the old one if the file name has changed
+            </summary>
+            <param name="patient">The patient data</param>
+            <param name="patientIndex">The patients current location</param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataStorage.PatientDataManager.Patient_Remote_DataManager_UpdatedPatientListRequestedByClient">
+            <summary>
+            Deals with the request for an updated patient list
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataStorage.PatientDataManager.Patient_Remote_DataManager_NewPatientSaveRequestedByClient(StroMoHab_Objects.Objects.Patient)">
+            <summary>
+            Saves a new patient
+            </summary>
+            <param name="patient">The new patient</param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataStorage.PatientDataManager.Patient_Remote_DataManager_PrepareToRecordNewSessionRequestedByClient(System.Int32,System.Int32)">
+            <summary>
+            Gets ready to record a new session - must be called before Patient_Remote_DataManager_ChangeRecordStatusRequestedByClient()
+            </summary>
+            <param name="patientIndex"></param>
+            <param name="sessionIndex"></param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataStorage.PatientDataManager.Patient_Remote_DataManager_ChangeRecordStatusRequestedByClient(System.Boolean)">
+            <summary>
+            Starts or stops recording. Must call Patient_Remote_DataManager_PrepareToRecordNewSessionRequestedByClient first
+            </summary>
+            <param name="active"></param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataStorage.PatientDataManager.Patient_Remote_DataManager_OpenSessionForPlaybackRequestedByClient(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Gets ready to play back a session
+            </summary>
+            <param name="patientIndex"></param>
+            <param name="sessionIndex"></param>
+            <param name="subSessionIndex"></param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataStorage.PatientDataManager.Patient_Remote_DataManager_ChangePlaybackStatusRequestedByClient(System.Boolean)">
+            <summary>
+            Starts or stops playback - must call Patient_Remote_DataManager_OpenSessionForPlaybackRequestedByClient() first
+            </summary>
+            <param name="active"></param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataStorage.PatientDataManager.VirtualMotionCaptureController_VirtualMotionCaptureSubSessionPlaybackEnded(System.DateTime)">
+            <summary>
+            Fired when playback ends
+            </summary>
+            <param name="subSessionStartTime"></param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataStorage.PatientDataManager.StartPlayback">
+            <summary>
+            Starts playback
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataStorage.PatientDataManager.StartRecording">
+            <summary>
+            Starts recording
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataStorage.PatientDataManager.StopRecording">
+            <summary>
+            Stops recording
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataStorage.PatientDataManager.VirtualMotionCaptureController_VirtualMotionCaptureSubSessionRecorded(System.DateTime,System.DateTime)">
+            <summary>
+            Called everytime a sub session is recorded
+            </summary>
+            <param name="subSessionStartTime"></param>
+            <param name="subSessionEndTime"></param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataStorage.PatientDataManager.DeleteMotionCaptureDataForSession(StroMoHab_Objects.Objects.Session)">
+            <summary>
+            Deletes the MC data associated with the given session
+            </summary>
+            <param name="session"></param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataStorage.PatientDataManager.LoadInPatientData">
+            <summary>
+            Loads in the patient data from the patient files
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataStorage.PatientDataManager.ReadListOfPatientFiles">
+            <summary>
+            Builds a list of all the avaliable patient files
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataStorage.PatientDataManager.GetFullFileName(System.String)">
+            <summary>
+            Turns the file name into a full file name including path and extension
+            </summary>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataStorage.PatientDataManager.OpenPatientFile(System.String)">
+            <summary>
+            Opens a specific patient file
+            </summary>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataStorage.PatientDataManager.SavePatientFile(StroMoHab_Objects.Objects.Patient)">
+            <summary>
+            Saves a patient file
+            </summary>
+            <param name="patient"></param>
+            <returns></returns>
+        </member>
+        <member name="T:StroMoHab_Matrix.RotationMatrix">
+            <summary>
+            A collection of classes and methods for interfacing with Math.NET Iridium (Numerics) 2008 August Release, Iteration 16 (v2008.8.16.470)
+            http://www.mathdotnet.com/downloads/Default.aspx
+            </summary>
+            <auther>Will Lunniss</auther>
+        </member>
+        <member name="F:StroMoHab_Matrix.RotationMatrix.rotationMatrixX">
+            <summary>
+            The X axis rotation matrix
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Matrix.RotationMatrix.rotationMatrixY">
+            <summary>
+            The Y axis rotation matrix
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Matrix.RotationMatrix.rotationMatrixZ">
+            <summary>
+            The Z axis rotation matrix
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Matrix.RotationMatrix.#ctor(System.Double,System.Double,System.Double)">
+            <summary>
+            Generates the 3 rotation matricies for use with Operations.Rotate()
+            </summary>
+            <param name="rotationValueX">Rotation around the X Axis</param>
+            <param name="rotationValueY">Rotation around the Y Axis</param>
+            <param name="rotationValueZ">Rotation around the Z Axis</param>
+        </member>
+        <member name="T:StroMoHab_Matrix.PointMatrix">
+            <summary>
+            Represents a single point in 3D space
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Matrix.PointMatrix.pointMatrix">
+            <summary>
+            The point matrix
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Matrix.PointMatrix.#ctor(System.Double,System.Double,System.Double)">
+            <summary>
+            Generates a point matrix (1x3 Vector) from the given inputs
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="z"></param>
+        </member>
+        <member name="M:StroMoHab_Matrix.PointMatrix.#ctor">
+            <summary>
+            Generates an empty point matrix (1x3 Vector)
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Matrix.PointMatrix.XCoordinate">
+            <summary>
+            The X coordinate
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Matrix.PointMatrix.YCoordinate">
+            <summary>
+            The Y coordinate
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Matrix.PointMatrix.ZCoordinate">
+            <summary>
+            The Z coordinate
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Matrix.Operations">
+            <summary>
+            Provides a number of matrix based operations
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Matrix.Operations.Rotate(StroMoHab_Matrix.PointMatrix,StroMoHab_Matrix.RotationMatrix)">
+            <summary>
+            Rotates the given point by the given rotation matrix and returns a point matrix
+            </summary>
+            <param name="pointMatrix">The 1x3 point matrix</param>
+            <param name="rotationMatrix">The 3 3x3 rotation matricies</param>
+            <returns>The new 1x3 point matrix</returns>
+        </member>
+        <member name="M:StroMoHab_Matrix.Operations.Transpose(MathNet.Numerics.LinearAlgebra.Matrix)">
+            <summary>
+            Transposes a square Matrix without overiding it
+            </summary>
+            <param name="A"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StroMoHab_Matrix.Operations.BuildRotorFromQuaternionData(StroMoHab_Objects.Objects.Trackable)">
+            <summary>
+            Finds the Rotation matrix of a Trackable by using the Quaternion data
+            </summary>
+            <param name="Trackable"></param>
+            <returns></returns>
+        </member>
+        <member name="T:StroMoHab_TT_Server.MotionCapture.VirtualMotionCaptureFrame">
+            <summary>
+            Stores a single frame of Motion Capture data
+            </summary>
+            TODO: Add position to visualiser.
+        </member>
+        <member name="P:StroMoHab_TT_Server.MotionCapture.VirtualMotionCaptureFrame.MarkerList">
+            <summary>
+            The Marker Data
+            </summary>
+        </member>
+        <member name="P:StroMoHab_TT_Server.MotionCapture.VirtualMotionCaptureFrame.TrackableList">
+            <summary>
+            The Trackable Data
+            </summary>
+        </member>
+        <member name="P:StroMoHab_TT_Server.MotionCapture.VirtualMotionCaptureFrame.TimeStamp">
+            <summary>
+            The Time Stamp
+            </summary>
+        </member>
+        <member name="P:StroMoHab_TT_Server.MotionCapture.VirtualMotionCaptureFrame.TreadmillSpeed">
+            <summary>
+            The Treadmill Speed
+            </summary>
+        </member>
+        <member name="T:StroMoHab_TT_Server.Treadmill.MotionCaptureTreadmill">
+            <summary>
+            This virtual Treadmill controller is a way to detect the speed of the treadmill using motion capture
+            </summary>
+        </member>
+        <member name="F:StroMoHab_TT_Server.Treadmill.MotionCaptureTreadmill.minSpeed">
+            <summary>
+            Specifys the minimum speed that the treadmill can go
+            </summary>
+        </member>
+        <member name="F:StroMoHab_TT_Server.Treadmill.MotionCaptureTreadmill.maxSpeed">
+            <summary>
+            Specifys the maximum speed that the treadmill can go
+            </summary>
+        </member>
+        <member name="F:StroMoHab_TT_Server.Treadmill.MotionCaptureTreadmill.mpsToMPH">
+            <summary>
+            Conversion factor from m/s into MPH
+            </summary>
+        </member>
+        <member name="F:StroMoHab_TT_Server.Treadmill.MotionCaptureTreadmill.numberOfSpeedValues">
+            <summary>
+            Determins how many previous speeds to save and average out
+            </summary>
+        </member>
+        <member name="F:StroMoHab_TT_Server.Treadmill.MotionCaptureTreadmill.timeOut">
+            <summary>
+            The number of attempts to try and find the speed of the treadmill before assuming its stopped (1 attempt occurs every 10ms so 100 = 1 second)
+            </summary>
+        </member>
+        <member name="F:StroMoHab_TT_Server.Treadmill.MotionCaptureTreadmill.processTreadmillSpeed">
+            <summary>
+            Determins if the treadmill speed sound be detected
+            </summary>
+        </member>
+        <member name="F:StroMoHab_TT_Server.Treadmill.MotionCaptureTreadmill.speedChangeCounter">
+            <summary>
+            Counts how many times the speed has changed
+            </summary>
+        </member>
+        <member name="F:StroMoHab_TT_Server.Treadmill.MotionCaptureTreadmill.speed">
+            <summary>
+            The current speed (excluding the conversion into real world speed)
+            </summary>
+        </member>
+        <member name="F:StroMoHab_TT_Server.Treadmill.MotionCaptureTreadmill.realSpeed">
+            <summary>
+            The current speed including conversion
+            </summary>
+        </member>
+        <member name="F:StroMoHab_TT_Server.Treadmill.MotionCaptureTreadmill.oldSpeed">
+            <summary>
+            The previous speed
+            </summary>
+        </member>
+        <member name="F:StroMoHab_TT_Server.Treadmill.MotionCaptureTreadmill.treadmillToVisuliserConversionValue">
+            <summary>
+            Conversion from speed to real world speed of the treadmill
+            </summary>
+        </member>
+        <member name="F:StroMoHab_TT_Server.Treadmill.MotionCaptureTreadmill.treadmillMarkerXPos">
+            <summary>
+            The X position of the treadmill marers
+            </summary>
+        </member>
+        <member name="F:StroMoHab_TT_Server.Treadmill.MotionCaptureTreadmill.treadmillMarkerYPos">
+            <summary>
+            The Y position of the treadmill marers
+            </summary>
+        </member>
+        <member name="F:StroMoHab_TT_Server.Treadmill.MotionCaptureTreadmill.speedValues">
+            <summary>
+            Stores a number of previous speed values so that they can be averaged out
+            </summary>
+        </member>
+        <member name="F:StroMoHab_TT_Server.Treadmill.MotionCaptureTreadmill.speedValuesIndex">
+            <summary>
+            Indexes the array of previous speed values
+            </summary>
+        </member>
+        <member name="F:StroMoHab_TT_Server.Treadmill.MotionCaptureTreadmill.treadmillMarkerNumber">
+            <summary>
+            The marker number that is being used to calculate the treadmill speed
+            </summary>
+        </member>
+        <member name="F:StroMoHab_TT_Server.Treadmill.MotionCaptureTreadmill.failedAttempts">
+            <summary>
+            The number of failed attempts to find the speed of the treadmill
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Treadmill.MotionCaptureTreadmill.CalibrateTreadmill">
+            <summary>
+            Calibrates the treadmill speed detection variables
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Treadmill.MotionCaptureTreadmill.SaveTreadmillCalibration">
+            <summary>
+            Saves the treadmill calibration settings
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Treadmill.MotionCaptureTreadmill.LoadTreadmillCalibration">
+            <summary>
+            Loads the treadmill calibration settings
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Treadmill.MotionCaptureTreadmill.FindSpeed(System.Collections.Generic.List{StroMoHab_Objects.Objects.Marker})">
+            <summary>
+             Trys to find the treadmill speed
+            </summary>
+            <param name="newMarkerList"></param>
+            <returns>Returns the marker numbers that was used for speed detection or -1 if it wasn't found</returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Treadmill.MotionCaptureTreadmill.UpdateSpeed">
+            <summary>
+            Sends the updated speed to the TreadmillController
+            </summary>
+        </member>
+        <member name="P:StroMoHab_TT_Server.Treadmill.MotionCaptureTreadmill.DetectTreadmillSpeed">
+            <summary>
+            Gets or Sets the property to enable/dissable detecting the treadmill speed
+            </summary>
+        </member>
+        <member name="T:StroMoHab_TT_Server.DataStorage.TaskDataManager">
+            <summary>
+            Manages task data held on the server and makes it avaliable to the task designer via the Task_Remote_DataManager
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataStorage.TaskDataManager.RegisterEvents">
+            <summary>
+            Registers the events
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataStorage.TaskDataManager.GetCurrentTask">
+            <summary>
+            Returns the current task
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataStorage.TaskDataManager.SetCurrentTask(StroMoHab_Objects.Objects.Task)">
+            <summary>
+            Sets the current task
+            </summary>
+            <param name="task">The task</param>
+            <param name="readOnly">Is it a read only task</param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataStorage.TaskDataManager.SelectTaskFile(System.Int32)">
+            <summary>
+            Selects a task from the list of task files
+            </summary>
+            <param name="taskFileNameEntry"></param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataStorage.TaskDataManager.ReadListOfTaskFiles">
+            <summary>
+            Reads in the lsit of task files
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataStorage.TaskDataManager.OpenTaskFile(System.String)">
+            <summary>
+            Opens a specific task file
+            </summary>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataStorage.TaskDataManager.OpenTaskFileAsCurrentTask(System.String)">
+            <summary>
+            Opens a specific task file
+            </summary>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataStorage.TaskDataManager.SaveTaskFile(StroMoHab_Objects.Objects.Task)">
+            <summary>
+            Saves a task file to disk
+            </summary>
+            <param name="task"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataStorage.TaskDataManager.Remote_DataManager_TaskListRequestedByClient">
+            <summary>
+            When the client requests a list of tasks
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.DataStorage.TaskDataManager.Remote_DataManager_TaskSetByClient(System.Int32)">
+            <summary>
+            When the client requests that a task be set
+            </summary>
+            <param name="taskFileNameEntry"></param>
+        </member>
+        <member name="T:StroMoHab_TT_Server.Communication.TCPServer">
+            <summary>
+            TCPServer handels connections from the clients and passes incoming commands from them to OptitrackCommandParser_Server
+            it doesn't issue any commands to MotionCapture, but it does pass motion capture data to JointProcessor and FilteredMarkerProcessor
+            It listens to the events from MotionCapture,JointProcessor,FilteredMarkerProcessor,OptitrackCameraList,TreadmillController and 
+            transmits the required data over the TCP connection to connected clients
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Communication.TCPServer.#ctor">
+            <summary>
+            Creates a new thread that listens for clients
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Communication.TCPServer.serverIPMulticastTimer_Tick(System.Object,System.EventArgs)">
+            <summary>
+            Sets up and sends out a multicast message to alerlt client applications
+            of the servers IP address
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Communication.TCPServer.TransmitFiltered(StroMoHab_Objects.Objects.Marker)">
+            <summary>
+            Transmits a filtered marker to the current tcpClient.
+            </summary>
+            <param name="marker"></param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Communication.TCPServer.Transmit(StroMoHab_Objects.Objects.Marker)">
+            <summary>
+            Transmits a marker to the current tcpClient.
+            </summary>
+            <param name="marker"></param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Communication.TCPServer.Transmit(StroMoHab_Objects.Objects.Trackable)">
+            <summary>
+            Transmits a trackable to the current tcpClient.
+            </summary>
+            <param name="trackable"></param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Communication.TCPServer.Transmit(StroMoHab_Objects.Objects.Joint)">
+            <summary>
+            Transmits a joint to the current tcpClient.
+            </summary>
+            <param name="joint"></param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Communication.TCPServer.Transmit(StroMoHab_Objects.Objects.OptiTrackCamera)">
+            <summary>
+            Transmits a camera to the current tcpClient
+            </summary>
+            <param name="camera"></param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Communication.TCPServer.Transmit(System.Single)">
+            <summary>
+            Transmits the current speed to all tcpClients.
+            </summary>
+            <param name="speed"></param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Communication.TCPServer.Transmit(System.Char,System.Boolean)">
+            <summary>
+            Transmits a labelled flag to all tcpClients.
+            </summary>
+            <param name="type">type</param>
+            <param name="flag">flag</param>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Communication.TCPServer.ConnectionStatus">
+            <summary>
+            Gets the connection status of the server, e.g. waiting for connections or a client has connected
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Communication.TCPServer.Start">
+            <summary>
+            Starts the Motion Capture Engine
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Communication.TCPServer.Stop">
+            <summary>
+            Stops the Motion Capture Engine
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Communication.TCPServer.FinalShutdown">
+            <summary>
+            Shuts down the api and drivers so that the application can close
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Communication.TCPServer.Running">
+            <summary>
+            Returns true if the Motion Capture engine is running, and false if not
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Communication.TCPServer.CameraCount">
+            <summary>
+            Returns the number of connected cameras as an int
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Communication.TCPServer.StartupLog">
+            <summary>
+            Returns a log containing any errors during startup
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="E:StroMoHab_TT_Server.Communication.TCPServer.ServerListeningStartedEvent">
+            <summary>
+            Fired when server starts listening for clients.
+            </summary>
+        </member>
+        <member name="E:StroMoHab_TT_Server.Communication.TCPServer.ClientConnectionAcceptedEvent">
+            <summary>
+            Fired when a new client connection is established.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_TT_Server.Communication.TCPServer.TrackableCount">
+            <summary>
+            The number of trackables visiable
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:StroMoHab_TT_Server.CustomAssemblyInfo.AssemblyTrackingToolsVersion">
+            <summary>
+            Stores the version of Tracking Tools that this build is designed for
+            </summary>
+        </member>
+        <member name="M:StroMoHab_TT_Server.CustomAssemblyInfo.AssemblyTrackingToolsVersion.#ctor(System.String)">
+            <summary>
+            The version of Tracking Tools that this build is designed for
+            </summary>
+            <param name="version">The version number</param>
+        </member>
+        <member name="P:StroMoHab_TT_Server.CustomAssemblyInfo.AssemblyTrackingToolsVersion.TrackingToolsVersion">
+            <summary>
+            Gets the version of Tracking Tools that this build is designed for
+            </summary>
+        </member>
+    </members>
+</doc>

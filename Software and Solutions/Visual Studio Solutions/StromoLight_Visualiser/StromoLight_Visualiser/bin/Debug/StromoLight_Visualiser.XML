@@ -1,0 +1,275 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StromoLight_Visualiser</name>
+    </assembly>
+    <members>
+        <member name="T:StromoLight_Visualiser.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:StromoLight_Visualiser.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:StromoLight_Visualiser.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:StromoLight_Visualiser.Forms.Form_TaskDesigner_0">
+            <summary>
+            Main Task Designer Form
+            </summary>
+        </member>
+        <member name="M:StromoLight_Visualiser.Forms.Form_TaskDesigner_0.#ctor(System.IntPtr)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="F:StromoLight_Visualiser.Forms.Form_TaskDesigner_0.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:StromoLight_Visualiser.Forms.Form_TaskDesigner_0.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:StromoLight_Visualiser.Forms.Form_TaskDesigner_0.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="E:StromoLight_Visualiser.Forms.Form_TaskDesigner_0.CurrentDistanceChanged">
+            <summary>
+            Triggered when the distance is changed in the task designer
+            </summary>
+        </member>
+        <member name="T:StromoLight_Visualiser.Forms.Form_TaskDesigner_0.CurrentDistanceChangedHandler">
+            <summary>
+            Delegate for event "CurrentDistanceChanged"
+            </summary>
+            <param name="newDistance"></param>
+        </member>
+        <member name="M:StromoLight_Visualiser.Program.Main">
+            <summary>
+            Entry point of the program
+            </summary>
+        </member>
+        <member name="T:StromoLight_Visualiser.VideoTextureManager">
+            <summary>
+            Manages the loading and buffering of image data from disk into threadsafe memory.
+            </summary>
+        </member>
+        <member name="M:StromoLight_Visualiser.VideoTextureManager.#ctor(System.Collections.Generic.List{System.String})">
+            <summary>
+            Initialises an instance of StromoLight_Visualiser.VideoTextureManager.
+            </summary>
+            <param name="listOfTextureFilePaths"></param>
+        </member>
+        <member name="M:StromoLight_Visualiser.VideoTextureManager.LoadAllBitmapsFromDisk(System.Object)">
+            <summary>
+            Starts a thread and streams image data into a ThreadsafeQueue.
+            </summary>
+            <param name="filePathlist">list of filepath strings</param>
+        </member>
+        <member name="M:StromoLight_Visualiser.VideoTextureManager.Dispose">
+            <summary>
+            Stops any loading operations and allows the thread to exit.
+            </summary>
+        </member>
+        <member name="P:StromoLight_Visualiser.VideoTextureManager.FrameQueue">
+            <summary>
+            Queue containing the video frame data.
+            </summary>
+        </member>
+        <member name="T:StromoLight_Visualiser.Forms.Form_SplashScreen">
+            <summary>
+            Form displayed while program is loading
+            </summary>
+        </member>
+        <member name="F:StromoLight_Visualiser.Forms.Form_SplashScreen.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:StromoLight_Visualiser.Forms.Form_SplashScreen.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:StromoLight_Visualiser.Forms.Form_SplashScreen.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:StromoLight_Visualiser.Forms.Form_SplashScreen.#ctor">
+            <summary>
+            Loading Form
+            </summary>
+        </member>
+        <member name="M:StromoLight_Visualiser.Forms.Form_SplashScreen.StartCountdown">
+            <summary>
+            Starts countdown
+            </summary>
+        </member>
+        <member name="T:StromoLight_Visualiser.Forms.Form_Start">
+            <summary>
+            Inital Task Designer Form.
+            </summary>
+        </member>
+        <member name="F:StromoLight_Visualiser.Forms.Form_Start.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:StromoLight_Visualiser.Forms.Form_Start.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:StromoLight_Visualiser.Forms.Form_Start.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:StromoLight_Visualiser.Forms.Form_Start.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="T:StromoLight_Visualiser.SDL_Main">
+            <summary>
+            The main SDL engine.
+            </summary>
+            <remarks>
+            Handles the graphics updating and the game logic.
+            </remarks>
+        </member>
+        <member name="F:StromoLight_Visualiser.SDL_Main.m_drawAvatar3D">
+            <summary>
+            When set to false the standar avatar is used, when true the trackable and joint based 3D avatar is used
+            </summary>
+        </member>
+        <member name="M:StromoLight_Visualiser.SDL_Main.AddObjectToDrawList(StroMoHab_Objects.Graphics.OpenGlObject)">
+            <summary>
+            Adds an OpenGl object to the scene
+            </summary>
+            <param name="objectToAdd"></param>
+        </member>
+        <member name="M:StromoLight_Visualiser.SDL_Main.#ctor">
+            <summary>
+            Basic constructor
+            </summary>
+        </member>
+        <member name="M:StromoLight_Visualiser.SDL_Main.Initialise(System.Boolean)">
+            <summary>
+            Initialises common methods
+            </summary>
+        </member>
+        <member name="M:StromoLight_Visualiser.SDL_Main.WindowAttributes">
+            <summary>
+            Sets the Application Icon and Window Title
+            </summary>
+        </member>
+        <member name="M:StromoLight_Visualiser.SDL_Main.AlignWindows">
+            <summary>
+            Centres the SDL graphics windows on the screen.
+            </summary>
+        </member>
+        <member name="M:StromoLight_Visualiser.SDL_Main.Reshape">
+            <summary>
+            Resizes the OpenGL scene whenever the window has been resized.
+            </summary>
+        </member>
+        <member name="M:StromoLight_Visualiser.SDL_Main.Reshape(System.Single)">
+            <summary>
+            Resizes the OpenGL scene.
+            </summary>
+            <param name="distance"></param>
+        </member>
+        <member name="M:StromoLight_Visualiser.SDL_Main.InitGL">
+            <summary>
+            Initalises the OpenGL context and does all inital setup.
+            </summary>
+        </member>
+        <member name="M:StromoLight_Visualiser.SDL_Main.StartSDL">
+            <summary>
+            Initialises the SDL context.
+            </summary>
+        </member>
+        <member name="M:StromoLight_Visualiser.SDL_Main.Tick(System.Object,SdlDotNet.Core.TickEventArgs)">
+            <summary>
+            Renders the OpenGL context to the screen
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:StromoLight_Visualiser.SDL_Main.Quit(System.Object,SdlDotNet.Core.QuitEventArgs)">
+            <summary>
+            Ensures the application loop is properly shut down (this event must be included)
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:StromoLight_Visualiser.SDL_Main.DrawGLScene">
+            <summary>
+            All drawing code goes here
+            </summary>
+        </member>
+        <member name="M:StromoLight_Visualiser.SDL_Main.SendStartupNotification">
+            <summary>
+            Sends a startup notification to the StromoLight queue.
+            </summary>
+        </member>
+        <member name="M:StromoLight_Visualiser.SDL_Main.SaveScreenShot(System.String,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            Saves a screen capture in the specified image format to a file.
+            </summary>
+            <param name="filename"></param>
+            <param name="format"></param>
+        </member>
+        <member name="M:StromoLight_Visualiser.SDL_Main.CaptureScreenShot">
+            <summary>
+            Saves a picture of the screen to a bitmap image.
+            </summary>
+            <returns>The saved bitmap.</returns>
+        </member>
+        <member name="P:StromoLight_Visualiser.SDL_Main.Width">
+            <summary>
+            Width of Window
+            </summary>
+        </member>
+        <member name="P:StromoLight_Visualiser.SDL_Main.Height">
+            <summary>
+            Height of Window
+            </summary>
+        </member>
+        <member name="P:StromoLight_Visualiser.SDL_Main.BitsPerPixel">
+            <summary>
+            Bits per pixel of surface
+            </summary>
+        </member>
+        <member name="P:StromoLight_Visualiser.SDL_Main.Title">
+            <summary>
+            Code Title
+            </summary>
+        </member>
+        <member name="P:StromoLight_Visualiser.SDL_Main.TextureArray">
+            <summary>
+            Contains all loaded textures
+            </summary>
+        </member>
+    </members>
+</doc>

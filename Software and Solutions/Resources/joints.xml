@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Joints>
+  <joint>
+    <id>1</id>
+    <name>Left Ankle</name>
+    <trackable1>1</trackable1>
+    <trackable2>3</trackable2>
+    <pitchOffset>0</pitchOffset>
+    <rollOffset>0</rollOffset>
+    <yawOffset>0</yawOffset>
+  </joint>
+  <joint>
+    <id>2</id>
+    <name>Right Ankle</name>
+    <trackable1>2</trackable1>
+    <trackable2>4</trackable2>
+  </joint>
+  <joint>
+    <id>3</id>
+    <name>Left Knee</name>
+    <trackable1>3</trackable1>
+    <trackable2>5</trackable2>
+  </joint>
+  <joint>
+    <id>4</id>
+    <name>Right Knee</name>
+    <trackable1>4</trackable1>
+    <trackable2>6</trackable2>
+  </joint>
+</Joints>
+
+

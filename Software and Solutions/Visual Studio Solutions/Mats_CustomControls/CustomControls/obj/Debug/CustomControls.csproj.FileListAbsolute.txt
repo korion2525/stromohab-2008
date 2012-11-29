@@ -1,0 +1,10 @@
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\Mats_CustomControls\CustomControls\bin\Debug\StroMoHab_Custom_Controls.dll
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\Mats_CustomControls\CustomControls\bin\Debug\StroMoHab_Custom_Controls.pdb
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\Mats_CustomControls\CustomControls\obj\Debug\ResolveAssemblyReference.cache
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\Mats_CustomControls\CustomControls\obj\Debug\CustomControls.CustomNumericUpDown.resources
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\Mats_CustomControls\CustomControls\obj\Debug\CustomControls.Properties.Resources.resources
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\Mats_CustomControls\CustomControls\obj\Debug\CustomControls.StroMoHab_Panel.resources
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\Mats_CustomControls\CustomControls\obj\Debug\GenerateResource-ResGen.read.1.tlog
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\Mats_CustomControls\CustomControls\obj\Debug\GenerateResource-ResGen.write.1.tlog
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\Mats_CustomControls\CustomControls\obj\Debug\StroMoHab_Custom_Controls.dll
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\Mats_CustomControls\CustomControls\obj\Debug\StroMoHab_Custom_Controls.pdb

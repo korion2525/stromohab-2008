@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StroMoHab_Custom_Controls</name>
+    </assembly>
+    <members>
+        <member name="T:CustomControls.StroMoHab_Panel">
+            <summary>
+            A windows form pannel with the StroMoHab logo embeded in the bottom right corner
+            </summary>
+        </member>
+        <member name="M:CustomControls.StroMoHab_Panel.#ctor">
+            <summary>
+            A windows form pannel with the StroMoHab logo embeded in the bottom right corner
+            </summary>
+        </member>
+        <member name="F:CustomControls.StroMoHab_Panel.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:CustomControls.StroMoHab_Panel.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:CustomControls.StroMoHab_Panel.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:CustomControls.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:CustomControls.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:CustomControls.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="F:CustomControls.CustomNumericUpDown.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:CustomControls.CustomNumericUpDown.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:CustomControls.CustomNumericUpDown.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+    </members>
+</doc>

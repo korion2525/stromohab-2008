@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="7cffbdfc-af7a-4441-b50f-2c8aeca492af" revisionNumber="1">
+  <developerGlossaryDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <glossary>
+    <title>Glossary</title>
+    <glossaryEntry>
+	    <terms>
+	    	<term termId="naturalPoint">Natural Point</term>
+	    </terms>
+	    <definition>
+	    	<para>The Motion Capture camera makes used by StroMoHab. Information avliable at 
+	    	<externalLink>
+    <linkText>http://www.naturalpoint.com</linkText>
+    <linkUri>http://www.naturalpoint.com</linkUri>
+</externalLink>
+
+	    	</para>
+	    </definition>
+    </glossaryEntry>
+	<glossaryEntry>
+      <terms>
+        <!-- One or more terms associated with the definition.  Add a termId
+           attribute if you need to link to it from a relatedEntry element.
+           Otherwise, it can be omitted.  Terms appear as a comma-separated
+           list above the definition. -->
+        <term termId="marker">Marker</term>
+      </terms>
+      <definition>
+        <para>A single object</para>
+      </definition>
+      <relatedEntry termId="trackable"/>
+    </glossaryEntry>
+    <glossaryEntry>
+      <terms>
+        <!-- One or more terms associated with the definition.  Add a termId
+           attribute if you need to link to it from a relatedEntry element.
+           Otherwise, it can be omitted.  Terms appear as a comma-separated
+           list above the definition. -->
+        <term termId="trackable">Trackable</term>
+      </terms>
+      <definition>
+        <para>A collection of rigidly attached markers</para>
+      </definition>
+      <relatedEntry termId="marker"/>
+     </glossaryEntry>
+    </glossary>
+  </developerGlossaryDocument>
+</topic>

@@ -1,0 +1,37 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="bFormatter" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter">
+      <Item value="Serialize`0" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="0A969E93-3C39-453C-B70A-1FD42265061E/d:Forms/f:TaskDesigner.Designer.cs" caret="25421" fromTop="26" />
+      <File id="0A969E93-3C39-453C-B70A-1FD42265061E/f:TaskDesignerProgram.cs" caret="0" fromTop="0" />
+      <File id="0A969E93-3C39-453C-B70A-1FD42265061E/d:Forms/f:TaskDesigner.cs" caret="2329" fromTop="31" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="0A969E93-3C39-453C-B70A-1FD42265061E/d:Forms/f:TaskDesigner.cs" caret="17612" fromTop="30" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir>C:\Program Files\NUnit 2.5.8\bin\net-2.0\</NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>

@@ -1,0 +1,67 @@
+﻿<Window x:Class="Stromohab_WPF_UserInterface.AddSessionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                Style="{StaticResource StromohabWindowStyle}"
+        xmlns:local="http://schemas.AvalonControls/AvalonControlsLibrary/Controls"
+        Title="Add Session" Loaded="Window_Loaded">
+    <Border Style="{StaticResource StromohabBorderStyle}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel
+            Grid.Row="0"
+            Grid.RowSpan="3"
+        ></StackPanel>
+            <Image 
+            Name="imgStromoIcon"
+            Style="{StaticResource StromohabImageStyle}"
+            Source="/Images/StroMoHab_Icon.jpg">
+            </Image>
+            <Label Grid.Column="1"
+       Grid.Row="0"
+       Grid.ColumnSpan="2"
+       FontSize="18"
+       Margin="10">Add Patient Session
+            </Label>
+            <Label 
+            Grid.Column="1"
+            Grid.Row="1">Date
+            </Label>
+            <DatePicker Name="datePickerDateOfBirth"
+                        Grid.Column="2"
+                        Grid.Row="1"
+                        ToolTip="Select the Session date">
+            </DatePicker>
+            <Label 
+            Grid.Column="1"
+            Grid.Row="2">Time
+            </Label>
+            <Label 
+            Grid.Column="1"
+            Grid.Row="3">Task
+            </Label>
+            <local:TimePicker Name="timePicker" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Stretch" SelectedHour="9" SelectedMinute="15" SelectedSecond="0" SelectedTime="09:15:00" ToolTip="Select the Session Time (hh:mm:ss)" UseLayoutRounding="True">
+                
+            </local:TimePicker>
+            <StackPanel Grid.Column="2" Grid.Row="5" Grid.RowSpan="2" Name="stackPanel1" Orientation="Horizontal">
+                <Button Content="Cancel" Name="btnCancel" IsCancel="True" Style="{StaticResource StromohabButtonStyle}" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnCancel_Click" />
+                <Button Content="Add Session" Name="btnAddSession" Style="{StaticResource StromohabButtonStyle}" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnAddSession_Click" />
+            </StackPanel>
+            <ComboBox Grid.Column="2" Grid.Row="3" Name="comboBoxTaskList" IsReadOnly="True" ItemsSource="{Binding}" DisplayMemberPath="tName" />
+        </Grid>
+    </Border>
+</Window>
+    

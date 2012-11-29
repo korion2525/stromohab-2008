@@ -1,0 +1,1894 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StroMoHab_Objects</name>
+    </assembly>
+    <members>
+        <member name="T:StroMoHab_Objects.Objects.ContactNumber">
+            <summary>
+            Stores Valid UK Landline and Mobile Numbers
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Objects.ContactNumber.TryParse(System.String)">
+            <summary>
+            Trys to parse the number
+            </summary>
+            <param name="value">The string to store as a phone number</param>
+            <returns>True if valid, false if not</returns>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.ContactNumber.Number">
+            <summary>
+            Gets the Validated Phone Number
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Objects.Graphics.Corridor">
+            <summary>
+            A corridor.
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Objects.Graphics.OpenGlObject">
+            <summary>
+            An OpenGL object
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Graphics.OpenGlObject.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Basic constructor
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Graphics.OpenGlObject.#ctor(System.Int32,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Constructor for textured OpenGlObject.
+            </summary>
+            <param name="textureNumber"></param>
+            <param name="textureWidth"></param>
+            <param name="textureHeight"></param>
+            <param name="xMin"></param>
+            <param name="yMin"></param>
+            <param name="zMin"></param>
+            <param name="xMax"></param>
+            <param name="yMax"></param>
+            <param name="zMax"></param>
+        </member>
+        <member name="M:StroMoHab_Objects.Graphics.OpenGlObject.Draw">
+            <summary>
+            Draws the OpenGL object
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Graphics.OpenGlObject.RotateX(System.Single)">
+            <summary>
+            Rotate around X-axis
+            </summary>
+            <param name="increment"></param>
+        </member>
+        <member name="M:StroMoHab_Objects.Graphics.OpenGlObject.RotateY(System.Single)">
+            <summary>
+            Rotate around Y-axis
+            </summary>
+            <param name="increment"></param>
+        </member>
+        <member name="M:StroMoHab_Objects.Graphics.OpenGlObject.RotateZ(System.Single)">
+            <summary>
+            Rotate around Z-axis
+            </summary>
+            <param name="increment"></param>
+        </member>
+        <member name="M:StroMoHab_Objects.Graphics.OpenGlObject.Move">
+            <summary>
+            Moves the OpenGL object
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.OpenGlObject.X">
+            <summary>
+            The object's X coordinate.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.OpenGlObject.Y">
+            <summary>
+            The object's Y coordinate.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.OpenGlObject.Z">
+            <summary>
+            The object's Z coordinate.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.OpenGlObject.XMin">
+            <summary>
+            The leftmost point/edge of the OpenGl object
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.OpenGlObject.YMin">
+            <summary>
+            The lowest point/edge of the OpenGl object
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.OpenGlObject.ZMin">
+            <summary>
+            The object's point/edge furthest into the screen
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.OpenGlObject.XMax">
+            <summary>
+            The rightmost point/edge of the object
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.OpenGlObject.YMax">
+            <summary>
+            The highest point/edge of the OpenGl object
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.OpenGlObject.ZMax">
+            <summary>
+            The object's point/edge closest to the screen.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.OpenGlObject.Length">
+            <summary>
+            Width of the object (in X). (TO BE RENAMED AT AN APPROPRIATE TIME - when we have time to fix what the renaming will break..)
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.OpenGlObject.Height">
+            <summary>
+            Height of the object (in Y).
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.OpenGlObject.Depth">
+            <summary>
+            Depth of the object (in Z).
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.OpenGlObject.XRotation">
+            <summary>
+            Objects rotation around X.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.OpenGlObject.YRotation">
+            <summary>
+            Objects rotation around Y.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.OpenGlObject.ZRotation">
+            <summary>
+            Objects rotation around Z.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.OpenGlObject.Colour">
+            <summary>
+            Object colour (RGBa).
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.OpenGlObject.Velocity">
+            <summary>
+            The object's velocity.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.OpenGlObject.CollisionModel">
+            <summary>
+            The collision model of the object.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.OpenGlObject.TextureNumber">
+            <summary>
+            The number of the texture to assign to the shape. -1 selects no texture.
+            </summary>
+            <remarks>
+            Select the number from the texture array in 
+            <code>StromoLight_Objects.Graphics.Textures
+            </code>
+            . If an invalid texture number is set, default: -1 is set (no texture).
+            </remarks>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.OpenGlObject.TextureHeight">
+            <summary>
+            The height of the texture (for OpenGl texture mapping).
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.OpenGlObject.TextureWidth">
+            <summary>
+            The width of the texture (for OpenGl texture mapping).
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.OpenGlObject.Selected">
+            <summary>
+            Indicates if the current object is selected.
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Graphics.Corridor.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Constructor for corridor. TODO: Add user-selectable textures.
+            </summary>
+            <param name="xMin"></param>
+            <param name="yMin"></param>
+            <param name="zMin"></param>
+            <param name="xMax"></param>
+            <param name="yMax"></param>
+            <param name="zMax"></param>
+        </member>
+        <member name="M:StroMoHab_Objects.Graphics.Corridor.#ctor(System.Single,System.Single,System.Single)">
+            <summary>
+            Constructor taking a width, height and depth.
+            </summary>
+            <param name="width"></param>
+            <param name="height"></param>
+            <param name="depth"></param>
+        </member>
+        <member name="M:StroMoHab_Objects.Graphics.Corridor.Draw">
+            <summary>
+            Draws the corridor.
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Graphics.Corridor.Move">
+            <summary>
+            Moves the corridor. Currently does nothing.
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Objects.Graphics.Colour">
+            <summary>
+            RGB Alpha as float (Gl4f).
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Graphics.Colour.#ctor(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Structure to hold RGBa colour
+            </summary>
+            <param name="red"></param>
+            <param name="green"></param>
+            <param name="blue"></param>
+            <param name="alpha"></param>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.Colour.SingleColour">
+            <summary>
+            Single colour vector. Requires array of length 4 (RGBA).
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.Colour.Red">
+            <summary>
+            Red component.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.Colour.Green">
+            <summary>
+            Green component.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.Colour.Blue">
+            <summary>
+            Blue component.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.Colour.Alpha">
+            <summary>
+            Alpha component.
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Objects.Graphics.Avatar">
+            <summary>
+            The subjects Avator object.
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Objects.Graphics.Avatar.leftFoot">
+            <summary>
+            The left foot of the avatar.
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Objects.Graphics.Avatar.rightFoot">
+            <summary>
+            The right foot of the avatar.
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Graphics.Avatar.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Constructor. Takes left, bottom, far, right, top, near values.
+            </summary>
+            <param name="xMin"></param>
+            <param name="yMin"></param>
+            <param name="zMin"></param>
+            <param name="xMax"></param>
+            <param name="yMax"></param>
+            <param name="zMax"></param>
+        </member>
+        <member name="M:StroMoHab_Objects.Graphics.Avatar.Update(System.Collections.Generic.List{StroMoHab_Objects.Objects.Trackable})">
+            <summary>
+            Updates the trackable list
+            </summary>
+            <param name="trackableList">The trackable list</param>
+        </member>
+        <member name="M:StroMoHab_Objects.Graphics.Avatar.Draw">
+            <summary>
+            Draws the avatar.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.Avatar.WalkBounceAngle">
+            <summary>
+            Angle to "bounce" the avatar - to simulate head bobbing.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.Avatar.RotationAngle">
+            <summary>
+            The amount the avatar is rotated.
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Objects.Graphics.BoundingBox">
+            <summary>
+            Holds bounding box infomation about current polygon face
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Graphics.BoundingBox.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Constructor. Takes minimum and maximum values in 3 dimensions.
+            </summary>
+            <param name="xMin"></param>
+            <param name="yMin"></param>
+            <param name="zMin"></param>
+            <param name="xMax"></param>
+            <param name="yMax"></param>
+            <param name="zMax"></param>
+        </member>
+        <member name="M:StroMoHab_Objects.Graphics.BoundingBox.Draw">
+            <summary>
+            Draws the BoundingBox.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.BoundingBox.X">
+            <summary>
+            The X-coordinate of the BoundingBox.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.BoundingBox.Y">
+            <summary>
+            The Y-coordinate of the BoundingBox.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.BoundingBox.Z">
+            <summary>
+            The Z-coordinate of the BoundingBox.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.BoundingBox.XMin">
+            <summary>
+            The leftmost edge of the BoundingBox.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.BoundingBox.YMin">
+            <summary>
+            The lowest edge of the BoundingBox.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.BoundingBox.ZMin">
+            <summary>
+            The BoundingBox edge furthest into the screen.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.BoundingBox.XMax">
+            <summary>
+            The rightmost edge of the BoundingBox.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.BoundingBox.YMax">
+            <summary>
+            The highest edge of the BoundingBox.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.BoundingBox.ZMax">
+            <summary>
+            The BoundingBox edge closest to the observer.
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Objects.Communication.Forms.FindServer">
+            <summary>
+            A form designed to resolve the problem of not being able to find the IP address of the server and connect to it
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Objects.Communication.Forms.FindServer.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Communication.Forms.FindServer.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:StroMoHab_Objects.Communication.Forms.FindServer.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Communication.Forms.FindServer.#ctor(System.String)">
+            <summary>
+            Displays a form to resolve the problem of not being able
+            to find the IP address of the server
+            Gives the user the change to ask for a retry, to manually enter
+            and IP address or to cancel and exit.
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Communication.Forms.FindServer.IsValidIP(System.String)">
+            <summary>
+            Validates the given IP address
+            Taken from http://www.dreamincode.net/code/snippet1378.htm
+            </summary>
+            <param name="addr"></param>
+            <returns></returns>
+        </member>
+        <member name="P:StroMoHab_Objects.Communication.Forms.FindServer.ServerIP">
+            <summary>
+            The manually entered IP address
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Objects.Objects.SubSession">
+            <summary>
+            Represents a sub session from the treadmill starting to stopping
+            Stores the start time so that the correct file can be opened, and the end time for convinience
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Objects.Graphics.Textures">
+            <summary>
+            Loads and stores the texture files for OpenGl use.
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Objects.Graphics.Textures.listOfTextureObjects">
+            <summary>
+            List of loaded textured objects from the Textures directory
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Graphics.Textures.GetTexture(System.Int32)">
+            <summary>
+            Returns a texture from the loaded texture array
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Graphics.Textures.ListOfTextureFilePaths(System.String)">
+            <summary>
+            Returns a list of filepaths to files in the textures folder.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:StroMoHab_Objects.Graphics.Textures.LoadTextures">
+            <summary>
+            Loads all textures. Must be called before attempting to draw object using textures.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.Textures.NumberOfLoadedTextures">
+            <summary>
+            The number of textures currently loaded into memory.
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Objects.Objects.Session">
+            <summary>
+            Represents a session but does not hold any of the data
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Session.SessionCompleted">
+            <summary>
+            Gets or Sets a value indicating if the session has been completed in full
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Session.ScheduledSession">
+            <summary>
+            Gets or Sets a value indicating if the session is scheduled (true), or has already been run (false)
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Objects.Graphics.Tightrope">
+            <summary>
+            Tightrope graphics object
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Graphics.Tightrope.#ctor(System.Single,System.Single)">
+            <summary>
+            Tightrope without texture
+            </summary>
+            <param name="width"></param>
+            <param name="length"></param>
+        </member>
+        <member name="M:StroMoHab_Objects.Graphics.Tightrope.#ctor(System.Int32,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Tightrope with texture
+            </summary>
+            <param name="textureNumber"></param>
+            <param name="textureWidth"></param>
+            <param name="textureHeight"></param>
+            <param name="width"></param>
+            <param name="length"></param>
+        </member>
+        <member name="M:StroMoHab_Objects.Graphics.Tightrope.Draw">
+            <summary>
+            Draws the tightrope
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Objects.Objects.Clinician">
+            <summary>
+            Store the name, login, password details and permisions for a clinician
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Clinician.CanEditDetails">
+            <summary>
+            Set to false to block changing any details (except the password)
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Clinician.EditClinicians">
+            <summary>
+            Gets or sets a bool indicating if the clinician can edit Clinicians
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Clinician.EditPatients">
+            <summary>
+            Gets or sets a bool indicating if the clinician can edit Patients
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Clinician.EditSessions">
+            <summary>
+            Gets or sets a bool indicating if the clinician can edit Sessions
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Clinician.ScheduleSessions">
+            <summary>
+            Gets or sets a bool indicating if the clinician can schedule sessions
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Clinician.RunSessions">
+            <summary>
+            Gets or sets a bool indicating if the clinician can run sessions
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Clinician.EditTasks">
+            <summary>
+            Gets or sets a bool indicating if the clinician can edit Tasks
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Clinician.FirstName">
+            <summary>
+            The Clinician's First Name
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Clinician.LastName">
+            <summary>
+            The Clinician's Last Name
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Clinician.LoginName">
+            <summary>
+            Login
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Objects.Graphics.Point3f">
+            <summary>
+            Describes a vertex.
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Graphics.Point3f.#ctor">
+            <summary>
+            A new Point.
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Graphics.Point3f.#ctor(StroMoHab_Objects.Graphics.Point3f)">
+            <summary>
+            A new point created from data supplied in parameter.
+            </summary>
+            <param name="newData"></param>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.Point3f.X">
+            <summary>
+            Vertex X Coordinate.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.Point3f.Y">
+            <summary>
+            Vertex Y Coordinate.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.Point3f.Z">
+            <summary>
+            Vertex Z Coordinate
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Objects.Graphics.OpenGLMarker">
+            <summary>
+            The graphical version of Marker.cs (an Optitrack marker).
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Objects.Graphics.OpenGLMarker.m_calibratedHeight">
+            <summary>
+            Sets the height of the foot. TO customise for a patient, modify this value based on the Y position of a marker when their foot is at rest.
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Graphics.OpenGLMarker.#ctor(StroMoHab_Objects.Objects.Marker)">
+            <summary>
+            Constructor. Creates OpenGlMarker from an optitrack Marker.
+            </summary>
+            <param name="marker"></param>
+        </member>
+        <member name="M:StroMoHab_Objects.Graphics.OpenGLMarker.Draw">
+            <summary>
+            Draws the marker.
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Objects.Graphics.CompoundOpenGlObject">
+            <summary>
+            A compound OpenGlObject is an object that consists of multiple OpenGlObjects
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Graphics.CompoundOpenGlObject.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="xMin"></param>
+            <param name="yMin"></param>
+            <param name="zMin"></param>
+            <param name="xMax"></param>
+            <param name="yMax"></param>
+            <param name="zMax"></param>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.CompoundOpenGlObject.CollisionModel">
+            <summary>
+            List of collison models for the CompoundOpenGlObject.
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Objects.Graphics.Face">
+            <summary>
+            Describes an objects face.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.Face.VerticesList">
+            <summary>
+            List of each vertex that makes up the face.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.Face.Normals">
+            <summary>
+            List of all the normals to each vertex that make up the face.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.Face.PlaneEquation">
+            <summary>
+            Equation of the plane that contains the face, in the form Ax + By + Cz + D = 0.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.Face.NeighbourIndices">
+            <summary>
+            Indices of each other face next to this one.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.Face.Visible">
+            <summary>
+            Is the face of the object visible to the light?
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Objects.Objects.OptiTrackCamera">
+            <summary>
+            Represents an OptiTrackCamera
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Objects.OptiTrackCamera.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Objects.OptiTrackCamera.#ctor(StroMoHab_Objects.Objects.OptiTrackCamera)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.OptiTrackCamera.CameraNumber">
+            <summary>
+            Camera Number
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.OptiTrackCamera.CameraName">
+            <summary>
+            Camera Name
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.OptiTrackCamera.xCoordinate">
+            <summary>
+            x Coordinate
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.OptiTrackCamera.yCoordinate">
+            <summary>
+            y Coordinate
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.OptiTrackCamera.zCoordinate">
+            <summary>
+            z Coordinate
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.OptiTrackCamera.RotationMatrix">
+            <summary>
+            Camera Rotation Matrix
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Objects.Objects.SecondaryContact">
+            <summary>
+            Represents a patients next of kin
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.SecondaryContact.RelationshipToPatient">
+            <summary>
+            Gets or sets the relationship between the Secondary Contact and the patient
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.SecondaryContact.Address">
+            <summary>
+            Gets or sets the address
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.SecondaryContact.ContactNumber">
+            <summary>
+            Gets of sets the contact telephone number
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Objects.Graphics.OpenGlTrackable.m_calibratedHeight">
+            <summary>
+            Sets the height of the foot. TO customise for a patient, modify this value based on the Y position of a marker when their foot is at rest.
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Objects.Forms.TopMostMessageBox">
+            <summary>
+            Draws a MessageBox that always stays on top
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Forms.TopMostMessageBox.Show(System.String)">
+            <summary>
+            Draws a MessageBox that always stays on top with an an OK button
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Forms.TopMostMessageBox.Show(System.String,System.String)">
+            <summary>
+            Draws a MessageBox that always stays on top with a title and an OK button
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Forms.TopMostMessageBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons)">
+            <summary>
+            Draws a MessageBox that always stays on top with a tile and selectable button
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Forms.TopMostMessageBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon)">
+            <summary>
+            Draws a MessageBox that always stays on top with a title, selectable buttons and an icon
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Objects.Communication.SendMCECommand">
+            <summary>
+            Sends motion capture commands to the server
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Communication.SendMCECommand.StartCameras">
+            <summary>
+            Start the cameras and begin data streaming
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Communication.SendMCECommand.StopCameras">
+            <summary>
+            Stop the cameras and end data streaming
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Communication.SendMCECommand.GetOptiTrackCameraCoordinates">
+            <summary>
+            Refresh camera list
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Communication.SendMCECommand.SetTreadmillSpeed(System.Single)">
+            <summary>
+            Starts the treadmill at the given speed.
+            </summary>
+            <param name="speed"></param>
+        </member>
+        <member name="M:StroMoHab_Objects.Communication.SendMCECommand.StopTreadmill">
+            <summary>
+            Stops the treadmill
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Communication.SendMCECommand.Calibrate">
+            <summary>
+            Stores calibration data at the server.
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Communication.SendMCECommand.ToggleDrawingFeet(System.Boolean)">
+            <summary>
+            Toggles the feet on and off in the visualiser.
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Communication.SendMCECommand.ForceTreadmillSpeedUpdate">
+            <summary>
+            Gets the server to send out the speed of the treadmill
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Communication.SendMCECommand.TransmitCommand(System.Int32)">
+            <summary>
+            Sends a command packet to the server. Used for single byte commands.
+            </summary>
+            <param name="commandNumber"></param>
+        </member>
+        <member name="M:StroMoHab_Objects.Communication.SendMCECommand.TransmitCommand(System.UInt16,System.Single)">
+            <summary>
+            Transmits a multi-byte command (eg. Treadmill speed) to the server.
+            </summary>
+            <param name="commandNumber"></param>
+            <param name="data"></param>
+        </member>
+        <member name="T:StroMoHab_Objects.Communication.TCPProcessor">
+            <summary>
+            Connects to, and handles data from the Motion Capture Server.
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Objects.Communication.TCPProcessor.m_client">
+            <summary>
+            The TCP Client object
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Objects.Communication.TCPProcessor.trackableList">
+            <summary>
+            Trackable List
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Objects.Communication.TCPProcessor.jointList">
+            <summary>
+            Joint List
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Objects.Communication.TCPProcessor._serverIPAddress">
+            <summary>
+            Server IP Address used by m_client
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Communication.TCPProcessor.ManagedConnectToServer">
+            <summary>
+            Manages finding the server and connecting to it it
+            The IP address used can be retried by accessing the ServerIPAddress property
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:StroMoHab_Objects.Communication.TCPProcessor.BuildServerRemotingString(System.Int32,System.String)">
+            <summary>
+            Returns the string needed to connect to a specific remoting port and objectUri running on the server
+            </summary>
+            <param name="port">The port number</param>
+            <param name="objectUri">The service name</param>
+            <returns>Connection string in the form "tcp://ServerIPAddress:port/objectUri"</returns>
+        </member>
+        <member name="M:StroMoHab_Objects.Communication.TCPProcessor.ConnectToServerAsync(System.Net.IPEndPoint)">
+            <summary>
+            Connects to a given IPEndPoint
+            Doesn't allow failed connections
+            </summary>
+            <param name="ipEndPoint"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StroMoHab_Objects.Communication.TCPProcessor.ConnectToServer(System.Net.IPEndPoint)">
+            <summary>
+            Connects to a given IPEndPoint
+            Does allow failed connections
+            </summary>
+            <param name="ipEndPoint"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StroMoHab_Objects.Communication.TCPProcessor.FindServerIPAddress">
+            <summary>
+            Finds the StoMoHab Server by listening out for its UDP Multicast message.
+            If it can't find the server it gives the user to option to try and find the server again
+            or to manually enter the IP address.
+            
+            The servers multicast message has a TTL of 0 so it will only function on the LAN and will not
+            extend past a router, this is where the manual IP entry option is useful. If needed change the
+            server code to so that its TTL is >0 so that the message can be recived outside of the LAN.
+            </summary>
+            <returns>The servers IP Address</returns>
+        </member>
+        <member name="E:StroMoHab_Objects.Communication.TCPProcessor.WholeFrameReceivedEvent">
+            <summary>
+            Fired when a whole frame has been received.
+            </summary>
+        </member>
+        <member name="E:StroMoHab_Objects.Communication.TCPProcessor.AvatarSpeedChangedEvent">
+            <summary>
+            Raised when avatar speed is changed
+            </summary>
+        </member>
+        <member name="E:StroMoHab_Objects.Communication.TCPProcessor.TrackableListReceivedEvent">
+            <summary>
+            Fired when a whole trackable list has been received
+            </summary>
+        </member>
+        <member name="E:StroMoHab_Objects.Communication.TCPProcessor.JointListReceivedEvent">
+            <summary>
+            Fired when a whole joint list has been received
+            </summary>
+        </member>
+        <member name="E:StroMoHab_Objects.Communication.TCPProcessor.FilteredMarkerListReceivedEvent">
+            <summary>
+            Fired when a whole filtered marker list has been received
+            </summary>
+        </member>
+        <member name="E:StroMoHab_Objects.Communication.TCPProcessor.ToggleDrawingOfFeetEvent">
+            <summary>
+            Triggered when a command to toggle the drawing of the feet has been received.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Communication.TCPProcessor.Connection">
+            <summary>
+            The tcpClient connection to the server.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Communication.TCPProcessor.ServerIPAddress">
+            <summary>
+            The IP address of the server
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Objects.Communication.TCPProcessor.WholeFrameReceivedHandler">
+            <summary>
+            Delegate for the WholeFrameReceived Event.
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Objects.Communication.TCPProcessor.AvatarSpeedChangedHandler">
+            <summary>
+            Delegate for the AvatarSpeedChanged Event.
+            </summary>
+            <param name="newSpeed"></param>
+        </member>
+        <member name="T:StroMoHab_Objects.Communication.TCPProcessor.TrackableListReceivedHandler">
+            <summary>
+            Delegate for the TrackableListReceived Event
+            </summary>
+            <param name="trackableList">The Updated Trackable list</param>
+        </member>
+        <member name="T:StroMoHab_Objects.Communication.TCPProcessor.FilteredMarkerListReceivedHandler">
+            <summary>
+            Delegate for the FilteredMarkerListReceived Event
+            Access data Via FilteredMarkerList.listOfMarkers
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Objects.Communication.TCPProcessor.JointListReceivedHandler">
+            <summary>
+            Delegate for the JointListReceivedEvent
+            </summary>
+            <param name="jointList">The Updated Joint List</param>
+        </member>
+        <member name="T:StroMoHab_Objects.Communication.TCPProcessor.ToggleDrawingOfFeetHandler">
+            <summary>
+            Delegate for the ToggleDrawingOfFeetEvent.
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Objects.Vector3f">
+            <summary>
+            Structure for holding a 3 dimensional vector
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Vector3f.#ctor(System.Single,System.Single,System.Single)">
+            <summary>
+            Constructor - takes 3 coordinates
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="z"></param>
+        </member>
+        <member name="M:StroMoHab_Objects.Vector3f.#ctor(StroMoHab_Objects.Vector3f)">
+            <summary>
+            Constructor - takes an already created vector
+            </summary>
+            <param name="v1"></param>
+        </member>
+        <member name="M:StroMoHab_Objects.Vector3f.op_Addition(StroMoHab_Objects.Vector3f,StroMoHab_Objects.Vector3f)">
+            <summary>
+            Vector Addition.
+            </summary>
+            <param name="v1"></param>
+            <param name="v2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StroMoHab_Objects.Vector3f.op_UnaryNegation(StroMoHab_Objects.Vector3f)">
+            <summary>
+            Vector Subtraction.
+            </summary>
+            <param name="v1"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StroMoHab_Objects.Vector3f.op_Multiply(StroMoHab_Objects.Vector3f,System.Single)">
+            <summary>
+            Vector Multiplication.
+            </summary>
+            <param name="v1"></param>
+            <param name="muliplicand"></param>
+            <returns></returns>
+        </member>
+        <member name="P:StroMoHab_Objects.Vector3f.X">
+            <summary>
+            The X value of the vector.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Vector3f.Y">
+            <summary>
+            The Y value of the vector.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Vector3f.Z">
+            <summary>
+            The Z value of the vector.
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Objects.Graphics.Quad">
+            <summary>
+            A square or rectangle object.
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Graphics.Quad.#ctor(StroMoHab_Objects.Vector3f,StroMoHab_Objects.Vector3f,StroMoHab_Objects.Vector3f,StroMoHab_Objects.Vector3f)">
+            <summary>
+            Constructor for non-textured quad.
+            </summary>
+            <param name="bottomLeftVertex"></param>
+            <param name="bottomRightVertex"></param>
+            <param name="topRightVertex"></param>
+            <param name="topLeftVertex"></param>
+        </member>
+        <member name="M:StroMoHab_Objects.Graphics.Quad.#ctor(System.Int32,System.Single,System.Single,StroMoHab_Objects.Vector3f,StroMoHab_Objects.Vector3f,StroMoHab_Objects.Vector3f,StroMoHab_Objects.Vector3f)">
+            <summary>
+            Constructor for textured quad.
+            </summary>
+            <param name="textureNumber"></param>
+            <param name="textureWidth"></param>
+            <param name="textureHeight"></param>
+            <param name="bottomLeftVertex"></param>
+            <param name="bottomRightVertex"></param>
+            <param name="topRightVertex"></param>
+            <param name="topLeftVertex"></param>
+        </member>
+        <member name="M:StroMoHab_Objects.Graphics.Quad.Draw(System.Boolean)">
+            <summary>
+            Draws a modified version of the quad if it is selected.
+            </summary>
+            <param name="selected"></param>
+        </member>
+        <member name="M:StroMoHab_Objects.Graphics.Quad.Draw">
+            <summary>
+            Draws the quad.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.Quad.BottomLeftVertex">
+            <summary>
+            The bottom left vertext of the quad.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.Quad.BottomRightVertex">
+            <summary>
+            The bottom right vertex of the quad.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.Quad.TopRightVertex">
+            <summary>
+            The top right vertex of the quad.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.Quad.TopLeftVertex">
+            <summary>
+            The top left vertex of the quad.
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Objects.ThreadsafeQueue`1">
+            <summary>
+            A Thread Safe non-blocking queue.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:StroMoHab_Objects.ThreadsafeQueue`1.#ctor(System.Int32)">
+            <summary>
+            Initialises a new, empty instance of the StroMoHab.Objects.ThreadsafeQueue.
+            </summary>
+            <param name="capacity">The maximum number of items the queue can contain.</param>
+        </member>
+        <member name="M:StroMoHab_Objects.ThreadsafeQueue`1.Enqueue(`0)">
+            <summary>
+            Adds data to the queue.
+            </summary>
+            <param name="data">The data to add the the queue</param>
+            <returns>true if operation is successful, else returns false</returns>
+            <exception cref="T:System.ArgumentNullException">If data to be enqueued is null</exception>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.TextureObject.FilePath">
+            <summary>
+            The filename the texture is created from.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.TextureObject.TextureID">
+            <summary>
+            The OpenGL texture ID associated with the texture.
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Objects.Objects.Joint">
+            <summary>
+            Represents a joint based on two connecting Trackables
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Joint.TimeStamp">
+            <summary>
+            TimeStamp
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Joint.xCoordinate">
+            <summary>
+            xCoordinate
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Joint.yCoordinate">
+            <summary>
+            y Coordinate
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Joint.zCoordinate">
+            <summary>
+            z Coordinate
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Joint.Exists">
+            <summary>
+            True if the Joint exists in the current frame, false if not
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Joint.Trackable1">
+            <summary>
+            The ID of the trackable furthest away from the center of the body, e.g Joint = Ankle, Trackable1 = Foot
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Joint.Trackable2">
+            <summary>
+            The ID of the trackable nearest the center of the body, e.g Joint = Ankle, Trackable2 = Lower Leg
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Joint.Yaw">
+            <summary>
+            Orientation - Yaw
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Joint.Pitch">
+            <summary>
+            Orientation - Pitch
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Joint.Roll">
+            <summary>
+            Orientation - Roll
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Joint.YawOffset">
+            <summary>
+            A pre-defined value to offset the orientation of the joint by when it is created
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Joint.PitchOffset">
+            <summary>
+            A pre-defined value to offset the orientation of the joint by when it is created
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Joint.RollOffset">
+            <summary>
+            A pre-defined value to offset the orientation of the joint by when it is created
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Joint.Name">
+            <summary>
+            The Name of the joint e.g. Left Ankle
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Joint.ID">
+            <summary>
+            Unique ID number of the joint
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Objects.Graphics.ShadowedObject">
+            <summary>
+            An object with the capability to throw a shadow.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.ShadowedObject.NumberOfVertices">
+            <summary>
+            Number of vertices contained in the object.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.ShadowedObject.VerticesList">
+            <summary>
+            List of all the vertices contained in the object.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.ShadowedObject.NumberOfFaces">
+            <summary>
+            Number of faces on the object.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.ShadowedObject.FacesList">
+            <summary>
+            List of all the faces on the object.
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Objects.Objects.FilteredMarkerList">
+            <summary>
+            Contains the details of all current Filtered Markers reported by the motion capture system.
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Objects.Objects.FilteredMarkerList.listOfMarkers">
+            <summary>
+            List of all markers containing latest data.
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Objects.FilteredMarkerList.MarkerFromList(System.Int32)">
+            <summary>
+            Returns a marker the list
+            </summary>
+            <param name="markerNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StroMoHab_Objects.Objects.FilteredMarkerList.AddMarker(StroMoHab_Objects.Objects.Marker)">
+            <summary>
+            Adds a given marker to the marker list
+            </summary>
+            <param name="currentMarker"></param>
+        </member>
+        <member name="M:StroMoHab_Objects.Objects.FilteredMarkerList.RemoveExcessMarkersFromList(System.Int64)">
+            <summary>
+            Removes markers that have been taken out of the capture volume from the list.
+            </summary>
+            <param name="currentNumberOfMarkers"></param>
+        </member>
+        <member name="T:StroMoHab_Objects.Objects.Password">
+            <summary>
+            Taken from http://www.aspheute.com/english/20040105.asp
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Objects.Password.#ctor(System.String,System.Int32)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="strPassword"></param>
+            <param name="nSalt"></param>
+        </member>
+        <member name="M:StroMoHab_Objects.Objects.Password.CreateRandomPassword(System.Int32)">
+            <summary>
+            Generates a new random password
+            </summary>
+            <param name="PasswordLength"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StroMoHab_Objects.Objects.Password.CreateRandomSalt">
+            <summary>
+            Generates a random salt
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:StroMoHab_Objects.Objects.Password.ComputeSaltedHash">
+            <summary>
+            Calculates the salted hash
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:StroMoHab_Objects.Graphics.Plane">
+            <summary>
+            Describes a plane, in the format: ax + by + cz + d = 0.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.Plane.A">
+            <summary>
+            Ax + By + Cz + D = 0.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.Plane.B">
+            <summary>
+            Ax + By + Cz + D = 0.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.Plane.C">
+            <summary>
+            Ax + By + Cz + D = 0.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Graphics.Plane.D">
+            <summary>
+            Ax + By + Cz + D = 0.
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Objects.Objects.Marker">
+            <summary>
+            Contains marker coordinate data
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Objects.Marker.#ctor">
+            <summary>
+            Default constructor - ID and Timestamp initialise to -1
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Objects.Marker.#ctor(StroMoHab_Objects.Objects.Marker)">
+            <summary>
+            Constructor - creates new marker using parameter marker value
+            </summary>
+            <param name="newMarker"></param>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Marker.MarkerId">
+            <summary>
+            ID number of the marker
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Marker.TimeStamp">
+            <summary>
+            The marker timestamp
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Marker.xCoordinate">
+            <summary>
+            X coordinate of marker
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Marker.yCoordinate">
+            <summary>
+            Y coordinate of marker
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Marker.zCoordinate">
+            <summary>
+            Z coordinate of marker
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Marker.prevXCoordinate">
+            <summary>
+            Previous X coordinate of marker
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Marker.prevYCoordinate">
+            <summary>
+            Previous Y coordinate of marker
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Marker.prevZCoordinate">
+            <summary>
+            Previous Z coordinate of marker
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Marker.PrevTimestamp">
+            <summary>
+            Previous timestamp matching previous coordinates.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Marker.Speed">
+            <summary>
+            Speed (scalar) of marker
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Objects.Objects.Task">
+            <summary>
+            Represents a Task and its associated properties
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Objects.Task.RangeTypeToMinMax(System.Enum,System.Int32@,System.Int32@)">
+            <summary>
+            Extracts the min and max value out of a range type (Distance or NumberOfObjects)
+            </summary>
+            <param name="type"></param>
+            <param name="min"></param>
+            <param name="max"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StroMoHab_Objects.Objects.Task.UpdateFields">
+            <summary>
+            Recalculates the distance and average spacing and rangers
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Objects.Task.FillOutNumberOfObjectsRange">
+            <summary>
+            Finds the number of objects range
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Objects.Task.FillOutDistanceRange">
+            <summary>
+            finds the distance range
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Objects.Task.GetEnumDescription(System.Enum)">
+            <summary>
+            Gets the description for the given enum
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Task.DistanceRange">
+            <summary>
+            Gets the range of distances that this task falls in
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Task.NumberOfObjectsRange">
+            <summary>
+            Gets the range of number of objects that this task falls in
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Task.TaskType">
+            <summary>
+            Gets or sets the type of task
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Task.NumberOfObjects">
+            <summary>
+            Number of objects in the task excluding the corridor
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Task.AverageDistanceBetweenObjects">
+            <summary>
+            Gets the average distance between objects (distance/number of objects)
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Task.Distance">
+            <summary>
+            The distance in meters from the start of the task to the last object
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Task.PreviewImage">
+            <summary>
+            Byte arrary containing a preview of the task
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Task.ObjectList">
+            <summary>
+            The list of objects
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Task.TaskDescription">
+            <summary>
+            Decrsiption of the task
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Task.FileName">
+            <summary>
+            The file name
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Task.PreviewImageAsImage">
+            <summary>
+            An image containing a preview of the task
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Objects.Objects.Task.TaskTypeType">
+            <summary>
+            A type to store different task types
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Objects.Objects.Task.DistanceRangeType">
+            <summary>
+            A type to store a range of Distances
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Objects.Objects.Task.NumberOfObjectsRangeType">
+            <summary>
+            A type to store a range of NumberOfObjects
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Objects.Objects.Patient">
+            <summary>
+            Represents a Patient
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Objects.Patient.AddSession(StroMoHab_Objects.Objects.Session)">
+            <summary>
+            Adds a sesion
+            </summary>
+            <param name="session"></param>
+        </member>
+        <member name="M:StroMoHab_Objects.Objects.Patient.SetDOB(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Sets the patients date of birth from a list of ints
+            </summary>
+            <param name="year">Year</param>
+            <param name="month">Month</param>
+            <param name="day">Day</param>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Patient.LastSessionString">
+            <summary>
+            Gets a string with the date and number of days since the last session
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Patient.NumberOfCompletedSessions">
+            <summary>
+            Gets the number of sessions that have been run
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Patient.NumberOfSessions">
+            <summary>
+            Gets the number of sessions (both scheduled and completed)
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Patient.Notes">
+            <summary>
+            Gets or sets the patients notes
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Patient.FirstName">
+            <summary>
+            The Patient's First Name
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Patient.MiddleName">
+            <summary>
+            The Patient's Middle Name
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Patient.LastName">
+            <summary>
+            The Patient's Last Name
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Patient.PatientID">
+            <summary>
+            Gets or sets the patient ID (NHS Number)
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Patient.Title">
+            <summary>
+            Gets or sets the patients title
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Patient.Gender">
+            <summary>
+            Gets or sets the patients gender
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Patient.DOB">
+            <summary>
+            Gets or sets the patients DOB
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Patient.AgeInYears">
+            <summary>
+            Gets the patients age in years
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Patient.Address">
+            <summary>
+            Gets or sets the address
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Patient.ContactNumber">
+            <summary>
+            Gets of sets the contact telephone number
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Patient.Sessions">
+            <summary>
+            Gets or sets the list of sessions
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Patient.SecondaryContact">
+            <summary>
+            Gets or sets the patients secondary contact
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Patient.FileName">
+            <summary>
+            Gets the FileName used to store the patient file
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Address.Postcode">
+            <summary>
+            Postcode
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Address.Line1">
+            <summary>
+            First line
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Address.Line2">
+            <summary>
+            Second line
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Address.Line3">
+            <summary>
+            Third line
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Address.Town">
+            <summary>
+            Town
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Address.County">
+            <summary>
+            County
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Objects.Graphics.Collisions">
+            <summary>
+            Contains collision detection methods
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Graphics.Collisions.HaveCollided(StroMoHab_Objects.Graphics.BoundingBox,StroMoHab_Objects.Graphics.BoundingBox,System.Single,System.Single,System.Single)">
+            <summary>
+            Returns bool indicating if two bounding boxes have collided
+            </summary>
+            <param name="rect1"></param>
+            <param name="rect2"></param>
+            <param name="currentX"></param>
+            <param name="currentY"></param>
+            <param name="currentZ"></param>
+            <returns></returns>
+        </member>
+        <member name="T:StroMoHab_Objects.Objects.Trackable">
+            <summary>
+            Represents a collection of markers in a pre-difined configuration
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Objects.Trackable.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Objects.Trackable.#ctor(StroMoHab_Objects.Objects.Trackable)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="newTrackable">New Trackable</param>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Trackable.TrackableIndex">
+            <summary>
+            The index inside the Tracking Tools API where the data is stored
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Trackable.TrackableMarkers">
+            <summary>
+            Contains a list of the Markers that make up the Trackable
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Trackable.TimeStamp">
+            <summary>
+            Time Stamp for when the trackable data was collected
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Trackable.Name">
+            <summary>
+            Name of the trackable e.g. Left Lower Leg
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Trackable.ID">
+            <summary>
+            Unique ID number assigned when defining the Trackle in Tracking Tools
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Trackable.xCoordinate">
+            <summary>
+            x Coordinate
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Trackable.yCoordinate">
+            <summary>
+            y Coordinate
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Trackable.zCoordinate">
+            <summary>
+            z Coordinate
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Trackable.Yaw">
+            <summary>
+            Orientation - Yaw
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Trackable.Pitch">
+            <summary>
+            Orientation - Pitch
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Trackable.Roll">
+            <summary>
+            Orientation - Roll
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Trackable.QW">
+            <summary>
+            Quaternion rotation data - QW
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Trackable.QX">
+            <summary>
+            Quaternion rotation data - QX
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Trackable.QY">
+            <summary>
+            Quaternion rotation data - QY
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Trackable.QZ">
+            <summary>
+            Quaternion rotation data - QZ
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Objects.WMIDevices">
+            <summary>
+            Provides a way to get the number of motion capture cameras via WMI
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.WMIDevices.UpdateCameraList">
+            <summary>
+            Updates the list of cameras
+            </summary>
+            <returns>The list of cameras</returns>
+        </member>
+        <member name="T:StroMoHab_Objects.Objects.OptitrackCameraList">
+            <summary>
+            Contains all of the currently connected Motion Capture Cameras
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Objects.Objects.OptitrackCameraList.listOfCameras">
+            <summary>
+            Contains the list of cameras
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Objects.OptitrackCameraList.AddCamera(StroMoHab_Objects.Objects.OptiTrackCamera)">
+            <summary>
+            Adds a camera
+            </summary>
+            <param name="camera">The camera to add</param>
+        </member>
+        <member name="M:StroMoHab_Objects.Objects.OptitrackCameraList.UpdateCameraInList(StroMoHab_Objects.Objects.OptiTrackCamera)">
+            <summary>
+            Updates a camera in the list
+            </summary>
+            <param name="camera">The camera</param>
+        </member>
+        <member name="M:StroMoHab_Objects.Objects.OptitrackCameraList.TransmitListOfCameras">
+            <summary>
+            Transmits the list of cameras
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Objects.OptitrackCameraList.CameraFromList(System.Int32)">
+            <summary>
+            Returns a camera from the list
+            </summary>
+            <param name="cameraNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="E:StroMoHab_Objects.Objects.OptitrackCameraList.TransmitCameraEvent">
+            <summary>
+            Transmit camera event
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Objects.Objects.OptitrackCameraList.TransmitCameraHandler">
+            <summary>
+            Handles transmitting a camera
+            </summary>
+            <param name="camera">The motion capture camera</param>
+        </member>
+        <member name="T:StroMoHab_Objects.Graphics.Cube">
+            <summary>
+            Cube object.
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Graphics.Cube.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Constructor for non-textured cube.
+            </summary>
+            <param name="xMin"></param>
+            <param name="yMin"></param>
+            <param name="zMin"></param>
+            <param name="xMax"></param>
+            <param name="yMax"></param>
+            <param name="zMax"></param>
+        </member>
+        <member name="M:StroMoHab_Objects.Graphics.Cube.#ctor(System.Int32,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Constructor for textured cube.
+            </summary>
+            <param name="textureNumber"></param>
+            <param name="textureWidth"></param>
+            <param name="textureHeight"></param>
+            <param name="xMin"></param>
+            <param name="yMin"></param>
+            <param name="zMin"></param>
+            <param name="xMax"></param>
+            <param name="yMax"></param>
+            <param name="zMax"></param>
+        </member>
+        <member name="M:StroMoHab_Objects.Graphics.Cube.Draw">
+            <summary>
+            Draws the cube.
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Objects.Objects.Postcode">
+            <summary>  
+            Represents a United Kingdom postcode.  
+            </summary>  
+            <remarks>  
+            For more details, see http://ianfnelson.com/blog/archive/2007/05/29/PostcodeStruct.aspx  
+            </remarks>  
+        </member>
+        <member name="M:StroMoHab_Objects.Objects.Postcode.Parse(System.String)">
+            <summary>  
+            Parses a string as a Postcode.  
+            </summary>  
+            <param name="s">String to be parsed</param>  
+            <returns>Postcode object</returns>  
+            <exception cref="T:System.FormatException">  
+            If the passed string cannot be parsed as a UK postcode  
+            </exception>  
+            <remarks>Using this overload, the inner code is not mandatory.</remarks>  
+        </member>
+        <member name="M:StroMoHab_Objects.Objects.Postcode.Parse(System.String,System.Boolean)">
+            <summary>  
+            Parses a string as a Postcode.  
+            </summary>  
+            <param name="s">String to be parsed</param>  
+            <param name="incodeMandatory">  
+            Indicates that the string passed must include a valid inner code.  
+            </param>  
+            <returns>Postcode object</returns>  
+            <exception cref="T:System.FormatException">  
+            If the passed string cannot be parsed as a UK postcode  
+            </exception>  
+        </member>
+        <member name="M:StroMoHab_Objects.Objects.Postcode.TryParse(System.String,StroMoHab_Objects.Objects.Postcode@)">
+            <summary>  
+            Attempts to parse a string as a Postcode.  
+            </summary>  
+            <param name="s">String to be parsed</param>  
+            <param name="result">Postcode object</param>  
+            <returns>  
+            Boolean indicating whether the string was successfully parsed as a UK Postcode  
+            </returns>  
+            <remarks>Using this overload, the inner code is not mandatory.</remarks>  
+        </member>
+        <member name="M:StroMoHab_Objects.Objects.Postcode.TryParse(System.String,StroMoHab_Objects.Objects.Postcode@,System.Boolean)">
+            <summary>  
+            Attempts to parse a string as a Postcode.  
+            </summary>  
+            <param name="s">String to be parsed</param>  
+            <param name="result">Postcode object</param>  
+            <param name="incodeMandatory">  
+            Indicates that the string passed must include a valid inner code.  
+            </param>  
+            <returns>  
+            Boolean indicating whether the string was successfully parsed as a UK Postcode  
+            </returns>  
+        </member>
+        <member name="M:StroMoHab_Objects.Objects.Postcode.ToString">
+            <summary>  
+            Returns a string representation of this postcode  
+            </summary>  
+            <returns></returns>  
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Postcode.OutCode">
+            <summary>  
+            Outer portion of the Postcode  
+            </summary>  
+        </member>
+        <member name="P:StroMoHab_Objects.Objects.Postcode.InCode">
+            <summary>  
+            Inner portion of the Postcode  
+            </summary>  
+        </member>
+        <member name="T:StroMoHab_Objects.Objects.MarkerList">
+            <summary>
+            Contains the details of all current markers reported by the motion capture system.
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Objects.Objects.MarkerList.listOfMarkers">
+            <summary>
+            List of all markers containing latest data.
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Objects.Objects.MarkerList.MarkerFromList(System.Int32)">
+            <summary>
+            Returns a marker the list
+            </summary>
+            <param name="markerNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StroMoHab_Objects.Objects.MarkerList.AddMarker(StroMoHab_Objects.Objects.Marker)">
+            <summary>
+            Adds a given marker to the marker list
+            </summary>
+            <param name="currentMarker"></param>
+        </member>
+        <member name="M:StroMoHab_Objects.Objects.MarkerList.RemoveExcessMarkersFromList(System.Int64)">
+            <summary>
+            Removes markers that have been taken out of the capture volume from the list.
+            </summary>
+            <param name="currentNumberOfMarkers"></param>
+        </member>
+    </members>
+</doc>

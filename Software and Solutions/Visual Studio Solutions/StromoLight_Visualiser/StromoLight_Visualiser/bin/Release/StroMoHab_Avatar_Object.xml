@@ -1,0 +1,391 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StroMoHab_Avatar_Object</name>
+    </assembly>
+    <members>
+        <member name="T:StroMoHab_Avatar_Object.Foot">
+            <summary>
+            Represents an OpenGl Foot
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Avatar_Object.BodyPart">
+            <summary>
+            Represents a single body part
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Avatar_Object.BodyPart.SCALLINGFACTOR">
+            <summary>
+            Global scalling factor 
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Avatar_Object.BodyPart.SPHERERESOLUTION">
+            <summary>
+            Number of lines to build up spheres from
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Avatar_Object.BodyPart.scaleX">
+            <summary>
+            The amount the unit shape should be scalled in the x y and z direction to reach the correct size
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Avatar_Object.BodyPart.scaleY">
+            <summary>
+            The amount the unit shape should be scalled in the x y and z direction to reach the correct size
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Avatar_Object.BodyPart.scaleZ">
+            <summary>
+            The amount the unit shape should be scalled in the x y and z direction to reach the correct size
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Avatar_Object.BodyPart.offsetX">
+            <summary>
+            The amount the unit shape should be shiffted in the x y and z direction be in the correct place
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Avatar_Object.BodyPart.offsetY">
+            <summary>
+            The amount the unit shape should be shiffted in the x y and z direction be in the correct place
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Avatar_Object.BodyPart.offsetZ">
+            <summary>
+            The amount the unit shape should be shiffted in the x y and z direction be in the correct place
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Avatar_Object.BodyPart.bodyPartBoundingBox">
+            <summary>
+            The bounding box used for collision detection
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Avatar_Object.BodyPart.DrawBodyPart">
+            <summary>
+            Implement code to draw the desired UNIT shape to represnt the body part
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Avatar_Object.BodyPart.CalculateScallingAndOffsets(StroMoHab_Objects.Objects.Trackable,StroMoHab_Objects.Objects.Joint,StroMoHab_Objects.Objects.Joint)">
+            <summary>
+            Implement code to calculate to size of the body part so that the unit shape can be scalled correctly
+            and so it can be offset correctly based on connecting joint data
+            </summary>
+            <param name="trackable"></param>
+            <param name="joint1"></param>
+            <param name="joint2"></param>
+        </member>
+        <member name="M:StroMoHab_Avatar_Object.BodyPart.Draw(StroMoHab_Objects.Objects.Trackable,StroMoHab_Objects.Objects.Joint,StroMoHab_Objects.Objects.Joint)">
+            <summary>
+            Draws the body part based on the trackable
+            </summary>
+            <param name="trackable">The trackable</param>
+            <param name="joint1">The first joint</param>
+            <param name="joint2">The second joint</param>
+        </member>
+        <member name="M:StroMoHab_Avatar_Object.BodyPart.ScaleIn">
+            <summary>
+            Scales the unit sphers/hemispheres to the correct ellipsoid shape to represent limbs
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Avatar_Object.BodyPart.ScaleOut">
+            <summary>
+            Undoes previous scalling
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Avatar_Object.BodyPart.MoveIn(StroMoHab_Objects.Objects.Trackable)">
+            <summary>
+            Moves to the center of the trackalbe and sets the orientation so that the body part can be drawn
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Avatar_Object.BodyPart.MoveOut(StroMoHab_Objects.Objects.Trackable)">
+            <summary>
+            Moves back to x/y/z = 0 and resets the orientation
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Avatar_Object.BodyPart.SetDrawingMode(System.Boolean)">
+            <summary>
+            Sets the Polygon drawing mode to use
+            </summary>
+            <param name="fillNotMesh">True = Fill False = Mesh</param>
+        </member>
+        <member name="M:StroMoHab_Avatar_Object.BodyPart.DrawUnitSphere">
+            <summary>
+            Draws a unit sphere which can be scalled to form and ellipsoid
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Avatar_Object.BodyPart.DrawUnitHemiSphere">
+            <summary>
+            Draws half a unit sphere that can be scalled to be half an ellipsoid
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Avatar_Object.BodyPart.UpdateBoundingBox(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Updates the boundbox for the current object
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Avatar_Object.BodyPart.CalculateBoundingBox(StroMoHab_Objects.Objects.Trackable)">
+            <summary>
+            Implement code to calculate the size of the bounding box
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Avatar_Object.BodyPart.CalculateMinMaxXYZ(StroMoHab_Objects.Objects.Trackable,System.Single@,System.Single@,System.Single@,System.Single@,System.Single@,System.Single@)">
+            <summary>
+            Calculates the min and max x y and z values for the bounding box that encapsulates the trackable
+            </summary>
+            <param name="trackable"></param>
+            <param name="xMin"></param>
+            <param name="yMin"></param>
+            <param name="zMin"></param>
+            <param name="xMax"></param>
+            <param name="yMax"></param>
+            <param name="zMax"></param>
+        </member>
+        <member name="M:StroMoHab_Avatar_Object.BodyPart.BuildCuboidCorners(System.Single,System.Single,System.Single)">
+            <summary>
+             Takes the X, Y, Z vectors from the centre to the exteme corner point on a cuboid and calculates the vectors
+             to all of the corner points
+             </summary>
+        </member>
+        <member name="M:StroMoHab_Avatar_Object.BodyPart.RotateCuboidCorners(System.Collections.Generic.List{StroMoHab_Matrix.PointMatrix},StroMoHab_Matrix.RotationMatrix)">
+            <summary>
+            Takes a list of corner points and rotates them
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Avatar_Object.BodyPart.FindMaxMinCorners(System.Collections.Generic.List{StroMoHab_Matrix.PointMatrix},System.Single@,System.Single@,System.Single@,System.Single@,System.Single@,System.Single@)">
+            <summary>
+            From the list of corner points finds the min and max x, y, and z values
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Avatar_Object.BodyPart.CollisionModel">
+            <summary>
+            The collision model of the object.
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Avatar_Object.Foot.#ctor">
+            <summary>
+            Constructor for the OpenGL Body Part
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Avatar_Object.Foot.CalculateScallingAndOffsets(StroMoHab_Objects.Objects.Trackable,StroMoHab_Objects.Objects.Joint,StroMoHab_Objects.Objects.Joint)">
+            <summary>
+            Calculates the scalling and offset values for the trackable which determin its size and position
+            </summary>
+            <param name="trackable"></param>
+            <param name="joint1"></param>
+            <param name="joint2"></param>
+        </member>
+        <member name="M:StroMoHab_Avatar_Object.Foot.DrawBodyPart">
+            <summary>
+            Draws the unit shape the represents the body part
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Avatar_Object.Foot.CalculateBoundingBox(StroMoHab_Objects.Objects.Trackable)">
+            <summary>
+            Calculates the bounding box for the given trackable and updates it
+            </summary>
+            <param name="trackable"></param>
+        </member>
+        <member name="T:StroMoHab_Avatar_Object.Joint">
+            <summary>
+            Represents and OpenGl Joint
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Avatar_Object.Joint.Draw(StroMoHab_Objects.Objects.Joint)">
+            <summary>
+            Draws the Joint
+            </summary>
+            <param name="joint">The joint</param>
+        </member>
+        <member name="M:StroMoHab_Avatar_Object.Joint.DrawUnitSphere">
+            <summary>
+            Draws a unit sphere which can be scalled to form and ellipsoid
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Avatar_Object.Joint.SetDrawingMode(System.Boolean)">
+            <summary>
+            Sets the Polygon drawing mode to use
+            </summary>
+            <param name="fillNotMesh"></param>
+        </member>
+        <member name="T:StroMoHab_Avatar_Object.UpperLeg">
+            <summary>
+            Represents and OpenGl Upper Leg
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Avatar_Object.UpperLeg.#ctor">
+            <summary>
+            Constructor for the OpenGL Body Part
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Avatar_Object.UpperLeg.CalculateScallingAndOffsets(StroMoHab_Objects.Objects.Trackable,StroMoHab_Objects.Objects.Joint,StroMoHab_Objects.Objects.Joint)">
+            <summary>
+            Calculates the scalling and offset values for the trackable which determin its size and position
+            </summary>
+            <param name="trackable"></param>
+            <param name="joint1"></param>
+            <param name="joint2"></param>
+        </member>
+        <member name="M:StroMoHab_Avatar_Object.UpperLeg.DrawBodyPart">
+            <summary>
+            Draws the unit shape the represents the body part
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Avatar_Object.UpperLeg.CalculateBoundingBox(StroMoHab_Objects.Objects.Trackable)">
+            <summary>
+            Calculates the bounding box for the given trackable and updates it
+            </summary>
+            <param name="trackable"></param>
+        </member>
+        <member name="T:StroMoHab_Avatar_Object.LowerLeg">
+            <summary>
+            Represents and OpenGl Lower Leg
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Avatar_Object.LowerLeg.#ctor">
+            <summary>
+            Constructor for the OpenGL Body Part
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Avatar_Object.LowerLeg.CalculateScallingAndOffsets(StroMoHab_Objects.Objects.Trackable,StroMoHab_Objects.Objects.Joint,StroMoHab_Objects.Objects.Joint)">
+            <summary>
+            Calculates the scalling and offset values for the trackable which determin its size and position
+            </summary>
+            <param name="trackable"></param>
+            <param name="joint1"></param>
+            <param name="joint2"></param>
+        </member>
+        <member name="M:StroMoHab_Avatar_Object.LowerLeg.DrawBodyPart">
+            <summary>
+            Draws the unit shape the represents the body part
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Avatar_Object.LowerLeg.CalculateBoundingBox(StroMoHab_Objects.Objects.Trackable)">
+            <summary>
+            Calculates the bounding box for the given trackable and updates it
+            </summary>
+            <param name="trackable"></param>
+        </member>
+        <member name="T:StroMoHab_Matrix.RotationMatrix">
+            <summary>
+            A collection of classes and methods for interfacing with Math.NET Iridium (Numerics) 2008 August Release, Iteration 16 (v2008.8.16.470)
+            http://www.mathdotnet.com/downloads/Default.aspx
+            </summary>
+            <auther>Will Lunniss</auther>
+        </member>
+        <member name="F:StroMoHab_Matrix.RotationMatrix.rotationMatrixX">
+            <summary>
+            The X axis rotation matrix
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Matrix.RotationMatrix.rotationMatrixY">
+            <summary>
+            The Y axis rotation matrix
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Matrix.RotationMatrix.rotationMatrixZ">
+            <summary>
+            The Z axis rotation matrix
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Matrix.RotationMatrix.#ctor(System.Double,System.Double,System.Double)">
+            <summary>
+            Generates the 3 rotation matricies for use with Operations.Rotate()
+            </summary>
+            <param name="rotationValueX">Rotation around the X Axis</param>
+            <param name="rotationValueY">Rotation around the Y Axis</param>
+            <param name="rotationValueZ">Rotation around the Z Axis</param>
+        </member>
+        <member name="T:StroMoHab_Matrix.PointMatrix">
+            <summary>
+            Represents a single point in 3D space
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Matrix.PointMatrix.pointMatrix">
+            <summary>
+            The point matrix
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Matrix.PointMatrix.#ctor(System.Double,System.Double,System.Double)">
+            <summary>
+            Generates a point matrix (1x3 Vector) from the given inputs
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="z"></param>
+        </member>
+        <member name="M:StroMoHab_Matrix.PointMatrix.#ctor">
+            <summary>
+            Generates an empty point matrix (1x3 Vector)
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Matrix.PointMatrix.XCoordinate">
+            <summary>
+            The X coordinate
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Matrix.PointMatrix.YCoordinate">
+            <summary>
+            The Y coordinate
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Matrix.PointMatrix.ZCoordinate">
+            <summary>
+            The Z coordinate
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Matrix.Operations">
+            <summary>
+            Provides a number of matrix based operations
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Matrix.Operations.Rotate(StroMoHab_Matrix.PointMatrix,StroMoHab_Matrix.RotationMatrix)">
+            <summary>
+            Rotates the given point by the given rotation matrix and returns a point matrix
+            </summary>
+            <param name="pointMatrix">The 1x3 point matrix</param>
+            <param name="rotationMatrix">The 3 3x3 rotation matricies</param>
+            <returns>The new 1x3 point matrix</returns>
+        </member>
+        <member name="M:StroMoHab_Matrix.Operations.Transpose(MathNet.Numerics.LinearAlgebra.Matrix)">
+            <summary>
+            Transposes a square Matrix without overiding it
+            </summary>
+            <param name="A"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StroMoHab_Matrix.Operations.BuildRotorFromQuaternionData(StroMoHab_Objects.Objects.Trackable)">
+            <summary>
+            Finds the Rotation matrix of a Trackable by using the Quaternion data
+            </summary>
+            <param name="Trackable"></param>
+            <returns></returns>
+        </member>
+        <member name="T:StroMoHab_Avatar_Object.Avatar">
+            <summary>
+            Represents a 3D opengl avatar
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Avatar_Object.Avatar.#ctor">
+            <summary>
+             Constructor for the 3D Avatar
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Avatar_Object.Avatar.Draw(System.Collections.Generic.List{StroMoHab_Objects.Objects.Trackable},System.Collections.Generic.List{StroMoHab_Objects.Objects.Joint})">
+            <summary>
+            Draws each Trackable in the list supplied
+            If joint data is avaliable the limb will be scalled, otherwise it will be a generic size
+            </summary>
+            <param name="trackableList">The trackable list</param>
+            <param name="jointList">The joint list</param>
+        </member>
+        <member name="P:StroMoHab_Avatar_Object.Avatar.CollisionModel">
+            <summary>
+            Gets the collision models for the avatar
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Avatar_Object.Avatar.DrawJoints">
+            <summary>
+            Gets or sets the property defining if joints should be drawn
+            </summary>
+        </member>
+    </members>
+</doc>

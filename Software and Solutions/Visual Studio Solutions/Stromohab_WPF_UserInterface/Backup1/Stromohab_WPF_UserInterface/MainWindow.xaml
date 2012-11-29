@@ -1,0 +1,13 @@
+﻿<Window x:Class="Stromohab_WPF_UserInterface.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Stromohab"
+        ShowInTaskbar="True"
+        Style="{StaticResource StromohabWindowStyle}"
+        Loaded="Window_Loaded">
+
+        <DockPanel>
+            <Frame x:Name="_mainFrame" NavigationUIVisibility="Hidden"></Frame>
+        </DockPanel>
+
+</Window>

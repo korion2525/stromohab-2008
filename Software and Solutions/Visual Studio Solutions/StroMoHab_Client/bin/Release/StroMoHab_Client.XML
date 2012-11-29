@@ -1,0 +1,851 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StroMoHab_Client</name>
+    </assembly>
+    <members>
+        <member name="T:StroMoHab_Client.Task_Detailed_Preview_Control">
+            <summary>
+            This control extends Task_Preview_Control and adds extra information. It is shown when the user selects a task
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Client.Task_Preview_Control">
+            <summary>
+            A control to show a task including an image, name, type and other details
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Client.Task_Preview_Control.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.Task_Preview_Control.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:StroMoHab_Client.Task_Preview_Control.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Client.Task_Preview_Control._task">
+            <summary>
+            The task
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Client.Task_Preview_Control._selected">
+            <summary>
+            Indicates if it has been selected
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Client.Task_Preview_Control.g">
+            <summary>
+            Graphics used to show if a task is selected
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.Task_Preview_Control.#ctor">
+            <summary>
+            The constructor
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.Task_Preview_Control.FillInFields">
+            <summary>
+            Fills in all the fields
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Client.Task_Preview_Control.SimplePreviewMode">
+            <summary>
+            Gets or sets a bool indicating if the control is in simple or detailed preview mode
+            In simple display a tooltip showing the description
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Client.Task_Preview_Control.Selected">
+            <summary>
+            Gets or sets a bool indicating if the current control is selected
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Client.Task_Preview_Control.Task">
+            <summary>
+            Gets or sets the Task
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Client.Task_Detailed_Preview_Control.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.Task_Detailed_Preview_Control.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:StroMoHab_Client.Task_Detailed_Preview_Control.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Client.Create_Edit_Patient_Form">
+            <summary>
+            A form to create and edit a patient
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Client.Create_Edit_Patient_Form.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.Create_Edit_Patient_Form.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:StroMoHab_Client.Create_Edit_Patient_Form.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Client.Create_Edit_Patient_Form.Patient">
+            <summary>
+            Gets or sets the patient
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Client.Clinician_Records_Screen">
+            <summary>
+            A control to manage clinicians
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Client.Clinician_Records_Screen.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.Clinician_Records_Screen.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:StroMoHab_Client.Clinician_Records_Screen.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.Clinician_Records_Screen.UpdateClinicians">
+            <summary>
+            Updates the list of clinicians
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.Clinician_Records_Screen.GetSelectedClinicianID">
+            <summary>
+            Gets the id of the selected clinician
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:StroMoHab_Client.Clinician_Records_Screen.GenerateListViewClinicianItem(StroMoHab_Objects.Objects.Clinician,System.Int32)">
+            <summary>
+            Generates a list view item for the given clinician
+            </summary>
+            <param name="clinician"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StroMoHab_Client.Clinician_Records_Screen.listViewClinicians_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            deals with an item being clicked
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:StroMoHab_Client.Clinician_Records_Screen.buttonNew_Click(System.Object,System.EventArgs)">
+            <summary>
+            Creates a new clinician
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:StroMoHab_Client.Clinician_Records_Screen.buttonEdit_Click(System.Object,System.EventArgs)">
+            <summary>
+            edits a clinician
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:StroMoHab_Client.Clinician_Records_Screen.buttonDelete_Click(System.Object,System.EventArgs)">
+            <summary>
+            deletes a clinician
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:StroMoHab_Client.Clinician_Records_Screen.listViewClinicians_MouseDoubleClick(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            deals with double clicking
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:StroMoHab_Client.Session_Details_Control.#ctor">
+            <summary>
+            A control to display details about a Session
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Client.Session_Details_Control.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.Session_Details_Control.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:StroMoHab_Client.Session_Details_Control.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Client.Run_Review_Session_Form">
+            <summary>
+            This form controls running a session and reviewing a session
+            It starts and stops playback and recording and sends the task to the visualiser
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Client.Run_Review_Session_Form.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.Run_Review_Session_Form.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:StroMoHab_Client.Run_Review_Session_Form.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.Run_Review_Session_Form._waitForVisualiser_Tick(System.Object,System.EventArgs)">
+            <summary>
+            Wait for the visualiser to load and then tell it what task to use
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:StroMoHab_Client.Run_Review_Session_Form.VisualiserLoaded">
+            <summary>
+            Sends the visualiser information once it has loaded
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.Run_Review_Session_Form._delayedWindowSetup_Tick(System.Object,System.EventArgs)">
+            <summary>
+            Wait and then setup the form size and position
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:StroMoHab_Client.Run_Review_Session_Form.SetupCompletedSession">
+            <summary>
+            Sets up the interface for a completed session
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.Run_Review_Session_Form.SetupScheduledSession">
+            <summary>
+            Sets up the interface for a scheduled sessison
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.Run_Review_Session_Form.StartPlayback">
+            <summary>
+            Stars playback
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.Run_Review_Session_Form.StopPlayback">
+            <summary>
+            Stops playback
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.Run_Review_Session_Form.StartRecording">
+            <summary>
+            Starts recording
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.Run_Review_Session_Form.StopRecording">
+            <summary>
+            Stops recording
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.Run_Review_Session_Form.buttonSwitchVMode_Click(System.Object,System.EventArgs)">
+            <summary>
+            Switches in and out of full screen mode
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:StroMoHab_Client.Run_Review_Session_Form.TreadmillSpeed">
+            <summary>
+            The current treadmill speed
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Client.Run_Review_Session_Form.CurrentSession">
+            <summary>
+            The current session
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Client.Patient_Detials_Control">
+            <summary>
+            A control to display details about a Patient
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.Patient_Detials_Control.#ctor">
+            <summary>
+            The constructor
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.Patient_Detials_Control.FillFields">
+            <summary>
+            Fills in the fields based on the patient set using the Patient property
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.Patient_Detials_Control.richTextBoxNotes_Validating(System.Object,System.ComponentModel.CancelEventArgs)">
+            <summary>
+            Saves the text box content when it looses focus
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:StroMoHab_Client.Patient_Detials_Control.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.Patient_Detials_Control.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:StroMoHab_Client.Patient_Detials_Control.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Client.Patient_Detials_Control.ShowTextBox">
+            <summary>
+            Gets or sets a bool indicating if the text box should be shown
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Client.Patient_Detials_Control.ShowDetails">
+            <summary>
+            Gets or sets a bool indicating if the details of the patient should be shown
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Client.Patient_Detials_Control.Patient">
+            <summary>
+            Gets or sets the patient
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Client.Patient_Records_Screen">
+            <summary>
+            Provides a screen for the clinician to manage patients
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Client.Patient_Records_Screen.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.Patient_Records_Screen.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:StroMoHab_Client.Patient_Records_Screen.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Client.Patient_Records_Screen._patientSorter">
+            <summary>
+            Used for sorting the list
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Client.Patient_Records_Screen._listViewItems">
+            <summary>
+            Contains all of the items
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Client.Patient_Records_Screen._Remote_Data_Manager">
+            <summary>
+            Remote connection to the server
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Client.Patient_Records_Screen._selectedPatientIndex">
+            <summary>
+            Selected patient
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.Patient_Records_Screen.LoadInPatientData">
+            <summary>
+            Loads in the patient data into the list view table used to open a patient
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.Patient_Records_Screen.GenerateListViewPatientItem(StroMoHab_Objects.Objects.Patient,System.Int32)">
+            <summary>
+            Converts patient data into a form suitable for a ListView
+            </summary>
+            <param name="patient">The Patient</param>
+            <param name="ID">An ID number to trace the item back to the patient</param>
+            <returns></returns>
+        </member>
+        <member name="M:StroMoHab_Client.Patient_Records_Screen.GetSelectedPatientID">
+            <summary>
+            gets the hidden patient id from the selected patient
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:StroMoHab_Client.Patient_Records_Screen.ClearSelected">
+            <summary>
+            Clears any selected patients in the list
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.Patient_Records_Screen.listViewPatients_ColumnClick(System.Object,System.Windows.Forms.ColumnClickEventArgs)">
+            <summary>
+            Performs sorting when the patient column headers are clicked
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:StroMoHab_Client.Patient_Records_Screen.CurrentClinician">
+            <summary>
+            Gets or sets the current clinician - used to determine permissions and to get the name of the last person to make an edit
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Client.Patient_Records_Screen.PatientListView">
+            <summary>
+            The list view containing all the patients
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Client.Patient_Records_Screen.AddFoundPatientCallback">
+            <summary>
+            Delegate to add items to the List from the worker thread
+            </summary>
+            <param name="patient"></param>
+        </member>
+        <member name="T:StroMoHab_Client.Create_Edit_Clinician_Form">
+            <summary>
+            A form to create and edit a clincian
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Client.Create_Edit_Clinician_Form.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.Create_Edit_Clinician_Form.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:StroMoHab_Client.Create_Edit_Clinician_Form.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Client.Create_Edit_Session_Control">
+            <summary>
+            A control to setup and edit session configuration (Task, Scheduling etc..)
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.Create_Edit_Session_Control.LoadInTasks">
+            <summary>
+            Loads in tasks from the server - call when starting up but not at Initialisation to limit delays
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.Create_Edit_Session_Control.UpdateListOfTasks">
+            <summary>
+            Gets an updated list of tasks from the server
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.Create_Edit_Session_Control.GenerateTaskControls">
+            <summary>
+            Generates the Task_Preview_Controls for available tasks, sets the task, registers a click event handler and adds them
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.Create_Edit_Session_Control.Reset">
+            <summary>
+            Clears all the filters
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.Create_Edit_Session_Control.FilterTasks">
+            <summary>
+            Filters out the tasks based on the selections made by the user
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.Create_Edit_Session_Control.ClearSelection">
+            <summary>
+            Clears any selections
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.Create_Edit_Session_Control.SelectTask_Preview_Control(System.Object)">
+            <summary>
+            Select a Task_Preview_Control
+            </summary>
+            <param name="control"></param>
+        </member>
+        <member name="M:StroMoHab_Client.Create_Edit_Session_Control.DelayedSelectTask(StroMoHab_Objects.Objects.Task)">
+            <summary>
+            Selects the specified task (after a short delay to ensure the panel size has setup correct for it to scroll)
+            </summary>
+            <param name="task"></param>
+        </member>
+        <member name="M:StroMoHab_Client.Create_Edit_Session_Control.SelectTask(StroMoHab_Objects.Objects.Task)">
+            <summary>
+            Selects a specific task
+            </summary>
+            <param name="task"></param>
+        </member>
+        <member name="F:StroMoHab_Client.Create_Edit_Session_Control.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.Create_Edit_Session_Control.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:StroMoHab_Client.Create_Edit_Session_Control.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Client.Create_Edit_Session_Control.ShowDetailedTaskPreview">
+            <summary>
+            Shows the detailed task preview so that the user can get a better idea of the task before selecting it
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Client.Create_Edit_Session_Control.CurrentClinician">
+            <summary>
+            Gets or sets the current clinician - used to determine permissions and to get the name of the last person to make an edit
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Client.Clinician_Login_Screen">
+            <summary>
+            Provides a screen for the clinician to login
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Client.Clinician_Login_Screen.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.Clinician_Login_Screen.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:StroMoHab_Client.Clinician_Login_Screen.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Client.Clinician_Login_Screen.CurrentClinician">
+            <summary>
+            Gets or sets the current clinician - used to determine permissions and to get the name of the last person to make an edit
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Client.ListViewColumnSorter">
+            <summary>
+            This class is an implementation of the 'IComparer' interface.
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Client.ListViewColumnSorter.ColumnToSort">
+            <summary>
+            Specifies the column to be sorted
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Client.ListViewColumnSorter.OrderOfSort">
+            <summary>
+            Specifies the order in which to sort (i.e. 'Ascending').
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Client.ListViewColumnSorter.ObjectCompare">
+            <summary>
+            Case insensitive comparer object
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.ListViewColumnSorter.#ctor">
+            <summary>
+            Class constructor.  Initializes various elements
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.ListViewColumnSorter.Compare(System.Object,System.Object)">
+            <summary>
+            This method is inherited from the IComparer interface.  It compares the two objects passed using a case insensitive comparison.
+            </summary>
+            <param name="x">First object to be compared</param>
+            <param name="y">Second object to be compared</param>
+            <returns>The result of the comparison. "0" if equal, negative if 'x' is less than 'y' and positive if 'x' is greater than 'y'</returns>
+        </member>
+        <member name="P:StroMoHab_Client.ListViewColumnSorter.SortColumn">
+            <summary>
+            Gets or sets the number of the column to which to apply the sorting operation (Defaults to '0').
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Client.ListViewColumnSorter.Order">
+            <summary>
+            Gets or sets the order of sorting to apply (for example, 'Ascending' or 'Descending').
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Client.Patient_Screen">
+            <summary>
+            The main screen where sessions and scheduled and run
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Client.Patient_Screen.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.Patient_Screen.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:StroMoHab_Client.Patient_Screen.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Client.Patient_Screen._sessionSorter">
+            <summary>
+            Used for sorting the list
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Client.Patient_Screen._remote_DataManager">
+            <summary>
+            Remote connection to the server
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.Patient_Screen.FillInFields">
+            <summary>
+            Fills in all of the forms on the control with the current patients info
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.Patient_Screen.CreateNewSession">
+            <summary>
+            Creates a new blank session
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.Patient_Screen.CreateNewSession(StroMoHab_Objects.Objects.Task)">
+            <summary>
+            Creates a new session based on the supplied task
+            </summary>
+            <param name="task"></param>
+        </member>
+        <member name="M:StroMoHab_Client.Patient_Screen.ShowPatientDetailsScreen">
+            <summary>
+            Shows the patient details screen
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.Patient_Screen.ClosePatientScreen">
+            <summary>
+            Closes the patient screen
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.Patient_Screen.ShowSessionDetailsScreen">
+            <summary>
+            Shows the session details screen
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.Patient_Screen.FillInListViewSessions">
+            <summary>
+            Fills in the list view session with the current patients info
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.Patient_Screen.GenerateListViewSessionItem(StroMoHab_Objects.Objects.Patient,System.Int32)">
+            <summary>
+            Generates a ListViewItem for listViewSessions
+            </summary>
+            <param name="patient"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StroMoHab_Client.Patient_Screen.GetSelectedSessionID">
+            <summary>
+            Returns the session ID of the selected session in the list of sessions
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:StroMoHab_Client.Patient_Screen.buttonBack_Click(System.Object,System.EventArgs)">
+            <summary>
+            Goes back to the previous screen
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:StroMoHab_Client.Patient_Screen.buttonOpen_Click(System.Object,System.EventArgs)">
+            <summary>
+            Opens a session or selects a task
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:StroMoHab_Client.Patient_Screen.buttonDuplicate_Click(System.Object,System.EventArgs)">
+            <summary>
+            Duplicates the current session
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:StroMoHab_Client.Patient_Screen.buttonNewSession_Click(System.Object,System.EventArgs)">
+            <summary>
+            Creates a new session
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:StroMoHab_Client.Patient_Screen.buttonDelete_Click(System.Object,System.EventArgs)">
+            <summary>
+            Deletes a session
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:StroMoHab_Client.Patient_Screen.buttonReport_Click(System.Object,System.EventArgs)">
+            <summary>
+            Generates a report
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:StroMoHab_Client.Patient_Screen.buttonRunSession_Click(System.Object,System.EventArgs)">
+            <summary>
+            Runs a session
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:StroMoHab_Client.Patient_Screen.buttonReviewSession_Click(System.Object,System.EventArgs)">
+            <summary>
+            Reviews a session
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:StroMoHab_Client.Patient_Screen.buttonEdit_Click(System.Object,System.EventArgs)">
+            <summary>
+            Edits a session or task
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:StroMoHab_Client.Patient_Screen.CurrentClinician">
+            <summary>
+            Gets or sets the current clinician - used to determine permissions and to get the name of the last person to make an edit
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Client.GUI">
+            <summary>
+            The main interface
+            </summary>
+        </member>
+        <member name="F:StroMoHab_Client.GUI.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.GUI.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:StroMoHab_Client.GUI.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.GUI.#ctor">
+            <summary>
+            The contructor
+            </summary>
+        </member>
+        <member name="M:StroMoHab_Client.GUI._progressBarHiderTimer_Tick(System.Object,System.EventArgs)">
+            <summary>
+            Hides the progress bar after a short while
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:StroMoHab_Client.GUI.SetProgressBarValueThreadSafe(System.Int32)">
+            <summary>
+            Sets the status bar progress bar value in a threadsafe way
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:StroMoHab_Client.GUI.SetProgressBarValue(System.Int32)">
+            <summary>
+            Sets the status bar progress bar value
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:StroMoHab_Client.GUI.SetStatusLabelValueThreadSafe(System.String)">
+            <summary>
+            Sets the status bar text label in a threadsafe way
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:StroMoHab_Client.GUI.SetStatusLabelValue(System.String)">
+            <summary>
+            Sets the status bar text label
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:StroMoHab_Client.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:StroMoHab_Client.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Client.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:StroMoHab_Client.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>

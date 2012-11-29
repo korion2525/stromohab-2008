@@ -1,0 +1,5 @@
+To access the website area on the university network or VPN go to
+
+\\ElecFS\StudentFS\WebAccessibleAreas\www.stromohab.com
+
+log in with your usual univesity account name/password

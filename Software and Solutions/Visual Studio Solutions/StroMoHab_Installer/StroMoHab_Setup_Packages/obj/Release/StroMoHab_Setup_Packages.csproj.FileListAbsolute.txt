@@ -1,0 +1,12 @@
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Installer\StroMoHab_Setup_Packages\bin\Release\Setup Files\TrackingTools.2.2.0.Final.exe
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Installer\StroMoHab_Setup_Packages\bin\Release\Setup Files\MSMQ.rtf
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Installer\StroMoHab_Setup_Packages\bin\Release\StroMoHab_Package_Manager.exe.config
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Installer\StroMoHab_Setup_Packages\bin\Release\StroMoHab_Package_Manager.exe
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Installer\StroMoHab_Setup_Packages\bin\Release\StroMoHab_Package_Manager.pdb
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Installer\StroMoHab_Setup_Packages\obj\Release\ResolveAssemblyReference.cache
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Installer\StroMoHab_Setup_Packages\obj\Release\StroMoHab_Setup_Packages.GUI.resources
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Installer\StroMoHab_Setup_Packages\obj\Release\StroMoHab_Setup_Packages.MSMQReadMe.resources
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Installer\StroMoHab_Setup_Packages\obj\Release\StroMoHab_Setup_Packages.Properties.Resources.resources
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Installer\StroMoHab_Setup_Packages\obj\Release\StroMoHab_Setup_Packages.csproj.GenerateResource.Cache
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Installer\StroMoHab_Setup_Packages\obj\Release\StroMoHab_Package_Manager.exe
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Installer\StroMoHab_Setup_Packages\obj\Release\StroMoHab_Package_Manager.pdb

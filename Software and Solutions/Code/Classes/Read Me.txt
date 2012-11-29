@@ -1,0 +1,14 @@
+To Build A Client Application:
+
+
+Include stromohab_08\Visual Studio Solutions\StromoLight_Objects\StromoLight_Objects\bin\Release\Stromolight_Objects.dll
+
+as this .dll file contains all the needed files
+
+
+
+If you don't re-add the new files your application will crash as it won't know how to deal with the additional data the server will send it
+
+
+
+Also See Documentation\Tracking Tool\Creating a Client Application.pdf

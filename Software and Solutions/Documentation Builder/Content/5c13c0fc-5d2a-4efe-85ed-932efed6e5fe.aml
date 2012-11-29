@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="5c13c0fc-5d2a-4efe-85ed-932efed6e5fe" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!--
+    <summary>
+      <para>Optional summary abstract</para>
+    </summary>
+    -->
+    <introduction>
+      <!-- Uncomment this to generate an outline of the section and sub-section
+           titles.  Specify a numeric value as the inner text to limit it to
+           a specific number of sub-topics when creating the outline.  Specify
+           zero (0) to limit it to top-level sections only.  -->
+      <!-- <autoOutline /> -->
+      <para>This topic describes setting up the tools used to build this documentation.</para>
+    </introduction>
+    <!-- Add one or more top-level section elements.  These are collapsible.
+         If using <autoOutline />, add an address attribute to identify it
+         and specify a title so that it can be jumped to with a hyperlink. -->
+    <section address="Requirements">
+      <title>Requirements</title>
+      <content>
+        <!-- Uncomment this to create a sub-section outline
+        <autoOutline /> -->
+        <para>In addition to the tools previously installed for developing StroMoHab code. The following are required:
+        <list class="bullet">
+		  <listItem>The latest version of 
+		  	<externalLink>
+    			<linkText>Sandcastle</linkText>
+    			<linkUri>http://sandcastle.codeplex.com/</linkUri>
+			</externalLink>
+			currently Sandcastle-June 2010 Release (Version 2.6.1062.1)
+		  </listItem>
+		  <listItem>The latest version of 
+		  	<externalLink>
+    			<linkText>Sandcastle Styles</linkText>
+    			<linkUri>http://www.codeplex.com/SandcastleStyles</linkUri>
+			</externalLink>
+			currently Sandcastle June 2010 (2.6.10621.1) Patch - Rev 1
+		  </listItem>
+		  <listItem>The latest version of 
+		  	<externalLink>
+    			<linkText>Sandcastle Help File Builder</linkText>
+    			<linkUri>http://shfb.codeplex.com/</linkUri>
+			</externalLink>
+			currently SHFB v1.9.1.0 Release
+		  </listItem>
+		</list>
+		Latest versions as of 08/07/2010
+        </para>
+      </content>
+    </section>
+    <section address="workingWithDoc">
+      <title>Editing And Building The Documentation</title>
+      <content>
+        <!-- Uncomment this to create a sub-section outline
+        <autoOutline /> -->
+        <para>
+        	The documentation is defined by <localUri>StroMoHab.shfbproj</localUri> which is
+        	stored in the <localUri>Documentation Builder</localUri> folder inside the <localUri>Software and Solutions</localUri>
+        	section of the StroMoHab SVN repository.
+        	
+        </para>
+      </content>
+      <sections>
+          <section address="Editing">
+              <title>Editing and Configuring the Documentation</title>
+              <content>
+                  <para>
+                  	<alert class="tip">
+					  <para>The plug-in <application>Additional Content Only</application> will stop the code documentation being built when enabled.
+					   This is useful when testing updates to Conceptual Content</para>
+					</alert>
+                  </para>
+              </content>
+          </section>
+          <section address="Building">
+              <title>Building the Documentation</title>
+              <content>
+                  <para>The documentation can be build either by using <application>Sandcastle Help File Builder's GUI</application>
+                  or via the <application>command line</application>.
+                  </para>
+                  <para>
+                  To build from the command line run the following:
+                  <command>%SystemRoot%\Microsoft.NET\Framework\v3.5\MSBuild.exe /p:Configuration=Release /p:DumpLogOnFailure=True StroMoHab.shfbproj</command>
+                  </para>
+              </content>
+          </section>
+      </sections>
+    </section>
+    <relatedTopics>
+      <!-- One or more of the following:
+           - A local link
+           - An external link
+           - A code entity reference
+
+      <link xlink:href="Other Topic's ID"/>
+      <link xlink:href="Other Topic's ID">Link inner text</link>
+
+      <externalLink>
+          <linkText>Link text</linkText>
+          <linkAlternateText>Optional alternate link text</linkAlternateText>
+          <linkUri>URI</linkUri>
+      </externalLink>
+
+      <codeEntityReference>API member ID</codeEntityReference>
+
+      Examples:
+
+      <link xlink:href="00e97994-e9e6-46e0-b420-5be86b2f8270" />
+      <link xlink:href="00e97994-e9e6-46e0-b420-5be86b2f8278">Some other topic</link>
+
+      <externalLink>
+          <linkText>SHFB on CodePlex</linkText>
+          <linkAlternateText>Go to CodePlex</linkAlternateText>
+          <linkUri>http://shfb.codeplex.com</linkUri>
+      </externalLink>
+
+      <codeEntityReference>T:TestDoc.TestClass</codeEntityReference>
+      <codeEntityReference>P:TestDoc.TestClass.SomeProperty</codeEntityReference>
+      <codeEntityReference>M:TestDoc.TestClass.#ctor</codeEntityReference>
+      <codeEntityReference>M:TestDoc.TestClass.#ctor(System.String,System.Int32)</codeEntityReference>
+      <codeEntityReference>M:TestDoc.TestClass.ToString</codeEntityReference>
+      <codeEntityReference>M:TestDoc.TestClass.FirstMethod</codeEntityReference>
+      <codeEntityReference>M:TestDoc.TestClass.SecondMethod(System.Int32,System.String)</codeEntityReference>
+      -->
+    </relatedTopics>
+  </developerConceptualDocument>
+</topic>

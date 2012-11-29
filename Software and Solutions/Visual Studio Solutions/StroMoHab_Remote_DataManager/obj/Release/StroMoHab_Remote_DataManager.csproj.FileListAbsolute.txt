@@ -1,0 +1,10 @@
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Remote_DataManager\bin\Release\StroMoHab_Remote_DataManager.dll
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Remote_DataManager\bin\Release\StroMoHab_Remote_DataManager.pdb
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Remote_DataManager\bin\Release\StroMoHab_Objects.dll
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Remote_DataManager\bin\Release\StroMoHab_Objects.pdb
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Remote_DataManager\bin\Release\StroMoHab_Objects.xml
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Remote_DataManager\obj\Release\ResolveAssemblyReference.cache
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Remote_DataManager\obj\Release\StroMoHab_Remote_DataManager.TaskFileBrowser.resources
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Remote_DataManager\obj\Release\StroMoHab_Remote_DataManager.csproj.GenerateResource.Cache
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Remote_DataManager\obj\Release\StroMoHab_Remote_DataManager.dll
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Remote_DataManager\obj\Release\StroMoHab_Remote_DataManager.pdb

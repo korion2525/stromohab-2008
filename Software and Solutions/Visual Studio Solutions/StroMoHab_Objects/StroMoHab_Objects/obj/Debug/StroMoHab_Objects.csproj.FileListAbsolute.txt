@@ -1,0 +1,9 @@
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Objects\StroMoHab_Objects\bin\Debug\StroMoHab_Objects.dll.config
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Objects\StroMoHab_Objects\bin\Debug\StroMoHab_Objects.dll
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Objects\StroMoHab_Objects\bin\Debug\StroMoHab_Objects.pdb
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Objects\StroMoHab_Objects\obj\Debug\ResolveAssemblyReference.cache
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Objects\StroMoHab_Objects\obj\Debug\StroMoHab_Objects.Communication.Forms.FindServer.resources
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Objects\StroMoHab_Objects\obj\Debug\StroMoHab_Objects.dll
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Objects\StroMoHab_Objects\obj\Debug\StroMoHab_Objects.pdb
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Objects\StroMoHab_Objects\obj\Debug\GenerateResource-ResGen.read.1.tlog
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StroMoHab_Objects\StroMoHab_Objects\obj\Debug\GenerateResource-ResGen.write.1.tlog

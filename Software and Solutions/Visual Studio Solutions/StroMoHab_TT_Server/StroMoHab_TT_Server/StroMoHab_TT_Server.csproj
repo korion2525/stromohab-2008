@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{70EF0249-A001-4B54-A3D1-0906E74C64C7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StroMoHab_TT_Server</RootNamespace>
+    <AssemblyName>StroMoHab_TT_Server</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>Stromohab.ico</ApplicationIcon>
+    <SignManifests>false</SignManifests>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Release\StroMoHab_TT_Server.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ionic.Zip, Version=1.9.1.5, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\3rd Party Code\DotNetZip\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Iridium, Version=2008.8.16.470, Culture=neutral, PublicKeyToken=c061a3ec32cc0c6f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\3rd Party Code\MathNet.Iridium-2008.8.16.470\Binaries\Release\MathNet.Iridium.dll</HintPath>
+    </Reference>
+    <Reference Include="StroMoHab_Objects, Version=2.3.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\StroMoHab_Objects\StroMoHab_Objects\bin\Release\StroMoHab_Objects.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\Code\Classes\FilteredMarkerProcessor\FilteredMarkerProcessor.cs">
+      <Link>FilteredMarkerProcessor\FilteredMarkerProcessor.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Code\Classes\JointProcessor\CoR.cs">
+      <Link>JointProcessor\CoR.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Code\Classes\JointProcessor\JointProcessor.cs">
+      <Link>JointProcessor\JointProcessor.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Code\Classes\Matirx\Stromohab_MatrixClasses.cs">
+      <Link>Matrix\Stromohab_MatrixClasses.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Code\Classes\MotionCapture\MotionCapture.cs">
+      <Link>MotionCapture\MotionCapture.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Code\Classes\MotionCapture\TrackingTools.cs">
+      <Link>MotionCapture\TrackingTools.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Code\Classes\Treadmill\Treadmill.cs">
+      <Link>Treadmill\Treadmill.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Code\Classes\Treadmill\TreadmillController.cs">
+      <Link>Treadmill\TreadmillController.cs</Link>
+    </Compile>
+    <Compile Include="CustomAssemblyInfo.cs" />
+    <Compile Include="DataStorage\ClinicianDataManager.cs" />
+    <Compile Include="DataStorage\TaskDataManager.cs" />
+    <Compile Include="GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI.Designer.cs">
+      <DependentUpon>GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MotionCapture\VirtualMotionCaptureController.cs" />
+    <Compile Include="MotionCapture\VirtualMotionCaptureFrame.cs" />
+    <Compile Include="MotionCapture\VirtualMotionCaptureSubSession.cs" />
+    <Compile Include="OptitrackCommandParser_Server.cs" />
+    <Compile Include="DataStorage\PatientDataManager.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI.resx">
+      <DependentUpon>GUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Treadmill\TreadmillCalibrationForm.resx">
+      <DependentUpon>TreadmillCalibrationForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="TCPServer.cs" />
+    <Compile Include="Treadmill\MotionCaptureTreadmill.cs" />
+    <Compile Include="Treadmill\TreadmillCalibrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Treadmill\TreadmillCalibrationForm.Designer.cs">
+      <DependentUpon>TreadmillCalibrationForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Resources\StromohabLogosmall.png" />
+    <None Include="..\..\..\Resources\NPTrackingTools.dll">
+      <Link>NPTrackingTools.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Stromohab.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\StroMoHab_Remote_DataManager\StroMoHab_Remote_DataManager.csproj">
+      <Project>{6A804C54-4711-41B6-BEFE-328CCD5DB50B}</Project>
+      <Name>StroMoHab_Remote_DataManager</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties BuildVersion_AssemblyInfoFilename="Properties\AssemblyInfo.cs" BuildVersion_BuildVersioningStyle="None.None.Increment.None" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" BuildVersion_StartDate="2010/7/31" BuildVersion_ConfigurationName="Release" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Topics>
+  <Topic id="2d35186e-2f64-480a-b800-a4ad3820a974" visible="True" isDefault="true" title="Welcome" />
+  <Topic id="b3f0e5fa-acb3-4164-991a-c30e7cc8e6cf" visible="True" title="Getting Started">
+    <Topic id="5c13c0fc-5d2a-4efe-85ed-932efed6e5fe" visible="True" title="Documentation Builder Tools" />
+  </Topic>
+  <Topic id="7cffbdfc-af7a-4441-b50f-2c8aeca492af" visible="True" apiParentMode="InsertAfter" title="Glossary" />
+</Topics>

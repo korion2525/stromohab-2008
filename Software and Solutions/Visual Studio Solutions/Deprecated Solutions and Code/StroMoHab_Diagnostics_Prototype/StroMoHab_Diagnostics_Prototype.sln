@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StroMoHab_Diagnostics_Prototype", "StroMoHab_Diagnostics_Prototype\StroMoHab_Diagnostics_Prototype.csproj", "{D1C07414-7DDB-4591-969D-E1B08F603968}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenGLViewer", "OpenGLViewer\OpenGLViewer.csproj", "{31313082-195A-4F75-A64C-4C1409210B0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenGLViewerRemoteControl", "OpenGLViewerRemoteControl\OpenGLViewerRemoteControl.csproj", "{B5BBA96B-D6A0-4B82-A433-F1168F7D86C7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1C07414-7DDB-4591-969D-E1B08F603968}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1C07414-7DDB-4591-969D-E1B08F603968}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1C07414-7DDB-4591-969D-E1B08F603968}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1C07414-7DDB-4591-969D-E1B08F603968}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31313082-195A-4F75-A64C-4C1409210B0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31313082-195A-4F75-A64C-4C1409210B0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31313082-195A-4F75-A64C-4C1409210B0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31313082-195A-4F75-A64C-4C1409210B0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5BBA96B-D6A0-4B82-A433-F1168F7D86C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5BBA96B-D6A0-4B82-A433-F1168F7D86C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5BBA96B-D6A0-4B82-A433-F1168F7D86C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5BBA96B-D6A0-4B82-A433-F1168F7D86C7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

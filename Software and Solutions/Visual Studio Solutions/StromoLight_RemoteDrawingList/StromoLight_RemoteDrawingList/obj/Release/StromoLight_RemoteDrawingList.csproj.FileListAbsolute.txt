@@ -1,0 +1,9 @@
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StromoLight_RemoteDrawingList\StromoLight_RemoteDrawingList\bin\Release\StromoLight_RemoteDrawingList.XML
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StromoLight_RemoteDrawingList\StromoLight_RemoteDrawingList\bin\Release\StromoLight_RemoteDrawingList.dll
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StromoLight_RemoteDrawingList\StromoLight_RemoteDrawingList\bin\Release\StromoLight_RemoteDrawingList.pdb
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StromoLight_RemoteDrawingList\StromoLight_RemoteDrawingList\bin\Release\StroMoHab_Objects.dll
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StromoLight_RemoteDrawingList\StromoLight_RemoteDrawingList\bin\Release\StroMoHab_Objects.pdb
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StromoLight_RemoteDrawingList\StromoLight_RemoteDrawingList\bin\Release\StroMoHab_Objects.xml
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StromoLight_RemoteDrawingList\StromoLight_RemoteDrawingList\obj\Release\ResolveAssemblyReference.cache
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StromoLight_RemoteDrawingList\StromoLight_RemoteDrawingList\obj\Release\StromoLight_RemoteDrawingList.dll
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\StromoLight_RemoteDrawingList\StromoLight_RemoteDrawingList\obj\Release\StromoLight_RemoteDrawingList.pdb

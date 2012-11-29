@@ -1,0 +1,746 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">True</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="B2EDB203-DE6E-42E1-BEC2-0E95D5D75EDD/d:Pages/f:AddPatientPage.xaml.cs" caret="596" fromTop="9" />
+      <File id="B2EDB203-DE6E-42E1-BEC2-0E95D5D75EDD/d:Pages/f:AddPatientPage.xaml" caret="442" fromTop="8" />
+      <File id="04E86A84-E886-40CB-9143-FAE0DE0A35D0/d:Graphics/f:Quad.cs" caret="8280" fromTop="18" />
+      <File id="B2EDB203-DE6E-42E1-BEC2-0E95D5D75EDD/d:Pages/f:CliniciansPatientsPage.xaml" caret="0" fromTop="0" />
+      <File id="7D195E6F-E41E-4EAA-86D0-460DDAB66070/f:StromohabEntityDataModel.Designer.cs" caret="23777" fromTop="19" />
+      <File id="B2EDB203-DE6E-42E1-BEC2-0E95D5D75EDD/d:Pages/f:EditPatientPage.xaml" caret="751" fromTop="0" />
+      <File id="B2EDB203-DE6E-42E1-BEC2-0E95D5D75EDD/d:Pages/f:EditPatientPage.xaml.cs" caret="1022" fromTop="35" />
+      <File id="B2EDB203-DE6E-42E1-BEC2-0E95D5D75EDD/d:Pages/f:CliniciansPatientsPage.xaml.cs" caret="3307" fromTop="95" />
+      <File id="B2EDB203-DE6E-42E1-BEC2-0E95D5D75EDD/d:Pages/f:LoginPage.xaml" caret="248" fromTop="3" />
+      <File id="7D195E6F-E41E-4EAA-86D0-460DDAB66070/f:StromohabEntityDataModel.edmx" caret="22886" fromTop="20" />
+      <File id="04E86A84-E886-40CB-9143-FAE0DE0A35D0/d:Communication/f:TCPProcessor.cs/l:..?..?..?..?Code?Classes?Client?TCPProcessor.cs" caret="5302" fromTop="20" />
+      <File id="04E86A84-E886-40CB-9143-FAE0DE0A35D0/d:Graphics/f:Cube.cs" caret="9128" fromTop="22" />
+      <File id="04E86A84-E886-40CB-9143-FAE0DE0A35D0/d:Graphics/f:Avatar.cs" caret="2366" fromTop="11" />
+      <File id="04E86A84-E886-40CB-9143-FAE0DE0A35D0/d:Graphics/f:OpenGlObject.cs" caret="2113" fromTop="0" />
+      <File id="E4FE3585-7ABA-4C09-94C1-08F90C21DB8C/f:VisualiserProgram.cs" caret="1624" fromTop="28" />
+      <File id="7D195E6F-E41E-4EAA-86D0-460DDAB66070/f:DataAccessLayer.cs" caret="4643" fromTop="26" />
+      <File id="B2EDB203-DE6E-42E1-BEC2-0E95D5D75EDD/d:Pages/f:LoginPage.xaml.cs" caret="1463" fromTop="45" />
+      <File id="7D195E6F-E41E-4EAA-86D0-460DDAB66070/f:Patients.cs" caret="0" fromTop="0" />
+      <File id="B2EDB203-DE6E-42E1-BEC2-0E95D5D75EDD/d:Pages/f:PatientSessionsPage.xaml.cs" caret="1054" fromTop="17" />
+      <File id="7D195E6F-E41E-4EAA-86D0-460DDAB66070/f:Tasks.cs" caret="573" fromTop="24" />
+      <File id="E4FE3585-7ABA-4C09-94C1-08F90C21DB8C/f:SDL_Main.cs" caret="22169" fromTop="13" />
+      <File id="E4FE3585-7ABA-4C09-94C1-08F90C21DB8C/f:KeyboardHandler.cs" caret="1571" fromTop="18" />
+      <File id="E4FE3585-7ABA-4C09-94C1-08F90C21DB8C/f:VirtualTaskLoader.cs" caret="2140" fromTop="17" />
+      <File id="B2EDB203-DE6E-42E1-BEC2-0E95D5D75EDD/f:App.xaml" caret="597" fromTop="11" />
+      <File id="B2EDB203-DE6E-42E1-BEC2-0E95D5D75EDD/f:DiagnosticsWindow.xaml" caret="196" fromTop="0" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="7D195E6F-E41E-4EAA-86D0-460DDAB66070/f:DataAccessLayer.cs" caret="2571" fromTop="0" />
+      <File id="7D195E6F-E41E-4EAA-86D0-460DDAB66070/f:Patients.cs" caret="132" fromTop="7" />
+      <File id="7D195E6F-E41E-4EAA-86D0-460DDAB66070/f:Tasks.cs" caret="590" fromTop="15" />
+      <File id="7D195E6F-E41E-4EAA-86D0-460DDAB66070/f:Tasks.cs" caret="573" fromTop="19" />
+      <File id="7D195E6F-E41E-4EAA-86D0-460DDAB66070/f:Tasks.cs" caret="227" fromTop="11" />
+      <File id="7D195E6F-E41E-4EAA-86D0-460DDAB66070/f:Tasks.cs" caret="395" fromTop="15" />
+      <File id="7D195E6F-E41E-4EAA-86D0-460DDAB66070/f:DataAccessLayer.cs" caret="3909" fromTop="19" />
+      <File id="7D195E6F-E41E-4EAA-86D0-460DDAB66070/f:DataAccessLayer.cs" caret="4690" fromTop="27" />
+      <File id="E4FE3585-7ABA-4C09-94C1-08F90C21DB8C/f:SDL_Main.cs" caret="22154" fromTop="24" />
+      <File id="B2EDB203-DE6E-42E1-BEC2-0E95D5D75EDD/d:Pages/f:LoginPage.xaml.cs" caret="1465" fromTop="26" />
+      <File id="B2EDB203-DE6E-42E1-BEC2-0E95D5D75EDD/d:Pages/f:LoginPage.xaml.cs" caret="1465" fromTop="38" />
+      <File id="7D195E6F-E41E-4EAA-86D0-460DDAB66070/f:Tasks.cs" caret="525" fromTop="20" />
+      <File id="7D195E6F-E41E-4EAA-86D0-460DDAB66070/f:Tasks.cs" caret="573" fromTop="29" />
+      <File id="7D195E6F-E41E-4EAA-86D0-460DDAB66070/f:Tasks.cs" caret="573" fromTop="24" />
+      <File id="B2EDB203-DE6E-42E1-BEC2-0E95D5D75EDD/d:Pages/f:LoginPage.xaml.cs" caret="1465" fromTop="31" />
+      <File id="B2EDB203-DE6E-42E1-BEC2-0E95D5D75EDD/d:Pages/f:LoginPage.xaml.cs" caret="1465" fromTop="28" />
+      <File id="B2EDB203-DE6E-42E1-BEC2-0E95D5D75EDD/d:Pages/f:LoginPage.xaml.cs" caret="1465" fromTop="22" />
+      <File id="B2EDB203-DE6E-42E1-BEC2-0E95D5D75EDD/d:Pages/f:LoginPage.xaml.cs" caret="1465" fromTop="17" />
+      <File id="E4FE3585-7ABA-4C09-94C1-08F90C21DB8C/f:SDL_Main.cs" caret="22154" fromTop="27" />
+      <File id="E4FE3585-7ABA-4C09-94C1-08F90C21DB8C/f:SDL_Main.cs" caret="22154" fromTop="24" />
+      <File id="E4FE3585-7ABA-4C09-94C1-08F90C21DB8C/f:KeyboardHandler.cs" caret="1018" fromTop="29" />
+      <File id="E4FE3585-7ABA-4C09-94C1-08F90C21DB8C/f:KeyboardHandler.cs" caret="191" fromTop="8" />
+      <File id="E4FE3585-7ABA-4C09-94C1-08F90C21DB8C/f:SDL_Main.cs" caret="22154" fromTop="30" />
+      <File id="E4FE3585-7ABA-4C09-94C1-08F90C21DB8C/f:VirtualTaskLoader.cs" caret="1864" fromTop="13" />
+      <File id="E4FE3585-7ABA-4C09-94C1-08F90C21DB8C/f:SDL_Main.cs" caret="22430" fromTop="14" />
+      <File id="E4FE3585-7ABA-4C09-94C1-08F90C21DB8C/f:SDL_Main.cs" caret="22169" fromTop="4" />
+      <File id="E4FE3585-7ABA-4C09-94C1-08F90C21DB8C/f:VirtualTaskLoader.cs" caret="2140" fromTop="17" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir>C:\Program Files\NUnit 2.5.8\bin\net-2.0\</NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="DialogResult" priority="2" />
+      <Item value="false" priority="8" />
+      <Item value="this" priority="10" />
+      <Item value="true" priority="7" />
+      <Item value="public" priority="14" />
+      <Item value="private" priority="13" />
+      <Item value="void" priority="10" />
+      <Item value="DisplayLoginScreen`0" priority="3" />
+      <Item value="LoginWindow`0" priority="1" />
+      <Item value="loginWindow" priority="10" />
+      <Item value="new" priority="63" />
+      <Item value="LoginWindow" priority="0" />
+      <Item value="if" priority="15" />
+      <Item value="MessageBox`0" priority="6" />
+      <Item value="Stromohab_DataAccessLayer" priority="10" />
+      <Item value="DataAccessLayer`0" priority="15" />
+      <Item value="userName" priority="10" />
+      <Item value="else" priority="3" />
+      <Item value="Patients`0" priority="6" />
+      <Item value="PatientWindow`0" priority="0" />
+      <Item value="null" priority="9" />
+      <Item value="_patientWindow" priority="11" />
+      <Item value="PatientWindow" priority="0" />
+      <Item value="prop" priority="0" />
+      <Item value="string" priority="30" />
+      <Item value="_authenticatedUsername" priority="2" />
+      <Item value="txtUserName" priority="5" />
+      <Item value="return" priority="7" />
+      <Item value="cliniciansPatients" priority="0" />
+      <Item value="datagridPatientsOfClinician" priority="20" />
+      <Item value="sqlCommand" priority="2" />
+      <Item value="sqlCommand`0" priority="1" />
+      <Item value="patientID" priority="1" />
+      <Item value="patientSessions" priority="1" />
+      <Item value="static" priority="20" />
+      <Item value="Sessions`0" priority="0" />
+      <Item value="Sessions" priority="0" />
+      <Item value="sessions" priority="0" />
+      <Item value="datagridSessionsOfPatient" priority="2" />
+      <Item value="_patientId" priority="5" />
+      <Item value="patientId" priority="20" />
+      <Item value="_userName" priority="4" />
+      <Item value="DataSet`0" priority="0" />
+      <Item value="DataGrid`0" priority="0" />
+      <Item value="TextBlock`0" priority="2" />
+      <Item value="selectedRow" priority="1" />
+      <Item value="as" priority="7" />
+      <Item value="String`0" priority="0" />
+      <Item value="_sessionsWindow" priority="4" />
+      <Item value="SessionsWindow" priority="0" />
+      <Item value="AddPatientWindow`0" priority="0" />
+      <Item value="addPatientWindow" priority="1" />
+      <Item value="AddPatientWindow" priority="0" />
+      <Item value="Close`0" priority="3" />
+      <Item value="txtFirstNames" priority="1" />
+      <Item value="txtLastName" priority="1" />
+      <Item value="datePickerDateOfBirth" priority="0" />
+      <Item value="comboBxGender" priority="0" />
+      <Item value="txtContactTelephone" priority="0" />
+      <Item value="dateOfBirth" priority="5" />
+      <Item value="DOBArray" priority="2" />
+      <Item value="Length" priority="3" />
+      <Item value="foreach" priority="0" />
+      <Item value="in" priority="0" />
+      <Item value="int" priority="23" />
+      <Item value="DOBReversed" priority="5" />
+      <Item value="i" priority="5" />
+      <Item value="currentString" priority="0" />
+      <Item value="System" priority="12" />
+      <Item value="Diagnostics" priority="7" />
+      <Item value="Process`0" priority="5" />
+      <Item value="SDL_Main`0" priority="4" />
+      <Item value="visualiser" priority="1" />
+      <Item value="StromoLight_Visualiser" priority="1" />
+      <Item value="Program`0" priority="3" />
+      <Item value="Program" priority="1" />
+      <Item value="visualiserProgram" priority="0" />
+      <Item value="try" priority="5" />
+      <Item value="Exception`0" priority="2" />
+      <Item value="ex" priority="4" />
+      <Item value="Debug`0" priority="2" />
+      <Item value="Environment`0" priority="9" />
+      <Item value="_remoteDrawingList" priority="1" />
+      <Item value="stromohabDevTableAdapters" priority="3" />
+      <Item value="patientsTableAdapter`0" priority="1" />
+      <Item value="patientsTableAdapter" priority="4" />
+      <Item value="patients" priority="2" />
+      <Item value="stromohabDev`0" priority="0" />
+      <Item value="PatientsTableAdapter`0" priority="0" />
+      <Item value="PatientsTableAdapter" priority="0" />
+      <Item value="Convert`0" priority="1" />
+      <Item value="AddSessionWindow`0" priority="0" />
+      <Item value="addSessionWindow" priority="1" />
+      <Item value="AddSessionWindow" priority="0" />
+      <Item value="using" priority="5" />
+      <Item value="tasksTableAdapter`0" priority="0" />
+      <Item value="tasksTableAdapter" priority="11" />
+      <Item value="comboBoxTaskList" priority="8" />
+      <Item value="TasksTableAdapter" priority="2" />
+      <Item value="tasks" priority="5" />
+      <Item value="tasksDataTable" priority="0" />
+      <Item value="Sessions_has_tasksTableAdapter`0" priority="0" />
+      <Item value="sessionsHasTasksTableAdapter" priority="2" />
+      <Item value="Sessions_has_tasksTableAdapter" priority="0" />
+      <Item value="TaskbarItemInfoProperty" priority="0" />
+      <Item value="TasksTableAdapter`0" priority="1" />
+      <Item value="const" priority="0" />
+      <Item value="m_objectsToDraw" priority="0" />
+      <Item value="DEMO_FILE_PATH" priority="1" />
+      <Item value="SaveFileDialog`0" priority="0" />
+      <Item value="SaveTask`0" priority="0" />
+      <Item value="StroMoHab_Task_Designer" priority="0" />
+      <Item value="TaskDesignerProgram`0" priority="0" />
+      <Item value="StroMoHab_Objects" priority="0" />
+      <Item value="Graphics" priority="0" />
+      <Item value="MTAThreadAttribute`0" priority="0" />
+      <Item value="ThreadStaticAttribute`0" priority="0" />
+      <Item value="Thread" priority="0" />
+      <Item value="ThreadStart" priority="0" />
+      <Item value="visualiserThread" priority="1" />
+      <Item value="ApartmentState`0" priority="0" />
+      <Item value="Windows" priority="0" />
+      <Item value="Application`0" priority="7" />
+      <Item value="VisualiserProgram`0" priority="0" />
+      <Item value="switch" priority="0" />
+      <Item value="case" priority="2" />
+      <Item value="bool" priority="1" />
+      <Item value="_isVideoDemoTask" priority="3" />
+      <Item value="_isVirtualTask" priority="1" />
+      <Item value="default" priority="0" />
+      <Item value="break" priority="2" />
+      <Item value="_isVirtualDemoTask" priority="0" />
+      <Item value="fullscreen" priority="0" />
+      <Item value="_visualiserProcess" priority="2" />
+      <Item value="Debugger`0" priority="1" />
+      <Item value="ProcessStartInfo" priority="0" />
+      <Item value="visualiserProcessStartInfo" priority="1" />
+      <Item value="IntPtr`0" priority="0" />
+      <Item value="Window_Closed`0" priority="0" />
+      <Item value="Closed" priority="0" />
+      <Item value="Closing" priority="0" />
+      <Item value="loginWindow_Closing`0" priority="0" />
+      <Item value="sender" priority="1" />
+      <Item value="value" priority="1" />
+      <Item value="avatar" priority="5" />
+      <Item value="Vector3f" priority="4" />
+      <Item value="sealed" priority="0" />
+      <Item value="_mainFrame" priority="0" />
+      <Item value="txtPassword" priority="0" />
+      <Item value="throw" priority="1" />
+      <Item value="NotImplementedException" priority="0" />
+      <Item value="ToolTipClosingEvent" priority="0" />
+      <Item value="exitCode" priority="0" />
+      <Item value="Left" priority="0" />
+      <Item value="ActualWidth" priority="0" />
+      <Item value="SystemParameters`0" priority="1" />
+      <Item value="Width" priority="0" />
+      <Item value="GetValue`0" priority="2" />
+      <Item value="WidthProperty" priority="1" />
+      <Item value="Top" priority="0" />
+      <Item value="double" priority="0" />
+      <Item value="HeightProperty" priority="0" />
+      <Item value="NavigationService" priority="9" />
+      <Item value="NavigationCommands`0" priority="1" />
+      <Item value="ShowsNavigationUI" priority="2" />
+      <Item value="Uri" priority="2" />
+      <Item value="cookie" priority="0" />
+      <Item value="LoadPatients`0" priority="1" />
+      <Item value="Properties" priority="0" />
+      <Item value="Settings`0" priority="0" />
+      <Item value="AppDomainSetup`0" priority="0" />
+      <Item value="Setter`0" priority="0" />
+      <Item value="CookieManager`0" priority="4" />
+      <Item value="stromohabDevEntities`0" priority="4" />
+      <Item value="IQueryable`0" priority="1" />
+      <Item value="stromohabDevEntities" priority="4" />
+      <Item value="var" priority="7" />
+      <Item value="from" priority="6" />
+      <Item value="db" priority="26" />
+      <Item value="where" priority="9" />
+      <Item value="p" priority="14" />
+      <Item value="select" priority="6" />
+      <Item value="RowDefinition`0" priority="2" />
+      <Item value="FindResource`0" priority="0" />
+      <Item value="ObjectDataProvider`0" priority="0" />
+      <Item value="DataRowView`0" priority="3" />
+      <Item value="row" priority="5" />
+      <Item value="patient`0" priority="17" />
+      <Item value="selectedPatientId" priority="0" />
+      <Item value="patient" priority="1" />
+      <Item value="newPatient" priority="3" />
+      <Item value="firstNames" priority="1" />
+      <Item value="lastName" priority="1" />
+      <Item value="clinician" priority="1" />
+      <Item value="idPatient" priority="1" />
+      <Item value="pFirstName" priority="1" />
+      <Item value="pLastName" priority="1" />
+      <Item value="pDateOfBirth" priority="0" />
+      <Item value="pGender" priority="0" />
+      <Item value="gender" priority="0" />
+      <Item value="pContactNumber" priority="0" />
+      <Item value="contactNumber" priority="0" />
+      <Item value="Clinicians_cUserName" priority="0" />
+      <Item value="clinicianUserName" priority="2" />
+      <Item value="DateTime`0" priority="0" />
+      <Item value="internal" priority="8" />
+      <Item value="c" priority="2" />
+      <Item value="clinician`0" priority="2" />
+      <Item value="patientsClinician" priority="0" />
+      <Item value="VisualiserCommandLineArguments" priority="0" />
+      <Item value="_patientToEdit" priority="16" />
+      <Item value="patientToEdit" priority="12" />
+      <Item value="gridPatientToEdit" priority="4" />
+      <Item value="IsHitTestVisibleProperty" priority="0" />
+      <Item value="DbType`0" priority="0" />
+      <Item value="ValidationResult`0" priority="0" />
+      <Item value="w" priority="0" />
+      <Item value="dbPatientInfo" priority="10" />
+      <Item value="acceptChangesDuringSave" priority="0" />
+      <Item value="pLastNameTextBox" priority="0" />
+      <Item value="SelectPatientIdFromDatagrid`0" priority="1" />
+      <Item value="patientToEditId" priority="2" />
+      <Item value="NullReferenceException`0" priority="0" />
+      <Item value="SelectPatientIdFromSelectedDatagridRow`0" priority="0" />
+      <Item value="MessageBoxButton`0" priority="0" />
+      <Item value="Exclamation" priority="0" />
+      <Item value="MessageBoxResult`0" priority="1" />
+      <Item value="ctx" priority="1" />
+      <Item value="SelectPatientFromPatientId`0" priority="0" />
+      <Item value="Patient" priority="0" />
+      <Item value="Patients" priority="0" />
+      <Item value="patientFullName" priority="1" />
+      <Item value="Avatar`0" priority="1" />
+      <Item value="TCPProcessor_AvatarSpeedChangedEvent`0" priority="0" />
+      <Item value="Console`0" priority="0" />
+      <Item value="currentArg" priority="0" />
+      <Item value="SetVirtualDemo`0" priority="1" />
+      <Item value="SetVideoDemo`0" priority="1" />
+      <Item value="YesNo" priority="0" />
+      <Item value="DialogResult`0" priority="0" />
+      <Item value="KeyboardHandler`0" priority="6" />
+      <Item value="kb" priority="1" />
+      <Item value="e" priority="3" />
+      <Item value="KeyboardHandler" priority="1" />
+      <Item value="IDisposable`0" priority="1" />
+      <Item value="StroMoHab_Avatar_Object" priority="0" />
+      <Item value="RemoteDrawingList" priority="3" />
+      <Item value="remoteDrawingList" priority="0" />
+      <Item value="X" priority="1" />
+      <Item value="KeyboardEventArgs`0" priority="0" />
+      <Item value="sdlMain" priority="2" />
+      <Item value="kbh" priority="0" />
+      <Item value="TaskLoader`0" priority="1" />
+      <Item value="taskLoader" priority="1" />
+      <Item value="VirtualTaskLoader`0" priority="1" />
+      <Item value="VirtualTaskLoader" priority="0" />
+      <Item value="StromoLight_RemoteDrawingList" priority="1" />
+      <Item value="DrawingList`0" priority="2" />
+      <Item value="drawingList" priority="4" />
+      <Item value="DrawingList" priority="0" />
+      <Item value="vtl" priority="0" />
+      <Item value="EnvironmentVariableTarget`0" priority="1" />
+      <Item value="task`0" priority="2" />
+      <Item value="task" priority="2" />
+      <Item value="taskToAdd" priority="5" />
+      <Item value="taskName" priority="1" />
+      <Item value="taskData" priority="2" />
+      <Item value="byte" priority="5" />
+      <Item value="Tasks`0" priority="1" />
+      <Item value="InPlaceBitmapMetadataWriter`0" priority="0" />
+      <Item value="Filestream" priority="0" />
+      <Item value="IO" priority="4" />
+      <Item value="FileStream`0" priority="2" />
+      <Item value="MemoryStream`0" priority="1" />
+      <Item value="Runtime" priority="0" />
+      <Item value="Serialization" priority="0" />
+      <Item value="Formatters" priority="0" />
+      <Item value="Binary" priority="0" />
+      <Item value="BinaryFormatter`0" priority="0" />
+      <Item value="binaryFormatter" priority="2" />
+      <Item value="BinaryFormatter" priority="0" />
+      <Item value="Open" priority="0" />
+      <Item value="MemoryStream" priority="0" />
+      <Item value="ms" priority="9" />
+      <Item value="testData" priority="2" />
+      <Item value="testString" priority="0" />
+      <Item value="catch" priority="0" />
+      <Item value="Quad`0" priority="0" />
+      <Item value="Quad" priority="0" />
+      <Item value="quad" priority="0" />
+      <Item value="float" priority="0" />
+      <Item value="NewTargetQuad`0" priority="0" />
+      <Item value="z" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Stromohab_WPF_UserInterface.MainWindow">
+      <Item value="Close`0" priority="0" />
+      <Item value="Hide`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Stromohab_WPF_UserInterface.LoginWindow">
+      <Item value="Show`0" priority="0" />
+      <Item value="Owner" priority="0" />
+      <Item value="ShowDialog`0" priority="0" />
+      <Item value="DialogResult" priority="1" />
+      <Item value="AuthenticatedUserName" priority="0" />
+      <Item value="Close`0" priority="0" />
+      <Item value="Closed" priority="0" />
+      <Item value="Closing" priority="0" />
+      <Item value="btnCancel" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Nullable`1">
+      <Item value="HasValue" priority="0" />
+      <Item value="Value" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.MessageBox">
+      <Item value="Show`0" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Stromohab_WPF_UserInterface.PatientWindow">
+      <Item value="datagridPatientsOfClinician" priority="0" />
+      <Item value="Show`0" priority="1" />
+      <Item value="Close`0" priority="2" />
+      <Item value="btnBackToLogin" priority="0" />
+      <Item value="Hide`0" priority="1" />
+      <Item value="btnGoToSessions" priority="0" />
+      <Item value="PatientId" priority="1" />
+      <Item value="UserName" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.DataGrid">
+      <Item value="DataContext" priority="4" />
+      <Item value="ItemsSource" priority="12" />
+      <Item value="SelectedItem" priority="2" />
+      <Item value="ItemContainerGenerator" priority="0" />
+      <Item value="SelectedIndex" priority="2" />
+      <Item value="Columns" priority="1" />
+      <Item value="InvalidateVisual`0" priority="0" />
+      <Item value="Items" priority="0" />
+      <Item value="SelectedValue" priority="7" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Stromohab_DataAccessLayer.DataAccessLayer">
+      <Item value="GetCliniciansPatients`0" priority="1" />
+      <Item value="SessionDatasetForCliniciansPatient`0" priority="0" />
+      <Item value="AddPatient`0" priority="0" />
+      <Item value="Instance" priority="1" />
+      <Item value="PatientSessions`0" priority="0" />
+      <Item value="EditPatient`0" priority="0" />
+      <Item value="SelectPatientFromPatientId`0" priority="1" />
+      <Item value="DeletePatientById`0" priority="0" />
+      <Item value="Patient" priority="2" />
+      <Item value="PatientFirstNamesFromPatientId`0" priority="0" />
+      <Item value="PatientLastNameFromPatientId`0" priority="0" />
+      <Item value="AddTask`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.TextBox">
+      <Item value="Text" priority="6" />
+      <Item value="Clear`0" priority="0" />
+      <Item value="Focus`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.DataSet">
+      <Item value="Tables" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.DataTable">
+      <Item value="DataSet" priority="0" />
+      <Item value="DefaultView" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.Button">
+      <Item value="Click" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MySql.Data.MySqlClient.MySqlCommand">
+      <Item value="Parameters" priority="0" />
+      <Item value="ExecuteNonQuery`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MySql.Data.MySqlClient.MySqlParameterCollection">
+      <Item value="AddWithValue`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Stromohab_DataAccessLayer.Sessions">
+      <Item value="SessionDatasetForCliniciansPatient`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.ItemContainerGenerator">
+      <Item value="ContainerFromIndex`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.DataGridColumn">
+      <Item value="GetCellContent`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.TextBlock">
+      <Item value="Text" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Stromohab_WPF_UserInterface.SessionsWindow">
+      <Item value="Show`0" priority="0" />
+      <Item value="btnBackToPatientScreen" priority="0" />
+      <Item value="Hide`0" priority="0" />
+      <Item value="btnRunSession" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Stromohab_WPF_UserInterface.AddPatientWindow">
+      <Item value="Show`0" priority="0" />
+      <Item value="ShowDialog`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.DatePicker">
+      <Item value="Text" priority="1" />
+      <Item value="SelectedDate" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.ComboBox">
+      <Item value="Text" priority="3" />
+      <Item value="ItemsSource" priority="1" />
+      <Item value="DataContext" priority="1" />
+      <Item value="DisplayMemberPath" priority="1" />
+      <Item value="Items" priority="0" />
+      <Item value="SelectedItem" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="Split`0" priority="1" />
+      <Item value="ToString`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="Concat`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.ItemCollection">
+      <Item value="Refresh`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Diagnostics.Process">
+      <Item value="Start`0" priority="2" />
+      <Item value="GetCurrentProcess`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@StromoLight_Visualiser.Program">
+      <Item value="Main`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Diagnostics.Debug">
+      <Item value="WriteLine`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Net.Sockets.SocketException">
+      <Item value="Message" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Environment">
+      <Item value="Exit`0" priority="3" />
+      <Item value="ExitCode" priority="0" />
+      <Item value="CurrentDirectory" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Stromohab_DataAccessLayer.stromohabDev">
+      <Item value="patientsDataTable`0" priority="0" />
+      <Item value="tasksDataTable`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Stromohab_DataAccessLayer.stromohabDevTableAdapters.PatientsTableAdapter">
+      <Item value="GetPatients`0" priority="2" />
+      <Item value="GetPatientsByClinicianUserName`0" priority="2" />
+      <Item value="Insert`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Stromohab_DataAccessLayer.stromohabDev+patientsDataTable">
+      <Item value="DefaultView" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Convert">
+      <Item value="ToDateTime`0" priority="0" />
+      <Item value="ToInt32`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Stromohab_WPF_UserInterface.AddSessionWindow">
+      <Item value="ShowDialog`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Stromohab_DataAccessLayer.stromohabDevTableAdapters.TasksTableAdapter">
+      <Item value="GetTasks`0" priority="3" />
+      <Item value="GetFilepaths`0" priority="0" />
+      <Item value="Fill`0" priority="0" />
+      <Item value="Insert`0" priority="0" />
+      <Item value="GetIDByName`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Stromohab_DataAccessLayer.stromohabDev+tasksRow">
+      <Item value="ToString`0" priority="0" />
+      <Item value="tFilepath" priority="0" />
+      <Item value="idTask" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Stromohab_DataAccessLayer.stromohabDev+tasksDataTable">
+      <Item value="tFilepathColumn" priority="3" />
+      <Item value="Rows" priority="0" />
+      <Item value="DefaultView" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.DataColumn">
+      <Item value="AllowDBNull" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Stromohab_DataAccessLayer.stromohabDevTableAdapters.Sessions_has_tasksTableAdapter">
+      <Item value="Insert`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:StromoLight_RemoteDrawingList.DrawingList">
+      <Item value="ObjectsToDraw" priority="0" />
+      <Item value="VisualiserController" priority="0" />
+      <Item value="Add`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@StroMoHab_Task_Designer.TaskDesignerProgram">
+      <Item value="Main`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Threading.Thread">
+      <Item value="ApartmentState" priority="0" />
+      <Item value="Start`0" priority="0" />
+      <Item value="SetApartmentState`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Threading.ApartmentState">
+      <Item value="STA" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@StromoLight_Visualiser.VisualiserProgram">
+      <Item value="Main`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Diagnostics.Process">
+      <Item value="BasePriority" priority="0" />
+      <Item value="Close`0" priority="0" />
+      <Item value="ProcessorAffinity" priority="0" />
+      <Item value="Kill`0" priority="0" />
+      <Item value="HasExited" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Diagnostics.Debugger">
+      <Item value="Launch`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:StroMoHab_Objects.Interfaces.IVisualiser">
+      <Item value="Speed" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:StroMoHab_Objects.Graphics.Avatar">
+      <Item value="Velocity" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@StroMoHab_Objects.Objects.Task+TaskTypeType">
+      <Item value="Obstacle_Avoidance" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:StroMoHab_Objects.Objects.Task">
+      <Item value="TaskType" priority="0" />
+      <Item value="TaskTypeType`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.Frame">
+      <Item value="Navigate`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.PasswordBox">
+      <Item value="Clear`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.SystemParameters">
+      <Item value="PrimaryScreenWidth" priority="0" />
+      <Item value="PrimaryScreenHeight" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Navigation.NavigationService">
+      <Item value="Navigate`0" priority="5" />
+      <Item value="GoBack`0" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Application">
+      <Item value="SetCookie`0" priority="1" />
+      <Item value="GetCookie`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Input.NavigationCommands">
+      <Item value="BrowseBack" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Stromohab_WPF_UserInterface.Properties.Settings">
+      <Item value="Default" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Stromohab_WPF_UserInterface.Properties.Settings">
+      <Item value="CookieUri" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Stromohab_WPF_UserInterface.CookieManager">
+      <Item value="UserName" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Stromohab_DataAccessLayer.stromohabDevEntities">
+      <Item value="sessions_has_tasks" priority="0" />
+      <Item value="sessions" priority="0" />
+      <Item value="patients" priority="6" />
+      <Item value="AddObject`0" priority="1" />
+      <Item value="SaveChanges`0" priority="3" />
+      <Item value="clinicians" priority="1" />
+      <Item value="DeleteObject`0" priority="0" />
+      <Item value="tasks" priority="8" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Stromohab_DataAccessLayer.session">
+      <Item value="Patients_idPatient" priority="0" />
+      <Item value="Patients_Clinicians_cUserName" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Stromohab_DataAccessLayer.patient">
+      <Item value="idPatient" priority="7" />
+      <Item value="pFirstName" priority="8" />
+      <Item value="pLastName" priority="8" />
+      <Item value="pDateOfBirth" priority="3" />
+      <Item value="EntityState" priority="0" />
+      <Item value="pContactNumber" priority="2" />
+      <Item value="pGender" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Objects.ObjectSet`1">
+      <Item value="AddObject`0" priority="6" />
+      <Item value="Single`1" priority="2" />
+      <Item value="Where`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Stromohab_DataAccessLayer.clinician">
+      <Item value="cUserName" priority="2" />
+      <Item value="patients" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Objects.DataClasses.EntityCollection`1">
+      <Item value="Add`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.Grid">
+      <Item value="DataContext" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.IQueryable`1">
+      <Item value="FirstOrDefault`1" priority="0" />
+      <Item value="SingleOrDefault`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.NullReferenceException">
+      <Item value="Message" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.MessageBoxButton">
+      <Item value="YesNo" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.MessageBoxResult">
+      <Item value="No" priority="0" />
+      <Item value="Yes" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.MessageBoxImage">
+      <Item value="Question" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Stromohab_DataAccessLayer.Patients">
+      <Item value="EditPatient`0" priority="0" />
+      <Item value="DeletePatientByID`0" priority="0" />
+      <Item value="PatientFirstNamesFromPatientId`0" priority="0" />
+      <Item value="PatientLastNameFromPatientId`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Stromohab_DataAccessLayer.Patients">
+      <Item value="PatientDataSetForClinician`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Diagnostics.Contracts.Contract">
+      <Item value="Requires`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SdlDotNet.Input.Key">
+      <Item value="H" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Console">
+      <Item value="WriteLine`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.MessageBox">
+      <Item value="Show`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.DialogResult">
+      <Item value="Yes" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:StromoLight_Visualiser.KeyboardHandler">
+      <Item value="HandleKeyboardUp`0" priority="1" />
+      <Item value="HandleKeyboardDown`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:StroMoHab_Avatar_Object.Avatar">
+      <Item value="Velocity" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@StromoLight_Visualiser.KeyboardHandler">
+      <Item value="HandleKeyboardDown`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:StromoLight_Visualiser.SDL_Main">
+      <Item value="avatar" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:StromoLight_Visualiser.TaskLoader">
+      <Item value="GenerateRandomVirtualDemoTask`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Stromohab_DataAccessLayer.task">
+      <Item value="tName" priority="1" />
+      <Item value="tData" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Void">
+      <Item value="Equals`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Stromohab_DataAccessLayer.Tasks">
+      <Item value="AddTask`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter">
+      <Item value="Serialize`0" priority="0" />
+      <Item value="Deserialize`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.MemoryStream">
+      <Item value="Read`0" priority="1" />
+      <Item value="Length" priority="1" />
+      <Item value="Position" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@StromoLight_Visualiser.VirtualTaskLoader">
+      <Item value="TargetTaskOne`0" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

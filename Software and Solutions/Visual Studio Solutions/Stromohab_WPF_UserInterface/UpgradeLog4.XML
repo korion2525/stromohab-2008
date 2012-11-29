@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Stromohab_WPF_UserInterface">
+</Property><Property Name="Solution File" Value="E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\Stromohab_WPF_UserInterface\Stromohab_WPF_UserInterface.sln">
+</Property><Property Name="Date" Value="17 January 2011">
+</Property><Property Name="Time" Value="19:28:22">
+</Property><Property Name="Log Number" Value="4">
+</Property></Properties><Event ErrorLevel="0" Project="Win32Utilites" Source="..\Win32Utilites\Win32Utilites\Win32Utilites.csproj" Description="Project file successfully backed up as E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\Win32UtilitiesBackup\Backup\Win32Utilites.csproj">
+</Event><Event ErrorLevel="0" Project="Win32Utilites" Source="..\Win32Utilites\Win32Utilites\Win32.cs" Description="File successfully backed up as E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\Win32UtilitiesBackup\Backup\Win32.cs">
+</Event><Event ErrorLevel="0" Project="Win32Utilites" Source="..\Win32Utilites\Win32Utilites\Properties\AssemblyInfo.cs" Description="File successfully backed up as E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\Win32UtilitiesBackup\Backup\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Win32Utilites" Source="..\Win32Utilites\Win32Utilites\Win32Utilites.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Win32Utilites" Source="..\Win32Utilites\Win32Utilites\Win32Utilites.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Win32Utilites" Source="..\Win32Utilites\Win32Utilites\Win32Utilites.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

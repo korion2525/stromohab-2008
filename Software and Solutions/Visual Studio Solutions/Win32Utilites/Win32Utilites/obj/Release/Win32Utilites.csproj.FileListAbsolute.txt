@@ -1,0 +1,6 @@
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\Win32Utilites\Win32Utilites\bin\Release\Win32Utilites.XML
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\Win32Utilites\Win32Utilites\bin\Release\Win32Utilites.dll
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\Win32Utilites\Win32Utilites\bin\Release\Win32Utilites.pdb
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\Win32Utilites\Win32Utilites\obj\Release\ResolveAssemblyReference.cache
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\Win32Utilites\Win32Utilites\obj\Release\Win32Utilites.dll
+E:\Mat\Documents\Working_Copy\Software and Solutions\Visual Studio Solutions\Win32Utilites\Win32Utilites\obj\Release\Win32Utilites.pdb
